@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta charset="utf-8" />
+    <title>Webarch - Responsive Admin Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN PLUGIN CSS -->
+    <link rel="stylesheet" href="assets/plugins/jquery-ricksaw-chart/css/rickshaw.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="assets/plugins/jquery-morris-chart/css/morris.css" type="text/css" media="screen">
+    <!-- BEGIN PLUGIN CSS -->
+    <link href="assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="assets/plugins/bootstrapv3/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/bootstrapv3/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="assets/plugins/animate.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" />
+    <!-- END PLUGIN CSS -->
+    <!-- BEGIN CORE CSS FRAMEWORK -->
+    <link href="webarch/css/webarch.css" rel="stylesheet" type="text/css" />
+    <!-- END CORE CSS FRAMEWORK -->
+</head>
+<!-- BEGIN BODY -->
+<body class="">
+<!-- BEGIN HEADER -->
+<div class="header navbar navbar-inverse ">
+    <!-- BEGIN TOP NAVIGATION BAR -->
+    <div class="navbar-inner" id="navbar-inner">
+
+    </div>
+    <!-- END TOP NAVIGATION BAR -->
+</div>
+<!-- END HEADER -->
+<!-- BEGIN CONTAINER -->
+<div class="page-container row-fluid">
+    <!-- BEGIN SIDEBAR -->
+    <div class="page-sidebar " id="main-menu">
+
+
+
+    </div>
+    <a href="#" class="scrollup">Scroll</a>
+    <div class="footer-widget">
+        <div class="progress transparent progress-small no-radius no-margin">
+            <div class="progress-bar progress-bar-success animate-progress-bar" data-percentage="79%" style="width: 79%;"></div>
+        </div>
+        <div class="pull-right">
+            <div class="details-status"> <span class="animate-number" data-value="86" data-animation-duration="560">86</span>% </div>
+            <a href="lockscreen.html"><i class="material-icons">power_settings_new</i></a></div>
+    </div>
+    <!-- END SIDEBAR -->
+    <!-- BEGIN PAGE CONTAINER-->
+    <div class="page-content">
+        <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+        <div id="portlet-config" class="modal hide">
+            <div class="modal-header">
+                <button data-dismiss="modal" class="close" type="button"></button>
+                <h3>Widget Settings</h3>
+            </div>
+            <div class="modal-body"> Widget settings form goes here </div>
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="content">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="grid simple">
+                        <div class="grid-body no-border">
+                            <br>
+                            <div id="sparkline-pie" class="col-md-12"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="grid simple">
+                        <div class="grid-body no-border">
+                            <br>
+                            <div id="sparkline-pie2" class="col-md-12"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BEGIN CHAT -->
+    <!-- END CHAT -->
+</div>
+<!-- END CONTAINER -->
+<!-- BEGIN CORE JS FRAMEWORK-->
+<script src="assets/plugins/pace/pace.min.js" type="text/javascript"></script>
+<!-- BEGIN JS DEPENDECENCIES-->
+<script src="assets/plugins/jquery/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="assets/plugins/bootstrapv3/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery-block-ui/jqueryblockui.min.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
+<script src="assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
+<!-- END CORE JS DEPENDECENCIES-->
+<!-- BEGIN CORE TEMPLATE JS -->
+<!--<script src="webarch/js/webarch.js" type="text/javascript"></script>-->
+<!-- END CORE TEMPLATE JS -->
+<!-- BEGIN PAGE LEVEL JS -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="assets/plugins/jquery-ricksaw-chart/js/d3.v2.js"></script>
+<script src="assets/plugins/jquery-ricksaw-chart/js/rickshaw.min.js"></script>
+<script src="assets/plugins/jquery-morris-chart/js/morris.min.js"></script>
+<script src="assets/plugins/jquery-easy-pie-chart/js/jquery.easypiechart.min.js"></script>
+<script src="assets/plugins/jquery-flot/jquery.flot.js"></script>
+<script src="assets/plugins/jquery-flot/jquery.flot.time.min.js"></script>
+<script src="assets/plugins/jquery-flot/jquery.flot.selection.min.js"></script>
+<script src="assets/plugins/jquery-flot/jquery.flot.animator.min.js"></script>
+<script src="assets/plugins/jquery-flot/jquery.flot.orderBars.js"></script>
+<script src="assets/plugins/jquery-sparkline/jquery-sparkline.js"></script>
+<script src="assets/plugins/jquery-easy-pie-chart/js/jquery.easypiechart.min.js"></script>
+<!-- END PAGE LEVEL PLUGINS -->
+<script src="assets/js/charts.js" type="text/javascript"></script>
+<script src="assets/plugins/highcharts.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var getHTML = {
+            init:function(){
+                this.GetHeaderHTML();
+                this.GetSidbarHTML();
+            },
+            GetHeaderHTML:function(){
+                $.ajax({
+                    url:'headerTest1.html',
+                    type:'get',
+                    success:function(res){
+                        $('#navbar-inner').html($(res));
+                    }
+                })
+            },
+            GetSidbarHTML:function(){
+                $.ajax({
+                    url:'sidebarTest1.html',
+                    type:'get',
+                    success:function(res){
+                        $('#main-menu').html($(res));
+                    }
+                })
+            }
+        }
+        getHTML.init();
+    });
+
+
+    // Build the chart
+    Highcharts.chart('container', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: '世界财富占比'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    },
+                    connectorColor: 'silver'
+                }
+            }
+        },
+        series: [{
+            name: '占有',
+            data: [
+                { name: '人民币', y: 61.41 },
+                { name: '美元', y: 11.84 },
+                { name: '欧元', y: 10.85 },
+                { name: '英镑', y: 4.67 },
+                { name: '黄金', y: 4.18 },
+                { name: '钻石', y: 7.05 }
+            ]
+        }]
+    });
+
+</script>
+</body>
+</html>
