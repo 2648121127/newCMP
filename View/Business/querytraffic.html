@@ -286,14 +286,14 @@
                 <li class="open active">
                     <a href="javascript:;"> <i class="material-icons">location_on</i> <span class="title">电信业务管理</span> <span class="open arrow"></span> </a>
                     <ul class="sub-menu">
-                        <li> <a href="queryPakage.html"> 套餐使用量 </a> </li>
-                        <li> <a href="queryBalance.html"> 余额查询 </a> </li>
-                        <li> <a href="prodInstQuery.html"> 产品资料 </a> </li>
-                        <li> <a href="queryCardStatus.html"> 查询卡状态 </a> </li>
-                        <li> <a href="queryTraffic.html"> 查询流量 </a> </li>
-                        <li> <a href="valueAddedDetailQuery.html"> 查询增值详单 </a> </li>
-                        <li> <a href="getLocationByPhone.html"> 基站粗定位 </a> </li>
-                        <li> <a href="getE2eInfo.html"> 设备识别码（IMEI） </a> </li>
+                        <li> <a href="querypackage.html"> 套餐使用量 </a> </li>
+                        <li> <a href="querybalance.html"> 余额查询 </a> </li>
+                        <li> <a href="prodinstquery.html"> 产品资料 </a> </li>
+                        <li> <a href="querycardstatus.html"> 查询卡状态 </a> </li>
+                        <li> <a href="querytraffic.html"> 查询流量 </a> </li>
+                        <li> <a href="valueaddeddetailquery.html"> 查询增值详单 </a> </li>
+                        <li> <a href="getlocationbyphone.html"> 基站粗定位 </a> </li>
+                        <li> <a href="gete2einfo.html"> 设备识别码（IMEI） </a> </li>
                     </ul>
                 </li>
                 <li>
@@ -374,19 +374,61 @@
                             <div class="grid simple ">
                                 <div class="grid-body no-border">
                                     <div style="overflow: hidden;border-bottom: 1px solid #dddddd">
-                                        <h3 style="font-size:18px;font-family:inherit;font-weight:500;color:#6f7b8a">余额查询
+                                        <h3 style="font-size:18px;font-family:inherit;font-weight:500;color:#6f7b8a">查询（当天/当月）流量
                                             <span style="float:right;font-size:12px;color:#fff;font-weight:bold;background: #0b9c8f;padding:0px 7px;border-radius: 5px;">共1页</span>
                                         </h3>
                                     </div>
 
-                                    <form class="form-inline">
+                                    <form class="form-inline row">
                                         <div class="row p-t-15" style="display: flex;display: -webkit-flex;align-items:center;">
-                                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                            <label class="col-lg-2 col-md-2 col-sm-2 text-right">查询号码</label>
+                                            <div class="col-lg-4 col-md-4 col-sm-4">
                                                 <input type="text" placeholder="ICCID/接入号码/便捷短号" style="width:100%;min-height:34px;">
                                             </div>
+                                        </div>
+                                        <div class="row p-t-15" style="display: flex;display: -webkit-flex;align-items:center;">
+                                            <label class="col-lg-2 col-md-2 col-sm-2 text-right">查询类型</label>
+                                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                                <div class="radio">
+                                                    <input id="male" type="radio" name="gender" value="male" checked="checked">
+                                                    <label for="male" style="padding-left:25px;">当天流量</label>
+                                                    <input id="female" type="radio" name="gender" value="female">
+                                                    <label for="female" style="padding-left:25px;">当月流量</label>
+                                                    <input id="female1" type="radio" name="gender" value="female1">
+                                                    <label for="female1" style="padding-left:25px;">时间段</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row p-t-15" style="display: flex;display: -webkit-flex;align-items:center;">
+                                            <label class="col-lg-2 col-md-2 col-sm-2 text-right">日期时间段</label>
+                                            <div class="input-append success date col-lg-2 col-md-2 col-sm-2" style="height:34px">
+                                                <input type="text" style="min-height:34px;">
+                                                <span class="add-on" style="height:34px;margin-left:-34px;"><span class="arrow"></span><i class="fa fa-th"></i></span>
+                                            </div>
+                                            <div class="input-append success date col-lg-2 col-md-2 col-sm-2" style="height:34px">
+                                                <input type="text" style="min-height:34px;">
+                                                <span class="add-on" style="height:34px;margin-left:-34px;"><span class="arrow"></span><i class="fa fa-th"></i></span>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                注：查询的开始和结束时间需限定在一个自然月内，不可跨月，跨年。
+                                            </div>
+                                        </div>
+                                        <div class="row p-t-15" style="display: flex;display: -webkit-flex;align-items:center;">
+                                            <label class="col-lg-2 col-md-2 col-sm-2 text-right">查询类型</label>
+                                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                                <div class="radio">
+                                                    <input id="useAll" type="radio" name="Ause" value="useAll" checked="checked">
+                                                    <label for="useAll" style="padding-left:25px;">流量总使用量</label>
+                                                    <input id="useX" type="radio" name="Ause" value="useX">
+                                                    <label for="useX" style="padding-left:25px;">流量使用明细</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row p-t-15">
+                                            <label class="col-lg-2 col-md-2 col-sm-2"></label>
                                             <div class="col-lg-3 col-md-3 col-sm-3">
                                                 <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="keywords">搜索</a>
-                                                <a href="queryBalance.html" type="reset" class="btn btn-white btn-small">重置</a>
+                                                <a href="querytraffic.html" type="reset" class="btn btn-white btn-small">重置</a>
                                             </div>
                                         </div>
                                     </form>
@@ -394,11 +436,9 @@
                                     <table class="table table-striped table-flip-scroll table-responsive" style="border-top:1px solid #ddd">
                                         <thead class="cf">
                                         <tr>
-                                            <th>ICCID/接入号码</th>
-                                            <th>当前余额(CNY)</th>
-                                            <th>帐户余额(CNY)</th>
-                                            <th>用户级余额(CNY)</th>
-                                            <th>操作</th>
+                                            <th>查询号码</th>
+                                            <th>流量合计</th>
+                                            <th>话费合计</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -406,10 +446,11 @@
                                             <td>Mark</td>
                                             <td>Otto</td>
                                             <td>Mark</td>
-                                            <td>Otto呜呜</td>
-                                            <td>
-                                                <a href="{:U('business/paydetail',array('id'=>$vo['id']))}" type="button" class="btn btn-small btn-mini btn-danger btn-xs" >充值</a>
-                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>Mark</td>
                                         </tr>
                                         </tbody>
                                     </table>

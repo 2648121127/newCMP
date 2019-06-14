@@ -1,7 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="70e25ccc-44ab-4b7a-aa71-334cdf648655" name="Default" comment="" />
+    <list default="true" id="70e25ccc-44ab-4b7a-aa71-334cdf648655" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/View/Actionlog/packageedit.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/View/Addpoolcard/addpoolcard.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/View/Addpoolcard/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/View/AhCard/errorpage.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/View/Business/pay.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/View/Business/queryowe.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/View/Card/addopencardrecord.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/View/Card/errorpage.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/View/Cardspec/allotcard.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/View/Cardspec/downcard.html" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/View/Actionlog/index.html" afterPath="$PROJECT_DIR$/View/Actionlog/index.html" />
+      <change beforePath="$PROJECT_DIR$/View/Adminuser/chgpasswd.html" afterPath="$PROJECT_DIR$/View/Adminuser/chgpasswd.html" />
+      <change beforePath="$PROJECT_DIR$/View/AhCard/activecard.html" afterPath="$PROJECT_DIR$/View/AhCard/activecard.html" />
+      <change beforePath="$PROJECT_DIR$/View/AhCard/addcard.html" afterPath="$PROJECT_DIR$/View/AhCard/addcard.html" />
+      <change beforePath="$PROJECT_DIR$/View/AhCard/allotcard.html" afterPath="$PROJECT_DIR$/View/AhCard/allotcard.html" />
+      <change beforePath="$PROJECT_DIR$/View/AhCard/index.html" afterPath="$PROJECT_DIR$/View/AhCard/index.html" />
+      <change beforePath="$PROJECT_DIR$/View/AhCard/stoprecovercard.html" afterPath="$PROJECT_DIR$/View/AhCard/stoprecovercard.html" />
+      <change beforePath="$PROJECT_DIR$/View/AhOpencardrecord/addOpencardrecord.html" afterPath="$PROJECT_DIR$/View/AhOpencardrecord/opencardrecordedit.html" />
+      <change beforePath="$PROJECT_DIR$/View/AhOpencardrecord/index.html" afterPath="$PROJECT_DIR$/View/AhOpencardrecord/index.html" />
+      <change beforePath="$PROJECT_DIR$/View/AhWorkorder/index.html" afterPath="$PROJECT_DIR$/View/AhWorkorder/index.html" />
+      <change beforePath="$PROJECT_DIR$/View/Business/getE2eInfo.html" afterPath="$PROJECT_DIR$/View/Business/gete2einfo.html" />
+      <change beforePath="$PROJECT_DIR$/View/Business/getLocationByPhone.html" afterPath="$PROJECT_DIR$/View/Business/getlocationbyphone.html" />
+      <change beforePath="$PROJECT_DIR$/View/Business/prodInstQuery.html" afterPath="$PROJECT_DIR$/View/Business/prodinstquery.html" />
+      <change beforePath="$PROJECT_DIR$/View/Business/queryBalance.html" afterPath="$PROJECT_DIR$/View/Business/querybalance.html" />
+      <change beforePath="$PROJECT_DIR$/View/Business/queryCardStatus.html" afterPath="$PROJECT_DIR$/View/Business/querycardstatus.html" />
+      <change beforePath="$PROJECT_DIR$/View/Business/queryPakage.html" afterPath="$PROJECT_DIR$/View/Business/querypackage.html" />
+      <change beforePath="$PROJECT_DIR$/View/Business/queryTraffic.html" afterPath="$PROJECT_DIR$/View/Business/querytraffic.html" />
+      <change beforePath="$PROJECT_DIR$/View/Business/valueAddedDetailQuery.html" afterPath="$PROJECT_DIR$/View/Business/valueaddeddetailquery.html" />
+      <change beforePath="$PROJECT_DIR$/View/Card/activecard.html" afterPath="$PROJECT_DIR$/View/Card/activecard.html" />
+      <change beforePath="$PROJECT_DIR$/View/Card/addcard.html" afterPath="$PROJECT_DIR$/View/Card/addcard.html" />
+      <change beforePath="$PROJECT_DIR$/View/Card/addfakecard.html" afterPath="$PROJECT_DIR$/View/Card/addfakecard.html" />
+      <change beforePath="$PROJECT_DIR$/View/Card/allotcard.html" afterPath="$PROJECT_DIR$/View/Card/allotcard.html" />
+      <change beforePath="$PROJECT_DIR$/View/Card/autonomylimit.html" afterPath="$PROJECT_DIR$/View/Card/autonomylimit.html" />
+      <change beforePath="$PROJECT_DIR$/View/Card/backcard.html" afterPath="$PROJECT_DIR$/View/Card/backcard.html" />
+      <change beforePath="$PROJECT_DIR$/View/Card/cancelcard.html" afterPath="$PROJECT_DIR$/View/Card/cancelcard.html" />
+      <change beforePath="$PROJECT_DIR$/View/Card/changecard.html" afterPath="$PROJECT_DIR$/View/Card/changecard.html" />
+      <change beforePath="$PROJECT_DIR$/View/Card/chgdealer.html" afterPath="$PROJECT_DIR$/View/Card/chgdealer.html" />
+      <change beforePath="$PROJECT_DIR$/View/Card/chgpackage.html" afterPath="$PROJECT_DIR$/View/Card/chgpackage.html" />
+      <change beforePath="$PROJECT_DIR$/View/Card/disabledcard.html" afterPath="$PROJECT_DIR$/View/Card/disabledcard.html" />
+      <change beforePath="$PROJECT_DIR$/View/Card/downloadcard.html" afterPath="$PROJECT_DIR$/View/Card/downloadcard.html" />
+      <change beforePath="$PROJECT_DIR$/View/Card/getallcardinfo.html" afterPath="$PROJECT_DIR$/View/Card/getallcardinfo.html" />
+      <change beforePath="$PROJECT_DIR$/View/Card/getcardbytime.html" afterPath="$PROJECT_DIR$/View/Card/getcardbytime.html" />
+      <change beforePath="$PROJECT_DIR$/View/Card/imeirerecord.html" afterPath="$PROJECT_DIR$/View/Card/imeirerecord.html" />
+      <change beforePath="$PROJECT_DIR$/View/Card/index.html" afterPath="$PROJECT_DIR$/View/Card/index.html" />
+      <change beforePath="$PROJECT_DIR$/View/Card/offnetaction.html" afterPath="$PROJECT_DIR$/View/Card/offnetaction.html" />
+      <change beforePath="$PROJECT_DIR$/View/Card/singlecutnet.html" afterPath="$PROJECT_DIR$/View/Card/singlecutnet.html" />
+      <change beforePath="$PROJECT_DIR$/View/Cardspec/addcard.html" afterPath="$PROJECT_DIR$/View/Cardspec/addcard.html" />
+      <change beforePath="$PROJECT_DIR$/View/Cardspec/chgoffnetvalue.html" afterPath="$PROJECT_DIR$/View/Cardspec/chgoffnetvalue.html" />
+      <change beforePath="$PROJECT_DIR$/View/Cardspec/chgpseudo.html" afterPath="$PROJECT_DIR$/View/Cardspec/chgpseudo.html" />
+      <change beforePath="$PROJECT_DIR$/View/Cardspec/countstarttime.html" afterPath="$PROJECT_DIR$/View/Cardspec/countstarttime.html" />
+      <change beforePath="$PROJECT_DIR$/View/Cardspec/downdisabledcard.html" afterPath="$PROJECT_DIR$/View/Cardspec/downdisabledcard.html" />
+      <change beforePath="$PROJECT_DIR$/View/Cardspec/downoffnetcard.html" afterPath="$PROJECT_DIR$/View/Cardspec/downoffnetcard.html" />
+      <change beforePath="$PROJECT_DIR$/View/Cardspec/downstart.html" afterPath="$PROJECT_DIR$/View/Cardspec/downstart.html" />
+      <change beforePath="$PROJECT_DIR$/View/Cardspec/downunusedcard.html" afterPath="$PROJECT_DIR$/View/Cardspec/downunusedcard.html" />
+      <change beforePath="$PROJECT_DIR$/View/Cardspec/downusedcard.html" afterPath="$PROJECT_DIR$/View/Cardspec/downusedcard.html" />
+      <change beforePath="$PROJECT_DIR$/View/Cardspec/index.html" afterPath="$PROJECT_DIR$/View/Cardspec/index.html" />
+      <change beforePath="$PROJECT_DIR$/View/Cardspec/isdelete.html" afterPath="$PROJECT_DIR$/View/Cardspec/isdelete.html" />
+      <change beforePath="$PROJECT_DIR$/View/Cardspec/isdisabled.html" afterPath="$PROJECT_DIR$/View/Cardspec/isdisabled.html" />
+      <change beforePath="$PROJECT_DIR$/View/Cardspec/isoffnet.html" afterPath="$PROJECT_DIR$/View/Cardspec/isoffnet.html" />
+      <change beforePath="$PROJECT_DIR$/View/Cardspec/saveoffnetflow.html" afterPath="$PROJECT_DIR$/View/Cardspec/saveoffnetflow.html" />
+      <change beforePath="$PROJECT_DIR$/View/Cardspec/savespecflow.html" afterPath="$PROJECT_DIR$/View/Cardspec/savespecflow.html" />
+      <change beforePath="$PROJECT_DIR$/View/Cardspec/saveusedflow.html" afterPath="$PROJECT_DIR$/View/Cardspec/saveusedflow.html" />
+      <change beforePath="$PROJECT_DIR$/View/Cardspecinfo/addCardspecinfo.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/View/Cardspecinfo/editCardspecinfo.html" afterPath="$PROJECT_DIR$/View/Cardspecinfo/cardspecinfoedit.html" />
+      <change beforePath="$PROJECT_DIR$/View/Cardspecinfo/index.html" afterPath="$PROJECT_DIR$/View/Cardspecinfo/index.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmCard/addcard.html" afterPath="$PROJECT_DIR$/View/CmCard/addcard.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmCard/allotcard.html" afterPath="$PROJECT_DIR$/View/CmCard/allotcard.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmCard/chgpackage.html" afterPath="$PROJECT_DIR$/View/CmCard/chgpackage.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmCard/index.html" afterPath="$PROJECT_DIR$/View/CmCard/index.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmCard/memberswitch.html" afterPath="$PROJECT_DIR$/View/CmCard/memberswitch.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmCard/statusmodify.html" afterPath="$PROJECT_DIR$/View/CmCard/statusmodify.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmDealer/CmDealer.html" afterPath="$PROJECT_DIR$/View/CmDealer/CmDealer.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmDealer/addDealercm.html" afterPath="$PROJECT_DIR$/View/CmDealer/addDealercm.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmInterfacepack/interfaceedit.html" afterPath="$PROJECT_DIR$/View/CmInterfacepack/interfaceedit.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmInterfacepack/interfacemgr.html" afterPath="$PROJECT_DIR$/View/CmInterfacepack/interfacemgr.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmInterfacepack/interfaceprivgroupedit.html" afterPath="$PROJECT_DIR$/View/CmInterfacepack/interfaceprivgroupedit.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmInterfacepack/interfaceprivgroupmgr.html" afterPath="$PROJECT_DIR$/View/CmInterfacepack/interfaceprivgroupmgr.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmInterfacepack/privgrppriv.html" afterPath="$PROJECT_DIR$/View/CmInterfacepack/privgrppriv.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmPackage/CmPackage.html" afterPath="$PROJECT_DIR$/View/CmPackage/CmPackage.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmPackage/addPackagecm.html" afterPath="$PROJECT_DIR$/View/CmPackage/addPackagecm.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmUseinfo/activeratemgr.html" afterPath="$PROJECT_DIR$/View/CmUseinfo/activeratemgr.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmUseinfo/developdatemgr.html" afterPath="$PROJECT_DIR$/View/CmUseinfo/developdatemgr.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmUseinfo/poolusedmgr.html" afterPath="$PROJECT_DIR$/View/CmUseinfo/poolusedmgr.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmWorkorder/CmWorkorder.html" afterPath="$PROJECT_DIR$/View/CmWorkorder/CmWorkorder.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmZichan/bills.html" afterPath="$PROJECT_DIR$/View/CmZichan/bills.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmZichan/functions.html" afterPath="$PROJECT_DIR$/View/CmZichan/functions.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmZichan/group.html" afterPath="$PROJECT_DIR$/View/CmZichan/group.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmZichan/number.html" afterPath="$PROJECT_DIR$/View/CmZichan/number.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmZichan/status.html" afterPath="$PROJECT_DIR$/View/CmZichan/status.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmZifei/flow.html" afterPath="$PROJECT_DIR$/View/CmZifei/flow.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmZifei/memberpkg.html" afterPath="$PROJECT_DIR$/View/CmZifei/memberpkg.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmZifei/orderno.html" afterPath="$PROJECT_DIR$/View/CmZifei/orderno.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmZifei/pool.html" afterPath="$PROJECT_DIR$/View/CmZifei/pool.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmZifei/share.html" afterPath="$PROJECT_DIR$/View/CmZifei/share.html" />
+      <change beforePath="$PROJECT_DIR$/View/Dangerplace/Dangerplace.html" afterPath="$PROJECT_DIR$/View/Dangerplace/Dangerplace.html" />
+      <change beforePath="$PROJECT_DIR$/View/Dangerplace/adddangerplace.html" afterPath="$PROJECT_DIR$/View/Dangerplace/adddangerplace.html" />
+      <change beforePath="$PROJECT_DIR$/View/Dangerplace/changecard.html" afterPath="$PROJECT_DIR$/View/Dangerplace/changecard.html" />
+      <change beforePath="$PROJECT_DIR$/View/Dangerplace/highriskhistory.html" afterPath="$PROJECT_DIR$/View/Dangerplace/highriskhistory.html" />
+      <change beforePath="$PROJECT_DIR$/View/Dealer/Dealer.html" afterPath="$PROJECT_DIR$/View/Dealer/Dealer.html" />
+      <change beforePath="$PROJECT_DIR$/View/Dealer/addDealer.html" afterPath="$PROJECT_DIR$/View/Dealer/addDealer.html" />
+      <change beforePath="$PROJECT_DIR$/View/Dealer/editdealer.html" afterPath="$PROJECT_DIR$/View/Dealer/editdealer.html" />
+      <change beforePath="$PROJECT_DIR$/View/Exportdata/addcountdata.html" afterPath="$PROJECT_DIR$/View/Exportdata/addcountdata.html" />
+      <change beforePath="$PROJECT_DIR$/View/Exportdata/addctccdata.html" afterPath="$PROJECT_DIR$/View/Exportdata/addctccdata.html" />
+      <change beforePath="$PROJECT_DIR$/View/Exportdata/getcountdata.html" afterPath="$PROJECT_DIR$/View/Exportdata/getcountdata.html" />
+      <change beforePath="$PROJECT_DIR$/View/Exportdata/index.html" afterPath="$PROJECT_DIR$/View/Exportdata/index.html" />
+      <change beforePath="$PROJECT_DIR$/View/Flowrecord/index10G.html" afterPath="$PROJECT_DIR$/View/Flowrecord/index10G.html" />
+      <change beforePath="$PROJECT_DIR$/View/Flowrecord/index15G.html" afterPath="$PROJECT_DIR$/View/Flowrecord/index15G.html" />
+      <change beforePath="$PROJECT_DIR$/View/Index/dashboard.html" afterPath="$PROJECT_DIR$/View/Index/dashboard.html" />
+      <change beforePath="$PROJECT_DIR$/View/Interfacepack/interfaceedit.html" afterPath="$PROJECT_DIR$/View/Interfacepack/interfaceedit.html" />
+      <change beforePath="$PROJECT_DIR$/View/Interfacepack/interfacemgr.html" afterPath="$PROJECT_DIR$/View/Interfacepack/interfacemgr.html" />
+      <change beforePath="$PROJECT_DIR$/View/Interfacepack/interfaceprivgroupedit.html" afterPath="$PROJECT_DIR$/View/Interfacepack/interfaceprivgroupedit.html" />
+      <change beforePath="$PROJECT_DIR$/View/Interfacepack/interfaceprivgroupmgr.html" afterPath="$PROJECT_DIR$/View/Interfacepack/interfaceprivgroupmgr.html" />
+      <change beforePath="$PROJECT_DIR$/View/Interfacepack/privgrppriv.html" afterPath="$PROJECT_DIR$/View/Interfacepack/privgrppriv.html" />
+      <change beforePath="$PROJECT_DIR$/View/Opencardrecord/Opencardrecord.html" afterPath="$PROJECT_DIR$/View/Opencardrecord/Opencardrecord.html" />
+      <change beforePath="$PROJECT_DIR$/View/Opencardrecord/addOpencardrecord.html" afterPath="$PROJECT_DIR$/View/Opencardrecord/addOpencardrecord.html" />
+      <change beforePath="$PROJECT_DIR$/View/Opencardrecord/editOpencardrecord.html" afterPath="$PROJECT_DIR$/View/Opencardrecord/editOpencardrecord.html" />
+      <change beforePath="$PROJECT_DIR$/View/Package/Package.html" afterPath="$PROJECT_DIR$/View/Package/Package.html" />
+      <change beforePath="$PROJECT_DIR$/View/Package/addPackage.html" afterPath="$PROJECT_DIR$/View/Package/addPackage.html" />
+      <change beforePath="$PROJECT_DIR$/View/Package/editpackage.html" afterPath="$PROJECT_DIR$/View/Package/editpackage.html" />
+      <change beforePath="$PROJECT_DIR$/View/Paramsign/index.html" afterPath="$PROJECT_DIR$/View/Paramsign/index.html" />
+      <change beforePath="$PROJECT_DIR$/View/Pool/Pool.html" afterPath="$PROJECT_DIR$/View/Pool/Pool.html" />
+      <change beforePath="$PROJECT_DIR$/View/Pool/addPool.html" afterPath="$PROJECT_DIR$/View/Pool/addPool.html" />
+      <change beforePath="$PROJECT_DIR$/View/Pool/addPoolCard.html" afterPath="$PROJECT_DIR$/View/Pool/addPoolCard.html" />
+      <change beforePath="$PROJECT_DIR$/View/Pool/editpool.html" afterPath="$PROJECT_DIR$/View/Pool/editpool.html" />
+      <change beforePath="$PROJECT_DIR$/View/Proportion/index.html" afterPath="$PROJECT_DIR$/View/Proportion/index.html" />
+      <change beforePath="$PROJECT_DIR$/View/Proportion/proportionedit.html" afterPath="$PROJECT_DIR$/View/Proportion/proportionedit.html" />
+      <change beforePath="$PROJECT_DIR$/View/Realname/Realname.html" afterPath="$PROJECT_DIR$/View/Realname/Realname.html" />
+      <change beforePath="$PROJECT_DIR$/View/Recharge/downlist.html" afterPath="$PROJECT_DIR$/View/Recharge/downlist.html" />
+      <change beforePath="$PROJECT_DIR$/View/Recharge/index.html" afterPath="$PROJECT_DIR$/View/Recharge/index.html" />
+      <change beforePath="$PROJECT_DIR$/View/Statistic/index.html" afterPath="$PROJECT_DIR$/View/Statistic/index.html" />
+      <change beforePath="$PROJECT_DIR$/View/Statistic/statisticedit.html" afterPath="$PROJECT_DIR$/View/Statistic/statisticedit.html" />
+      <change beforePath="$PROJECT_DIR$/View/System/adminuseredit.html" afterPath="$PROJECT_DIR$/View/System/adminuseredit.html" />
+      <change beforePath="$PROJECT_DIR$/View/System/adminusermgr.html" afterPath="$PROJECT_DIR$/View/System/adminusermgr.html" />
+      <change beforePath="$PROJECT_DIR$/View/System/roleedit.html" afterPath="$PROJECT_DIR$/View/System/roleedit.html" />
+      <change beforePath="$PROJECT_DIR$/View/System/rolemgr.html" afterPath="$PROJECT_DIR$/View/System/rolemgr.html" />
+      <change beforePath="$PROJECT_DIR$/View/Useinfo/activeratemgr.html" afterPath="$PROJECT_DIR$/View/Useinfo/activeratemgr.html" />
+      <change beforePath="$PROJECT_DIR$/View/Useinfo/adddevelop.html" afterPath="$PROJECT_DIR$/View/Useinfo/adddevelop.html" />
+      <change beforePath="$PROJECT_DIR$/View/Useinfo/developdatemgr.html" afterPath="$PROJECT_DIR$/View/Useinfo/developdatemgr.html" />
+      <change beforePath="$PROJECT_DIR$/View/Useinfo/poolusedmgr.html" afterPath="$PROJECT_DIR$/View/Useinfo/poolusedmgr.html" />
+      <change beforePath="$PROJECT_DIR$/View/Workorder/index.html" afterPath="$PROJECT_DIR$/View/Workorder/index.html" />
+      <change beforePath="$PROJECT_DIR$/View/Workorderspec/index.html" afterPath="$PROJECT_DIR$/View/Workorderspec/index.html" />
+      <change beforePath="$PROJECT_DIR$/sidebarTest1.html" afterPath="$PROJECT_DIR$/sidebarTest1.html" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -15,68 +159,25 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/Card/index.html">
+        <entry file="file://$PROJECT_DIR$/View/Addpoolcard/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5105">
-              <caret line="480" column="69" lean-forward="false" selection-start-line="480" selection-start-column="53" selection-end-line="480" selection-end-column="69" />
+            <state relative-caret-position="-461">
+              <caret line="311" column="86" lean-forward="false" selection-start-line="311" selection-start-column="86" selection-end-line="311" selection-end-column="86" />
               <folding>
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#a#0;n#li#0;n#ul#0;n#li#0;n#ul#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#24409#24415#0" expanded="true" />
-                <element signature="e#24415#24421#0" expanded="true" />
-                <element signature="e#26143#26149#0" expanded="true" />
-                <element signature="e#26149#26155#0" expanded="true" />
-                <element signature="e#26155#26161#0" expanded="true" />
-                <element signature="e#26161#26167#0" expanded="true" />
-                <element signature="e#37620#37626#0" expanded="true" />
-                <element signature="e#38432#38438#0" expanded="true" />
-                <element signature="e#39107#39113#0" expanded="true" />
-                <element signature="e#39753#39759#0" expanded="true" />
-                <element signature="e#39759#39765#0" expanded="true" />
-                <element signature="e#40888#40894#0" expanded="true" />
-                <element signature="e#42029#42035#0" expanded="true" />
-                <element signature="e#42912#42918#0" expanded="true" />
-                <element signature="e#43796#43802#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/View/Index/dashboard.html">
+      <file leaf-file-name="addpoolcard.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/View/Addpoolcard/addpoolcard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="432" column="37" lean-forward="false" selection-start-line="432" selection-start-column="37" selection-end-line="432" selection-end-column="37" />
+            <state relative-caret-position="345">
+              <caret line="302" column="129" lean-forward="false" selection-start-line="302" selection-start-column="129" selection-end-line="302" selection-end-column="129" />
               <folding>
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#h2#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h5#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h2#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h5#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h2#0;n#div#0;n#div#3;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h5#0;n#div#0;n#div#3;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index10G.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/Flowrecord/index10G.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="401" column="46" lean-forward="false" selection-start-line="396" selection-start-column="40" selection-end-line="401" selection-end-column="46" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -94,8 +195,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>This field is required</find>
-      <find>animateNumbers</find>
       <find>select2</find>
       <find>form_traditional_validation</find>
       <find>Constructor</find>
@@ -124,6 +223,8 @@
       <find>Search Dashboard</find>
       <find>http://wlw.pinet.co/Public/Images/pinetlogo.png</find>
       <find>trafficWidget</find>
+      <find>keyword</find>
+      <find>status</find>
     </findStrings>
     <replaceStrings>
       <replace>32</replace>
@@ -138,21 +239,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/View/CmCard/allotcard.html" />
-        <option value="$PROJECT_DIR$/View/CmCard/chgpackage.html" />
-        <option value="$PROJECT_DIR$/View/CmCard/statusmodify.html" />
-        <option value="$PROJECT_DIR$/View/CmCard/memberswitch.html" />
-        <option value="$PROJECT_DIR$/View/CmCard/index.html" />
-        <option value="$PROJECT_DIR$/View/AhCard/addcard.html" />
-        <option value="$PROJECT_DIR$/View/AhCard/activecard.html" />
-        <option value="$PROJECT_DIR$/View/AhCard/allotcard.html" />
-        <option value="$PROJECT_DIR$/View/AhCard/stoprecovercard.html" />
-        <option value="$PROJECT_DIR$/View/AhCard/index.html" />
-        <option value="$PROJECT_DIR$/View/AhWorkorder/index.html" />
-        <option value="$PROJECT_DIR$/View/AhOpencardrecord/addOpencardrecord.html" />
-        <option value="$PROJECT_DIR$/View/AhOpencardrecord/index.html" />
-        <option value="$PROJECT_DIR$/View/Useinfo/adddevelop.html" />
-        <option value="$PROJECT_DIR$/View/Useinfo/developdatemgr.html" />
         <option value="$PROJECT_DIR$/View/Recharge/index.html" />
         <option value="$PROJECT_DIR$/View/Recharge/downlist.html" />
         <option value="$PROJECT_DIR$/View/Statistic/addstatistic.html" />
@@ -162,12 +248,10 @@
         <option value="$PROJECT_DIR$/View/Exportdata/Exportdata.html" />
         <option value="$PROJECT_DIR$/webarch/css/common.css" />
         <option value="$PROJECT_DIR$/View/Exportdata/index.html" />
-        <option value="$PROJECT_DIR$/View/Card/allotcard.html" />
         <option value="$PROJECT_DIR$/View/Exportdata/getcountdata.html" />
         <option value="$PROJECT_DIR$/View/Exportdata/addctccdata.html" />
         <option value="$PROJECT_DIR$/View/Exportdata/addcountdata.html" />
         <option value="$PROJECT_DIR$/View/Business/queryPakage.html" />
-        <option value="$PROJECT_DIR$/View/Business/queryBalance.html" />
         <option value="$PROJECT_DIR$/View/Interfacepack/interfaceedit.html" />
         <option value="$PROJECT_DIR$/View/Interfacepack/interfacemgr.html" />
         <option value="$PROJECT_DIR$/View/Interfacepack/interfaceprivgroupedit.html" />
@@ -186,9 +270,26 @@
         <option value="$PROJECT_DIR$/View/Adminuser/login.html" />
         <option value="$PROJECT_DIR$/View/Adminuser/dashboard.html" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/View/Card/index.html" />
         <option value="$PROJECT_DIR$/View/Flowrecord/index10G.html" />
         <option value="$PROJECT_DIR$/View/Index/dashboard.html" />
+        <option value="$PROJECT_DIR$/View/Card/index.html" />
+        <option value="$PROJECT_DIR$/View/AhCard/errorpage.html" />
+        <option value="$PROJECT_DIR$/View/Business/prodinstquery.html" />
+        <option value="$PROJECT_DIR$/View/Business/queryBalance.html" />
+        <option value="$PROJECT_DIR$/View/Business/querycardstatus.html" />
+        <option value="$PROJECT_DIR$/View/Business/queryowe.html" />
+        <option value="$PROJECT_DIR$/View/Business/pay.html" />
+        <option value="$PROJECT_DIR$/View/Card/addopencardrecord.html" />
+        <option value="$PROJECT_DIR$/View/Cardspec/index.html" />
+        <option value="$PROJECT_DIR$/View/Card/allotcard.html" />
+        <option value="$PROJECT_DIR$/View/Cardspec/downcard.html" />
+        <option value="$PROJECT_DIR$/View/Cardspec/allotcard.html" />
+        <option value="$PROJECT_DIR$/View/Cardspecinfo/cardspecinfoedit.html" />
+        <option value="$PROJECT_DIR$/View/Cardspecinfo/index.html" />
+        <option value="$PROJECT_DIR$/View/Actionlog/index.html" />
+        <option value="$PROJECT_DIR$/View/Actionlog/packageedit.html" />
+        <option value="$PROJECT_DIR$/View/Addpoolcard/index.html" />
+        <option value="$PROJECT_DIR$/View/Addpoolcard/addpoolcard.html" />
       </list>
     </option>
   </component>
@@ -199,9 +300,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="816" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -240,7 +340,7 @@
               <item name="NewPinet" type="b2602c69:ProjectViewProjectNode" />
               <item name="NewPinet" type="462c0819:PsiDirectoryNode" />
               <item name="View" type="462c0819:PsiDirectoryNode" />
-              <item name="Adminuser" type="462c0819:PsiDirectoryNode" />
+              <item name="Addpoolcard" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="NewPinet" type="b2602c69:ProjectViewProjectNode" />
@@ -252,19 +352,7 @@
               <item name="NewPinet" type="b2602c69:ProjectViewProjectNode" />
               <item name="NewPinet" type="462c0819:PsiDirectoryNode" />
               <item name="View" type="462c0819:PsiDirectoryNode" />
-              <item name="Flowrecord" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NewPinet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NewPinet" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-              <item name="Index" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NewPinet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NewPinet" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-              <item name="Paramsign" type="462c0819:PsiDirectoryNode" />
+              <item name="Cardspecinfo" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -289,19 +377,19 @@
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/View/Card" />
+      <recent name="$PROJECT_DIR$/View/Index" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/assets/plugins" />
+      <recent name="$PROJECT_DIR$/html/CmUseinfo" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/View/Index" />
       <recent name="$PROJECT_DIR$/html/Paramsign" />
       <recent name="$PROJECT_DIR$/html/CmZifei" />
       <recent name="$PROJECT_DIR$/html/Business" />
       <recent name="$PROJECT_DIR$/html/Exportdata" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/View/Index" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/assets/plugins" />
-      <recent name="$PROJECT_DIR$/html/CmUseinfo" />
-      <recent name="$PROJECT_DIR$/html/CmInterfacepack" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -339,15 +427,16 @@
       <workItem from="1558953645069" duration="4826000" />
       <workItem from="1559180653418" duration="74746000" />
       <workItem from="1560150321823" duration="11130000" />
-      <workItem from="1560236312584" duration="3651000" />
+      <workItem from="1560236312584" duration="19589000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="300242000" />
+    <option name="totallyTimeSpent" value="316180000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32971016" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20434782" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -358,7 +447,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38757765" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38757765" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -382,171 +471,13 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/View/Useinfo/adddevelop.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="444" column="30" lean-forward="true" selection-start-line="444" selection-start-column="30" selection-end-line="444" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Useinfo/developdatemgr.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="412" column="53" lean-forward="false" selection-start-line="412" selection-start-column="53" selection-end-line="412" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Recharge/downlist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="400" column="46" lean-forward="true" selection-start-line="400" selection-start-column="46" selection-end-line="400" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Recharge/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="431" column="78" lean-forward="false" selection-start-line="431" selection-start-column="74" selection-end-line="431" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/AhCard/addcard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="484" column="39" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="526" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Statistic/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-564">
-          <caret line="453" column="47" lean-forward="true" selection-start-line="453" selection-start-column="47" selection-end-line="453" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Proportion/proportionedit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="389" column="42" lean-forward="false" selection-start-line="389" selection-start-column="42" selection-end-line="389" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Proportion/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="341" column="17" lean-forward="true" selection-start-line="341" selection-start-column="17" selection-end-line="341" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Statistic/statisticedit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="35" column="4" lean-forward="false" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/AhCard/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-198">
-          <caret line="381" column="84" lean-forward="false" selection-start-line="381" selection-start-column="84" selection-end-line="381" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/AhCard/allotcard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="475" column="37" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="536" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Adminuser/chgpasswd.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7330">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/AhWorkorder/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="432" column="49" lean-forward="false" selection-start-line="432" selection-start-column="49" selection-end-line="432" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webarch/css/common.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="49" column="45" lean-forward="true" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Exportdata/getcountdata.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="506" column="110" lean-forward="true" selection-start-line="506" selection-start-column="110" selection-end-line="506" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Exportdata/addctccdata.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="500" column="79" lean-forward="true" selection-start-line="500" selection-start-column="79" selection-end-line="500" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Exportdata/addcountdata.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="494" column="74" lean-forward="true" selection-start-line="494" selection-start-column="74" selection-end-line="494" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Exportdata/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="391" column="69" lean-forward="false" selection-start-line="391" selection-start-column="69" selection-end-line="391" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Business/queryPakage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="410" column="47" lean-forward="true" selection-start-line="410" selection-start-column="47" selection-end-line="410" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Business/queryBalance.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="414" column="44" lean-forward="true" selection-start-line="414" selection-start-column="44" selection-end-line="414" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Business/prodInstQuery.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Interfacepack/interfacemgr.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="383" column="75" lean-forward="false" selection-start-line="383" selection-start-column="75" selection-end-line="383" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Interfacepack/interfaceedit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="403" column="38" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="476" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/View/CmInterfacepack/interfacemgr.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="458">
           <caret line="412" column="53" lean-forward="false" selection-start-line="412" selection-start-column="53" selection-end-line="412" selection-end-column="53" />
+          <folding>
+            <element signature="n#ul#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -554,6 +485,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
           <caret line="410" column="97" lean-forward="false" selection-start-line="410" selection-start-column="97" selection-end-line="410" selection-end-column="97" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -561,6 +493,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
           <caret line="403" column="39" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="468" selection-end-column="7" />
+          <folding>
+            <element signature="n#ul#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h3#0;n#if#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h3#1;n#if#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -568,6 +505,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="557">
           <caret line="467" column="28" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="477" selection-end-column="7" />
+          <folding>
+            <element signature="n#ul#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -575,6 +516,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="433">
           <caret line="393" column="42" lean-forward="true" selection-start-line="393" selection-start-column="42" selection-end-line="393" selection-end-column="42" />
+          <folding>
+            <element signature="n#ul#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h3#0;n#if#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h3#1;n#if#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -582,6 +528,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="369">
           <caret line="341" column="17" lean-forward="true" selection-start-line="214" selection-start-column="12" selection-end-line="341" selection-end-column="17" />
+          <folding>
+            <element signature="n#ul#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -589,6 +538,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="466">
           <caret line="467" column="28" lean-forward="true" selection-start-line="467" selection-start-column="28" selection-end-line="467" selection-end-column="28" />
+          <folding>
+            <element signature="n#ul#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -596,6 +549,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="151">
           <caret line="401" column="127" lean-forward="false" selection-start-line="401" selection-start-column="127" selection-end-line="401" selection-end-column="127" />
+          <folding>
+            <element signature="n#ul#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h3#0;n#if#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h3#1;n#if#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -603,13 +561,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="559">
           <caret line="408" column="89" lean-forward="false" selection-start-line="408" selection-start-column="81" selection-end-line="408" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Card/activecard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="401" column="91" lean-forward="false" selection-start-line="401" selection-start-column="65" selection-end-line="401" selection-end-column="91" />
+          <folding>
+            <element signature="n#ul#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -617,6 +571,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="503">
           <caret line="418" column="65" lean-forward="false" selection-start-line="418" selection-start-column="65" selection-end-line="418" selection-end-column="65" />
+          <folding>
+            <element signature="n#ul#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h3#0;n#if#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h3#1;n#if#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -624,6 +583,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="465" column="60" lean-forward="false" selection-start-line="465" selection-start-column="60" selection-end-line="465" selection-end-column="60" />
+          <folding>
+            <element signature="n#ul#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -652,6 +614,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1375">
           <caret line="143" column="24" lean-forward="false" selection-start-line="143" selection-start-column="24" selection-end-line="143" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -659,13 +622,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-7450">
           <caret line="402" column="75" lean-forward="false" selection-start-line="402" selection-start-column="75" selection-end-line="402" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Card/addcard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="506" column="24" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="559" selection-end-column="7" />
+          <folding>
+            <element signature="n#ul#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#11;n#tr#0;n#volist#0;n#if#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#4;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#5;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -680,6 +643,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1083">
           <caret line="394" column="42" lean-forward="true" selection-start-line="394" selection-start-column="42" selection-end-line="394" selection-end-column="42" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -688,6 +661,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
           <caret line="28" column="17" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="556" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -697,18 +671,18 @@
           <caret line="100" column="6" lean-forward="false" selection-start-line="100" selection-start-column="6" selection-end-line="100" selection-end-column="6" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#h2#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#3;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#3;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#h2#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h5#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h5#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#3;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h5#0;n#div#0;n#div#3;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -719,49 +693,18 @@
           <caret line="112" column="12" lean-forward="true" selection-start-line="112" selection-start-column="12" selection-end-line="112" selection-end-column="12" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#h2#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#3;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#3;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Card/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5105">
-          <caret line="480" column="69" lean-forward="false" selection-start-line="480" selection-start-column="53" selection-end-line="480" selection-end-column="69" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#a#0;n#li#0;n#ul#0;n#li#0;n#ul#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#24409#24415#0" expanded="true" />
-            <element signature="e#24415#24421#0" expanded="true" />
-            <element signature="e#26143#26149#0" expanded="true" />
-            <element signature="e#26149#26155#0" expanded="true" />
-            <element signature="e#26155#26161#0" expanded="true" />
-            <element signature="e#26161#26167#0" expanded="true" />
-            <element signature="e#37620#37626#0" expanded="true" />
-            <element signature="e#38432#38438#0" expanded="true" />
-            <element signature="e#39107#39113#0" expanded="true" />
-            <element signature="e#39753#39759#0" expanded="true" />
-            <element signature="e#39759#39765#0" expanded="true" />
-            <element signature="e#40888#40894#0" expanded="true" />
-            <element signature="e#42029#42035#0" expanded="true" />
-            <element signature="e#42912#42918#0" expanded="true" />
-            <element signature="e#43796#43802#0" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#h2#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h5#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h5#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#3;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h5#0;n#div#0;n#div#3;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -774,32 +717,296 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/Card/allotcard.html">
+    <entry file="file://$PROJECT_DIR$/View/Index/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="462" column="46" lean-forward="true" selection-start-line="457" selection-start-column="40" selection-end-line="462" selection-end-column="46" />
+        <state relative-caret-position="-765">
+          <caret line="432" column="37" lean-forward="false" selection-start-line="432" selection-start-column="37" selection-end-line="432" selection-end-column="37" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#h2#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h5#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h5#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#3;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h5#0;n#div#0;n#div#3;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Opencardrecord/Opencardrecord.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="17" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="491" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/Index/dashboard.html">
+    <entry file="file://$PROJECT_DIR$/View/Dangerplace/highriskhistory.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="432" column="37" lean-forward="false" selection-start-line="432" selection-start-column="37" selection-end-line="432" selection-end-column="37" />
+        <state relative-caret-position="266">
+          <caret line="385" column="54" lean-forward="true" selection-start-line="381" selection-start-column="48" selection-end-line="385" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Card/addcard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="34" column="35" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="34" selection-end-column="35" />
+          <folding>
+            <element signature="n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Card/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="148" column="72" lean-forward="false" selection-start-line="148" selection-start-column="72" selection-end-line="148" selection-end-column="72" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#h2#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#3;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#3;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#li#0;n#ul#0;n#li#0;n#ul#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#24493#24499#0" expanded="false" />
+            <element signature="e#24499#24505#0" expanded="false" />
+            <element signature="e#26227#26233#0" expanded="false" />
+            <element signature="e#26233#26239#0" expanded="false" />
+            <element signature="e#26239#26245#0" expanded="false" />
+            <element signature="e#26245#26251#0" expanded="false" />
+            <element signature="e#37704#37710#0" expanded="false" />
+            <element signature="e#38516#38522#0" expanded="false" />
+            <element signature="e#39191#39197#0" expanded="false" />
+            <element signature="e#39837#39843#0" expanded="false" />
+            <element signature="e#39843#39849#0" expanded="false" />
+            <element signature="e#40972#40978#0" expanded="false" />
+            <element signature="e#42113#42119#0" expanded="false" />
+            <element signature="e#42996#43002#0" expanded="false" />
+            <element signature="e#43880#43886#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Business/prodinstquery.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="376" column="126" lean-forward="false" selection-start-line="376" selection-start-column="126" selection-end-line="376" selection-end-column="126" />
+          <folding>
+            <element signature="e#9499#9505#0" expanded="false" />
+            <element signature="e#9505#9511#0" expanded="false" />
+            <element signature="e#9876#9882#0" expanded="false" />
+            <element signature="e#9882#9888#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webarch/js/webarch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="331" column="5" lean-forward="false" selection-start-line="331" selection-start-column="5" selection-end-line="331" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Business/querybalance.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="381" column="62" lean-forward="false" selection-start-line="381" selection-start-column="62" selection-end-line="381" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Business/queryowe.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="409" column="59" lean-forward="true" selection-start-line="409" selection-start-column="59" selection-end-line="409" selection-end-column="59" />
+          <folding>
+            <element signature="e#9499#9505#0" expanded="false" />
+            <element signature="e#9505#9511#0" expanded="false" />
+            <element signature="e#9876#9882#0" expanded="false" />
+            <element signature="e#9882#9888#0" expanded="false" />
+            <element signature="n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#0;n#if#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Business/querycardstatus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="426" column="25" lean-forward="true" selection-start-line="426" selection-start-column="25" selection-end-line="426" selection-end-column="25" />
+          <folding>
+            <element signature="e#9499#9505#0" expanded="false" />
+            <element signature="e#9505#9511#0" expanded="false" />
+            <element signature="e#9876#9882#0" expanded="false" />
+            <element signature="e#9882#9888#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Business/pay.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="445" column="1" lean-forward="true" selection-start-line="445" selection-start-column="1" selection-end-line="445" selection-end-column="1" />
+          <folding>
+            <element signature="e#9499#9505#0" expanded="false" />
+            <element signature="e#9505#9511#0" expanded="false" />
+            <element signature="e#9876#9882#0" expanded="false" />
+            <element signature="e#9882#9888#0" expanded="false" />
+            <element signature="n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/AhCard/errorpage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="61" lean-forward="true" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Card/errorpage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Card/addopencardrecord.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="500" column="108" lean-forward="true" selection-start-line="500" selection-start-column="108" selection-end-line="500" selection-end-column="108" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/card.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/form_elements.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="35" column="10" lean-forward="true" selection-start-line="31" selection-start-column="6" selection-end-line="35" selection-end-column="10" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Cardspec/downcard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="416" column="57" lean-forward="true" selection-start-line="416" selection-start-column="57" selection-end-line="416" selection-end-column="57" />
+          <folding>
+            <element signature="n#style#0;n#select#0;n#div#3;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Cardspec/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="782" column="11" lean-forward="true" selection-start-line="779" selection-start-column="8" selection-end-line="782" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Card/allotcard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="633">
+          <caret line="525" column="11" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="529" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Cardspec/allotcard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="445" column="46" lean-forward="true" selection-start-line="445" selection-start-column="46" selection-end-line="445" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Cardspecinfo/cardspecinfoedit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="633">
+          <caret line="469" column="7" lean-forward="true" selection-start-line="469" selection-start-column="7" selection-end-line="469" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Cardspecinfo/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="377" column="179" lean-forward="true" selection-start-line="377" selection-start-column="44" selection-end-line="377" selection-end-column="179" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Card/activecard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="445" column="33" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="498" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Actionlog/packageedit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-89">
+          <caret line="433" column="50" lean-forward="true" selection-start-line="433" selection-start-column="50" selection-end-line="433" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Actionlog/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="709">
+          <caret line="534" column="9" lean-forward="false" selection-start-line="534" selection-start-column="9" selection-end-line="534" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Addpoolcard/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-461">
+          <caret line="311" column="86" lean-forward="false" selection-start-line="311" selection-start-column="86" selection-end-line="311" selection-end-column="86" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Addpoolcard/addpoolcard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="302" column="129" lean-forward="false" selection-start-line="302" selection-start-column="129" selection-end-line="302" selection-end-column="129" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -287,14 +287,14 @@
                 <li>
                     <a href="javascript:;"> <i class="material-icons">location_on</i> <span class="title">电信业务管理</span> <span class=" arrow"></span> </a>
                     <ul class="sub-menu">
-                        <li> <a href="../Business/queryPakage.html"> 套餐使用量 </a> </li>
-                        <li> <a href="../Business/queryBalance.html"> 余额查询 </a> </li>
-                        <li> <a href="../Business/prodInstQuery.html"> 产品资料 </a> </li>
-                        <li> <a href="../Business/queryCardStatus.html"> 查询卡状态 </a> </li>
-                        <li> <a href="../Business/queryTraffic.html"> 查询流量 </a> </li>
-                        <li> <a href="../Business/valueAddedDetailQuery.html"> 查询增值详单 </a> </li>
-                        <li> <a href="../Business/getLocationByPhone.html"> 基站粗定位 </a> </li>
-                        <li> <a href="../Business/getE2eInfo.html"> 设备识别码（IMEI） </a> </li>
+                        <li> <a href="../Business/querypackage.html"> 套餐使用量 </a> </li>
+                        <li> <a href="../Business/querybalance.html"> 余额查询 </a> </li>
+                        <li> <a href="../Business/prodinstquery.html"> 产品资料 </a> </li>
+                        <li> <a href="../Business/querycardstatus.html"> 查询卡状态 </a> </li>
+                        <li> <a href="../Business/querytraffic.html"> 查询流量 </a> </li>
+                        <li> <a href="../Business/valueaddeddetailquery.html"> 查询增值详单 </a> </li>
+                        <li> <a href="../Business/getlocationbyphone.html"> 基站粗定位 </a> </li>
+                        <li> <a href="../Business/gete2einfo.html"> 设备识别码（IMEI） </a> </li>
                     </ul>
                 </li>
                 <li>
@@ -468,7 +468,7 @@
                                                 </select>
                                             </div>
                                             <div class="col-lg-3 col-md-3 col-sm-3">
-                                                <div class="input-append success date" style="min-width:87%;height:36px">
+                                                <div class="input-append success date"  style="min-width:87%;height:36px">
                                                     <input type="text" >
                                                     <span class="add-on"><span class="arrow"></span><i class="fa fa-th"></i></span>
                                                 </div>
@@ -762,42 +762,33 @@
 <script src="../../assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
 <!-- END CORE JS DEPENDECENCIES-->
-<!-- BEGIN CORE TEMPLATE JS -->
-<script src="../../webarch/js/webarch.js" type="text/javascript"></script>
-<!--<script src="assets/js/chat.js" type="text/javascript"></script>-->
-<!-- END CORE TEMPLATE JS -->
-<!-- BEGIN PAGE LEVEL PLUGINS -->
-<script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-datatable/js/jquery.dataTables.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-datatable/extra/js/dataTables.tableTools.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/datatables-responsive/js/datatables.responsive.js" type="text/javascript"></script>
-<script src="../../assets/plugins/datatables-responsive/js/lodash.min.js" type="text/javascript"></script>
-<!-- END PAGE LEVEL JS INIT -->
-<script src="../../assets/js/card.js" type="text/javascript"></script>
-<!--<script src="../../assets/js/datatables.js" type="text/javascript"></script>-->
-<!--<script>
 
-    $('table .checkbox input').click(function()
-    {
-        if ($(this).is(':checked'))
-        {
-            $(this).parent().parent().parent().toggleClass('row_selected');
-        }
-        else
-        {
-            $(this).parent().parent().parent().toggleClass('row_selected');
-        }
-    });
-    // Demo charts - not required
-    $('.customer-sparkline').each(function()
-    {
-        $(this).sparkline('View',
-            {
-                type: $(this).attr("data-sparkline-type"),
-                barColor: $(this).attr("data-sparkline-color"),
-                enableTagOptions: true
-            });
-    });
-</script>-->
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script src="../../assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
+<!--<script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/jquery-datatable/js/jquery.dataTables.min.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/jquery-datatable/extra/js/dataTables.tableTools.min.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/datatables-responsive/js/datatables.responsive.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/datatables-responsive/js/lodash.min.js" type="text/javascript"></script>-->
+<!-- END PAGE LEVEL JS INIT -->
+
+<script src="../../webarch/js/webarch.js" type="text/javascript"></script>
+<!--<script src="../../assets/js/form_elements.js" type="text/javascript"></script>-->
+<script>
+    $(function(){
+        //Date Pickers
+        $('.input-append.date').datepicker({
+            autoclose: true,
+            todayHighlight: true
+        });
+        // $('.input-append.date').datepicker({
+        //     format: "dd/mm/yyyy",
+        //     startView: 1,
+        //     daysOfWeekDisabled: "3,4",
+        //     autoclose: true,
+        //     todayHighlight: true
+        // });
+    })
+</script>
 </body>
 </html>

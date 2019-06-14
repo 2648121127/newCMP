@@ -287,14 +287,14 @@
                 <li>
                     <a href="javascript:;"> <i class="material-icons">location_on</i> <span class="title">电信业务管理</span> <span class=" arrow"></span> </a>
                     <ul class="sub-menu">
-                        <li> <a href="../Business/queryPakage.html"> 套餐使用量 </a> </li>
-                        <li> <a href="../Business/queryBalance.html"> 余额查询 </a> </li>
-                        <li> <a href="../Business/prodInstQuery.html"> 产品资料 </a> </li>
-                        <li> <a href="../Business/queryCardStatus.html"> 查询卡状态 </a> </li>
-                        <li> <a href="../Business/queryTraffic.html"> 查询流量 </a> </li>
-                        <li> <a href="../Business/valueAddedDetailQuery.html"> 查询增值详单 </a> </li>
-                        <li> <a href="../Business/getLocationByPhone.html"> 基站粗定位 </a> </li>
-                        <li> <a href="../Business/getE2eInfo.html"> 设备识别码（IMEI） </a> </li>
+                        <li> <a href="../Business/querypackage.html"> 套餐使用量 </a> </li>
+                        <li> <a href="../Business/querybalance.html"> 余额查询 </a> </li>
+                        <li> <a href="../Business/prodinstquery.html"> 产品资料 </a> </li>
+                        <li> <a href="../Business/querycardstatus.html"> 查询卡状态 </a> </li>
+                        <li> <a href="../Business/querytraffic.html"> 查询流量 </a> </li>
+                        <li> <a href="../Business/valueaddeddetailquery.html"> 查询增值详单 </a> </li>
+                        <li> <a href="../Business/getlocationbyphone.html"> 基站粗定位 </a> </li>
+                        <li> <a href="../Business/gete2einfo.html"> 设备识别码（IMEI） </a> </li>
                     </ul>
                 </li>
                 <li>
@@ -375,37 +375,54 @@
                             <div class="grid simple ">
                                 <div class="grid-body no-border">
                                     <div style="overflow: hidden;border-bottom: 1px solid #dddddd">
-                                        <h3 style="font-size:18px;font-family:inherit;font-weight:500;color:#6f7b8a">获取签名</h3>
+                                        <h3 style="font-size:18px;font-family:inherit;font-weight:500;color:#6f7b8a">获取签名
+                                            <span style="float:right;font-size:12px;color:#fff;font-weight:bold;background: #0b9c8f;padding:0px 7px;border-radius: 5px;">共 {$total} 项</span>
+                                        </h3>
                                     </div>
                                     <form class="form-inline">
                                         <div class="row p-t-15 shuiping-juzhong">
                                             <div class="col-lg-2 col-md-2 col-sm-2">
-                                                    <input type="text" placeholder="请输入操作号码" style="width:100%;min-height:34px;">
+                                                    <input type="text" name="unicid" id="unicid"  placeholder="请输入操作号码" value="{$unicid}" style="width:100%;min-height:34px;">
                                             </div>
                                             <div class="col-lg-2 col-md-2 col-sm-2">
-                                                <select style="width:100%;">
+                                                <select name="result" id="result" style="width:100%;">
                                                     <option value="">请选择操作结果</option>
-                                                    <option value="1">年卡封装年卡</option>
-                                                    <option value="2">月卡封装年卡</option>
+                                                    <volist name="resultlist" id="li">
+                                                        <if condition="$result eq $li.key" >
+                                                            <option value="{$li.key}" selected="selected">{$li.val}</option>
+                                                            <else/>
+                                                            <option value="{$li.key}">{$li.val}</option>
+                                                        </if>
+                                                    </volist>
                                                 </select>
                                             </div>
                                             <div class="col-lg-2 col-md-2 col-sm-2">
-                                                <select style="width:100%;">
+                                                <select name="cardtype" id="cardtype" style="width:100%;">
                                                     <option value="">请选择卡类别</option>
-                                                    <option value="1">活卡待激活.</option>
-                                                    <option value="1">在用</option>
+                                                    <volist name="cardtypelist" id="li">
+                                                        <if condition="$cardtype eq $li['key']" >
+                                                            <option value="{$li.key}" selected="selected">{$li.val}</option>
+                                                            <else/>
+                                                            <option value="{$li.key}">{$li.val}</option>
+                                                        </if>
+                                                    </volist>
                                                 </select>
                                             </div>
                                             <div class="col-lg-2 col-md-2 col-sm-2">
-                                                <select style="width:100%;">
+                                                <select name="acttype" id="acttype" style="width:100%;">
                                                     <option value="">请选择操作类别</option>
-                                                    <option value="1">活卡待激活.</option>
-                                                    <option value="1">在用</option>
+                                                    <volist name="acttypelist" id="li">
+                                                        <if condition="$acttype eq $li['key']" >
+                                                            <option value="{$li.key}" selected="selected">{$li.val}</option>
+                                                            <else/>
+                                                            <option value="{$li.key}">{$li.val}</option>
+                                                        </if>
+                                                    </volist>
                                                 </select>
                                             </div>
                                             <div class="col-lg-2 col-md-2 col-sm-2">
-                                                <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="keywords">搜索</a>
-                                                <a href="index.html" type="reset" class="btn btn-white btn-small">重置</a>
+                                                <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="keyword">搜索</a>
+                                                <a href="{:U('Actionlog/index')}" type="reset" class="btn btn-white btn-small">重置</a>
                                             </div>
                                         </div>
                                     </form>
@@ -414,34 +431,38 @@
                                         <table class="table table-striped" style="border-top:1px solid #ddd">
                                             <thead class="cf">
                                             <tr>
-                                                <th>ID</th>
-                                                <th>操作号码</th>
-                                                <th>操作类型</th>
-                                                <th>操作结果</th>
-                                                <th>卡分类</th>
-                                                <th>操作时间</th>
+                                                <th >ID</th>
+                                                <th >操作号码</th>
+                                                <th >操作类型</th>
+                                                <th >操作结果</th>
+                                                <th >卡分类</th>
+                                                <th >操作时间</th>
+                                                <!--<th >操作</th>-->
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <tr>
-                                                <td>Mark</td>
-                                                <td>Otto</td>
-                                                <td>Mark</td>
-                                                <td>Otto呜呜</td>
-                                                <td> 坎坎坷坷</td>
-                                                <td> <span class="label label-important">ALERT!</span></td>
-                                                <td>Mark</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Mark</td>
-                                                <td>Otto</td>
-                                                <td>Mark</td>
-                                                <td>Otto呜呜</td>
-                                                <td> 坎坎坷坷</td>
-                                                <td> <span class="label label-important">ALERT!</span></td>
-                                                <td>Mark</td>
-                                            </tr>
+                                                <if condition="$data eq null">
+                                                    <td colspan="7" style="text-align:center;padding:30px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">没有数据</td>
+                                                    <else/>
+                                                    <volist name="data" id="vo">
+                                                        <tr>
+                                                            <td>{$vo.id}</td>
+                                                            <td>{$vo.unicid}</td>
+                                                            <td>{$vo.acttypeval}</td>
+                                                            <td>{$vo.resultval}</td>
+                                                            <td>{$vo.cardtypeval}</td>
+                                                            <td>{$vo.acttime}</td>
+                                                            <!--<td class="center">-->
+                                                            <!--<a href="{:U('Actionlog/editactionlog',array('id'=>$vo['id']))}" type="button" class="btn btn-small btn-info btn-sm" >修改</a>-->
+                                                            <!--<a href="{:U('Actionlog/deltactionlog',array('id'=>$vo['id']))}" onclick="if(!confirm('您是否确定要删除此记录？')){return  false;}" class="btn btn-small btn-danger btn-sm">删除</a>-->
+                                                            <!--</td>-->
+                                                        </tr>
+                                                    </volist>
+                                                </if>
                                             </tbody>
+                                            <div class="panel-footer clearfix">
+                                                {$page}
+                                            </div>
                                         </table>
                                     </div>
                                 </div>
@@ -464,27 +485,53 @@
 <script src="../../assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
 
-<script src="../../assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-inputmask/jquery.inputmask.min.js" type="text/javascript"></script>
+<!--<script src="../../assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/jquery-inputmask/jquery.inputmask.min.js" type="text/javascript"></script>-->
 <script src="../../assets/plugins/jquery-autonumeric/autoNumeric.js" type="text/javascript"></script>
-<script src="../../assets/plugins/ios-switch/ios7-switch.js" type="text/javascript"></script>
-<script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js" type="text/javascript"></script>
-<script src="../../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js" type="text/javascript"></script>
+<!--<script src="../../assets/plugins/ios-switch/ios7-switch.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js" type="text/javascript"></script>-->
 <script src="../../assets/plugins/bootstrap-tag/bootstrap-tagsinput.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/dropzone/dropzone.min.js" type="text/javascript"></script>
+<!--<script src="../../assets/plugins/dropzone/dropzone.min.js" type="text/javascript"></script>-->
 
-<script src="../../webarch/js/webarch.js" type="text/javascript"></script>
 
 <script src="../../assets/plugins/jquery-datatable/js/jquery.dataTables.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-datatable/extra/js/dataTables.tableTools.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/datatables-responsive/js/datatables.responsive.js" type="text/javascript"></script>
+<!--<script src="../../assets/plugins/datatables-responsive/js/datatables.responsive.js" type="text/javascript"></script>-->
 <script src="../../assets/plugins/datatables-responsive/js/lodash.min.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL JS INIT -->
-<script src="../../assets/js/datatables.js" type="text/javascript"></script>
-<script src="../../assets/js/form_elements.js" type="text/javascript"></script>
+<script src="../../webarch/js/webarch.js" type="text/javascript"></script>
+<!--<script src="../../assets/js/datatables.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/js/form_elements.js" type="text/javascript"></script>-->
+<script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+        //高级筛选
+        $("#keyword").click(function(){
+            var unicid = $("#unicid").val();
+            var cardtype = $("#cardtype").val();
+            var acttype = $("#acttype").val();
+            var result = $("#result").val();
+            var url =  "{:U('Actionlog/keywords')}"+"?act=keywords&unicid="+unicid+"&cardtype="+cardtype+"&acttype="+acttype+"&result="+result;
+            window.location = url;
+        });
 
+
+        //根据卡分类，查询操作类型
+        $("#cardtype").change(function(){
+            var cardtype = $("#cardtype").val();
+            $.post("{:U('Actionlog/getacttype')}","cardtype="+cardtype,function(obj){
+                //console.log(obj);
+                $("#acttype").empty();
+                $("#acttype").append("<option value=''>请选择操作类别</option>");
+                $.each(obj,function(k,v){
+                    $("#acttype").append("<option value='"+v.key+"'>"+v.val+"</option>");
+                })
+            });
+        });
+
+    });
+</script>
 </body>
 </html>

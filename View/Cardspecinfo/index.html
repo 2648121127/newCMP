@@ -286,14 +286,14 @@
                 <li>
                     <a href="javascript:;"> <i class="material-icons">location_on</i> <span class="title">电信业务管理</span> <span class=" arrow"></span> </a>
                     <ul class="sub-menu">
-                        <li> <a href="../Business/queryPakage.html"> 套餐使用量 </a> </li>
-                        <li> <a href="../Business/queryBalance.html"> 余额查询 </a> </li>
-                        <li> <a href="../Business/prodInstQuery.html"> 产品资料 </a> </li>
-                        <li> <a href="../Business/queryCardStatus.html"> 查询卡状态 </a> </li>
-                        <li> <a href="../Business/queryTraffic.html"> 查询流量 </a> </li>
-                        <li> <a href="../Business/valueAddedDetailQuery.html"> 查询增值详单 </a> </li>
-                        <li> <a href="../Business/getLocationByPhone.html"> 基站粗定位 </a> </li>
-                        <li> <a href="../Business/getE2eInfo.html"> 设备识别码（IMEI） </a> </li>
+                        <li> <a href="../Business/querypackage.html"> 套餐使用量 </a> </li>
+                        <li> <a href="../Business/querybalance.html"> 余额查询 </a> </li>
+                        <li> <a href="../Business/prodinstquery.html"> 产品资料 </a> </li>
+                        <li> <a href="../Business/querycardstatus.html"> 查询卡状态 </a> </li>
+                        <li> <a href="../Business/querytraffic.html"> 查询流量 </a> </li>
+                        <li> <a href="../Business/valueaddeddetailquery.html"> 查询增值详单 </a> </li>
+                        <li> <a href="../Business/getlocationbyphone.html"> 基站粗定位 </a> </li>
+                        <li> <a href="../Business/gete2einfo.html"> 设备识别码（IMEI） </a> </li>
                     </ul>
                 </li>
                 <li>
@@ -381,7 +381,7 @@
 
                                     <div class="p-t-15">
                                         <div>
-                                            <a href="addCardspecinfo.html" type="button" class="btn btn-primary btn-sm m-r-65">
+                                            <a href="{:U('Cardspecinfo/addCardspecinfo')}" type="button" class="btn btn-primary btn-sm m-r-65">
                                                 <i class="fa fa-plus"></i>
                                                 增加封装数据
                                             </a>
@@ -400,20 +400,28 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td> <span class="label label-important">ALERT!</span></td>
-                                            <td>Marksdbfajbdhaslbvhldsajkbfghjlsbfhsla</td>
-                                            <td>Otto</td>
-                                            <td>
-                                                <a href="editCardspecinfo.html" class="btn btn-primary btn-xs btn-mini" type="button">修改</a>
-                                                <a href="javascript:;" class="btn btn-danger btn-xs btn-mini" type="button" onclick="if(!confirm('您是否确定要删除此记录？')){return  false;}">删除</a>
-                                            </td>
-                                        </tr>
+                                        <if condition="$data eq null">
+                                            <td colspan="7" style="text-align:center;padding:30px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">没有数据</td>
+                                            <else/>
+                                            <volist name="data" id="vo">
+                                            <tr>
+                                                <td >{$vo.newtype}</td>
+                                                <td >{$vo.apiname}</td>
+                                                <td >{$vo.realdata}</td>
+                                                <td >{$vo.pseudodata}</td>
+                                                <td >{$vo.totalflow}</td>
+                                                <td>
+                                                    <a href="{:U('Cardspecinfo/editCardspecinfo',array('id'=>$vo['id']))}" class="btn btn-primary btn-xs btn-mini" type="button">修改</a>
+                                                    <a href="{:U('Cardspecinfo/deltCardspecinfo',array('id'=>$vo['id']))}" class="btn btn-danger btn-xs btn-mini" type="button" onclick="if(!confirm('您是否确定要删除此记录？')){return  false;}">删除</a>
+                                                </td>
+                                            </tr>
+                                            </volist>
+                                        </if>
                                         </tbody>
                                     </table>
-
+                                    <div class="panel-footer clearfix">
+                                        {$page}
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -425,7 +433,7 @@
         <!-- END PAGE -->
     </div>
 </div>
-<script src="assets/plugins/pace/pace.min.js" type="text/javascript"></script>
+<script src="../../assets/plugins/pace/pace.min.js" type="text/javascript"></script>
 <!-- BEGIN JS DEPENDECENCIES-->
 <script src="../../assets/plugins/jquery/jquery-1.11.3.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrapv3/js/bootstrap.min.js" type="text/javascript"></script>
@@ -448,6 +456,21 @@
 <script src="../../assets/plugins/datatables-responsive/js/lodash.min.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL JS INIT -->
 <script src="../../assets/js/datatables.js" type="text/javascript"></script>
-
+<script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+        $("#keywords").change(function(){
+            var keywords = $("#keywords").val();
+            var url =  "{:U('CmPackage/keywords')}"+"?act=keywords&keywords="+keywords;
+            window.location = url;
+        });
+        $("#keywords").keypress(function(e){
+            if (event.keyCode == 13) {
+                event.cancelBubble = true;
+                event.returnValue = false;
+                $('#keywords').change();
+            }
+        });
+    });
+</script>
 </body>
 </html>
