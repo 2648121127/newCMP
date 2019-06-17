@@ -375,29 +375,34 @@
                                 <div class="grid-body no-border">
                                     <div style="overflow: hidden;border-bottom: 1px solid #dddddd">
                                         <h3 style="font-size:18px;font-family:inherit;font-weight:500;color:#6f7b8a">开卡记录管理
-                                            <span style="float:right;font-size:12px;color:#fff;font-weight:bold;background: #0b9c8f;padding:0px 7px;border-radius: 5px;">共1页</span>
+                                            <span style="float:right;font-size:12px;color:#fff;font-weight:bold;background: #0b9c8f;padding:0px 7px;border-radius: 5px;">共 {$total} 项</span>
                                         </h3>
                                     </div>
 
                                     <form class="form-inline">
                                         <div class="p-t-15">
                                             <div class="form-group">
-                                                <a href="opencardrecordedit.html" type="button" class="btn btn-primary btn-sm m-r-65">
+                                                <a href="{:U('AhOpencardrecord/addOpencardrecord')}" type="button" class="btn btn-primary btn-sm m-r-65">
                                                     <i class="fa fa-plus"></i>
                                                     增加开卡记录
                                                 </a>
                                             </div>
                                             <div class="form-group">
                                                 <div class="form-group m-r-5">
-                                                    <select style="min-width:169px;width:100%;height:36px !important;">
-                                                        <option value="1">选择渠道商</option>
-                                                        <option value="2">22222.</option>
-                                                        <option value="3">3333</option>
+                                                    <select name="keywords" id="keywords" style="min-width:169px;width:100%;height:36px !important;">
+                                                        <option value="">请选择渠道商</option>
+                                                        <volist name="admins" id="ad">
+                                                            <if condition="$ad.uid eq $uid" >
+                                                                <option value="{$ad.uid}" selected="selected">{$ad.nickname}</option>
+                                                                <else/>
+                                                                <option value="{$ad.uid}">{$ad.nickname}</option>
+                                                            </if>
+                                                        </volist>
                                                     </select>
                                                 </div>
                                                 <label class="form-group">
-                                                    <a href="#" type="button" class="btn btn-success btn-small m-r-5" id="keywords">搜索</a>
-                                                    <a href="Package.html" type="reset" class="btn btn-white btn-small">重置</a>
+                                                    <a href="#" type="button" class="btn btn-success btn-small m-r-5" id="keyword">搜索</a>
+                                                    <a href="{:U('AhOpencardrecord/index')}" type="reset" class="btn btn-white btn-small">重置</a>
                                                 </label>
                                             </div>
                                         </div>
@@ -415,20 +420,28 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>Otto</td>
-                                            <td> <span class="label label-important">ALERT!</span></td>
-                                            <td>Otto</td>
-                                            <td>
-                                                <a href="{:U('AhOpencardrecord/editopencardrecord',array('id'=>$vo['id']))}" type="button" class="btn btn-primary btn-xs btn-mini">修改</a>
-                                                <a href="{:U('AhOpencardrecord/deltopencardrecord',array('id'=>$vo['id']))}" class="btn btn-danger btn-xs btn-mini" type="button" onclick="if(!confirm('您是否确定要删除此记录？')){return  false;}">删除</a>
-                                            </td>
-                                        </tr>
+                                        <if condition="$data eq null">
+                                            <td colspan="6" style="text-align:center;padding:30px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">没有数据</td>
+                                            <else/>
+                                            <volist name="data" id="vo">
+                                                <tr>
+                                                    <td>{$vo.id}</td>
+                                                    <td>{$vo.nickname}</td>
+                                                    <td>{$vo.opencardtime}</td>
+                                                    <td>{$vo.num}</td>
+                                                    <td>{$vo.packagename}</td>
+                                                    <td>
+                                                        <a href="{:U('AhOpencardrecord/editopencardrecord',array('id'=>$vo['id']))}" type="button" class="btn btn-primary btn-xs btn-mini">修改</a>
+                                                        <a href="{:U('AhOpencardrecord/deltopencardrecord',array('id'=>$vo['id']))}" class="btn btn-danger btn-xs btn-mini" type="button" onclick="if(!confirm('您是否确定要删除此记录？')){return  false;}">删除</a>
+                                                    </td>
+                                                </tr>
+                                            </volist>
+                                        </if>
                                         </tbody>
                                     </table>
-
+                                    <div class="panel-footer clearfix">
+                                        {$page}
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -444,24 +457,28 @@
 <script src="../../assets/plugins/jquery/jquery-1.11.3.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrapv3/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-block-ui/jqueryblockui.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
+<!--<script src="../../assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>-->
 <script src="../../assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
-<!-- END CORE JS DEPENDECENCIES-->
-<!-- BEGIN CORE TEMPLATE JS -->
-<script src="../../webarch/js/webarch.js" type="text/javascript"></script>
-<!--<script src="assets/js/chat.js" type="text/javascript"></script>-->
-<!-- END CORE TEMPLATE JS -->
-<!-- BEGIN PAGE LEVEL PLUGINS -->
+
 <script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-datatable/js/jquery.dataTables.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-datatable/extra/js/dataTables.tableTools.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/datatables-responsive/js/datatables.responsive.js" type="text/javascript"></script>
-<script src="../../assets/plugins/datatables-responsive/js/lodash.min.js" type="text/javascript"></script>
+<!--<script src="../../assets/plugins/jquery-datatable/extra/js/dataTables.tableTools.min.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/datatables-responsive/js/datatables.responsive.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/datatables-responsive/js/lodash.min.js" type="text/javascript"></script>-->
 <!-- END PAGE LEVEL JS INIT -->
-<script src="../../assets/js/datatables.js" type="text/javascript"></script>
+<script src="../../webarch/js/webarch.js" type="text/javascript"></script>
+<!--<script src="../../assets/js/datatables.js" type="text/javascript"></script>-->
 
+<script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+        $("#keyword").click(function(){
+            var keywords = $("#keywords").val();
+            var url =  "{:U('AhOpencardrecord/keywords')}"+"?act=keywords&keywords="+keywords;
+            window.location = url;
+        });
+    });
+</script>
 </body>
 </html>

@@ -34,11 +34,11 @@
 }
 
 /*   表单验证提示信息设置  start*/
-#packagetype1-error,#liuliangchi1-error{
+#packagetype1-error,#dirtype-error,#haspool-error,#packagetype-error{
     position: absolute;
     top:36px;
 }
-#packageid2-error,#liuliangchi2-error{
+#packageid2-error,#liuliangchi2-error,#packageid-error{
     text-align: right;
 }
 .input-group-btn{
@@ -47,16 +47,8 @@
 /*   表单验证提示信息设置  end */
 
 /*开卡日期显示必填样式设置，避免它对其他样式造成错乱*/
-#time-error,#startdate-error,#enddate-error,#countdate-error{
+#time-error,#opencardtime-error,#startdate-error,#enddate-error,#countdate-error{
     float:left;
-}
-
-#packagetype1-error{
-    position: absolute;
-    top:36px;
-}
-#packageid2-error{
-    text-align: right;
 }
 .input-group-btn{
     vertical-align:top;

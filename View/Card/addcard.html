@@ -27,7 +27,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="../../assets/plugins/animate.min.css" rel="stylesheet" type="text/css" />
     <link href="../../assets/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" />
-    <link href="../../assets/plugins/dropzone/css/dropzone.css" rel="stylesheet" type="text/css" />
+    <!--<link href="../../assets/plugins/dropzone/css/dropzone.css" rel="stylesheet" type="text/css" />-->
     <!-- END PLUGIN CSS -->
     <!-- BEGIN CORE CSS FRAMEWORK -->
     <link href="../../webarch/css/webarch.css" rel="stylesheet" type="text/css" />
@@ -399,126 +399,128 @@
                                         </div>
                                     </div>
 
-                                    <form class="form-horizontal col-lg-6 col-md-6 col-sm-6" action="#" id="form_traditional_validation" name="form_traditional_validation" role="form" autocomplete="off">
+                                    <form class="form-horizontal col-lg-12 col-md-12 col-sm-12" novalidate action="__ACTION__" method="post" id="form_traditional_validation" name="form_traditional_validation" role="form" autocomplete="off">
                                         <div class="p-t-15"></div>
                                         <div class="form-group">
-                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label">下载模板</label>
-                                            <div class="col-lg-9 col-md-9 col-sm-9">
-                                                <a href="http://wlw.pinet.co/Public/Files/PinetM2MDeviceActionMembersImport.xls" class="btn btn-sm btn-success" type="button">
+                                            <label class="col-lg-2 col-md-2 col-sm-2 control-label">下载模板</label>
+                                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                                <a href="{$Think.WEB_ROOT}Public/Files/PinetM2MDeviceCardMembersImport.xls" class="btn btn-sm btn-success" type="button">
                                                     <i class="fa fa-download"></i>
                                                     下载模板
                                                 </a>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="fenlei" class="col-lg-3 col-md-3 col-sm-3 control-label">物联网卡分类</label>
-                                            <div class="col-lg-9 col-md-9 col-sm-9">
-                                                <select name="fenlei" id="fenlei"  class="c-select-36 c-width-100 select2" data-init-plugin="select2">
+                                            <label for="type" class="col-lg-2 col-md-2 col-sm-2 control-label">物联网卡分类</label>
+                                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                                <select id="type" name="type"  class="c-select-36 c-width-100 select2" data-init-plugin="select2">
                                                     <option value="">请选择物联网卡分类</option>
-                                                    <option value="1">月卡</option>
-                                                    <option value="2">年卡</option>
+                                                    <volist name="types" id="tp">
+                                                        <option value="{$tp.key}">{$tp.val}</option>
+                                                    </volist>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>定向分类</label>
-                                            <div class="col-lg-9 col-md-9 col-sm-9">
-                                                <select name="dingxiang" id="dingxiang" class="c-select-36 c-width-100 select2" required>
+                                            <label class="col-lg-2 col-md-2 col-sm-2 control-label"><em class="text-danger">*&nbsp;</em>定向分类</label>
+                                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                                <select id="dirtype" name="dirtype" class="c-select-36 c-width-100 select2" required>
                                                     <option value="">请选择定向分类</option>
-                                                    <option value="1">请选择1</option>
+                                                    <volist name="dirtypes" id="tp">
+                                                        <option value="{$tp.key}">{$tp.val}</option>
+                                                    </volist>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>发卡商</label>
-                                            <div class="col-lg-9 col-md-9 col-sm-9">
-                                                <select name="faka" id="faka" class="c-select-36 c-width-100 select2" required>
-                                                    <option value="">请选择发卡商</option>
-                                                    <option value="1">请选择发卡商1</option>
+                                            <label class="col-lg-2 col-md-2 col-sm-2 control-label"><em class="text-danger">*&nbsp;</em>发卡商</label>
+                                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                                <select name="dealerid" id="dealerid" class="c-select-36 c-width-100 select2" required>
+                                                    <option value="" >请选择发卡商</option>
+                                                    <volist name="dealers" id="v">
+                                                        <option value="{$v.id}">{$v.name}</option>
+                                                    </volist>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label">渠道商</label>
-                                            <div class="col-lg-9 col-md-9 col-sm-9">
-                                                <select name="uid1" id="uid1" data-required="true" class="c-select-36 c-width-100">
-                                                    <option value="">请选择分销商</option>
-                                                    <option value="1">请选择分销商1</option>
+                                            <label class="col-lg-2 col-md-2 col-sm-2 control-label">渠道商</label>
+                                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                                <select name="uid" id="uid" data-required="true" class="c-select-36 c-width-100">
+                                                    <option value="" >请选择分销商</option>
+                                                    <volist name="admins" id="v">
+                                                        <option value="{$v.uid}">{$v.nickname}</option>
+                                                    </volist>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>流量池</label>
-                                            <div class="col-lg-9 col-md-9 col-sm-9">
-                                                <select id="liuliangchi1" name="liuliangchi1" class="col-lg-5 col-md-5 col-sm-5 c-select-36 select2" required>
+                                            <label class="col-lg-2 col-md-2 col-sm-2 control-label"><em class="text-danger">*&nbsp;</em>流量池</label>
+                                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                                <select id="haspool" name="haspool" class="col-lg-5 col-md-5 col-sm-5 c-select-36 select2" required>
                                                     <option value="">是否入池</option>
-                                                    <option value="加餐包">加餐包</option>
-                                                    <option value="月流量">月流量</option>
-                                                    <option value="季流量">季流量</option>
-                                                    <option value="半年流量">半年流量</option>
-                                                    <option value="年流量">年流量</option>
-                                                    <option value="特殊包">特殊包</option>
+                                                    <option value="1">单卡</option>
+                                                    <option value="2">入池</option>
                                                 </select>
-                                                <select id="liuliangchi2" name="liuliangchi2" class="col-lg-5 col-md-5 col-sm-5 c-select-36 col-md-offset-2 select2" required>
+                                                <select id="poolid" name="poolid" class="col-lg-5 col-md-5 col-sm-5 c-select-36 col-md-offset-2 select2" readonly="readonly">
                                                     <option value="">请选择流量池</option>
-                                                    <option value="半年流量">半年流量</option>
-                                                    <option value="年流量">年流量</option>
-                                                    <option value="特殊包">特殊包</option>
+                                                    <volist name="poollist" id="p">
+                                                        <option value="{$p.id}">{$p.name}</option>
+                                                    </volist>
                                                 </select>
-
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <span>若流量池不在列表当中，<a href="{:U('Pool/index')}" style="color:#f00;">请点击这里</a>去创建流量池。</span>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>套餐</label>
-                                            <div class="col-lg-9 col-md-9 col-sm-9">
-                                                <select id="packagetype1" name="packagetype1" class="col-lg-5 col-md-5 col-sm-5 c-select-36 select2" required>
-                                                    <option value="">请选择类别</option>
-                                                    <option value="加餐包">加餐包</option>
-                                                    <option value="月流量">月流量</option>
-                                                    <option value="季流量">季流量</option>
-                                                    <option value="半年流量">半年流量</option>
-                                                    <option value="年流量">年流量</option>
-                                                    <option value="特殊包">特殊包</option>
+                                            <label class="col-lg-2 col-md-2 col-sm-2 control-label"><em class="text-danger">*&nbsp;</em>套餐</label>
+                                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                                <select id="packagetype" name="packagetype" class="col-lg-5 col-md-5 col-sm-5 c-select-36 select2" required>
+                                                    <option value="">请选择套餐类别</option>
+                                                    <volist name="packgs" id="pkname">
+                                                        <option value="{$pkname}">{$pkname}</option>
+                                                    </volist>
                                                 </select>
-                                                <select id="packageid2" name="packageid2" class="col-lg-5 col-md-5 col-sm-5 c-select-36 col-md-offset-2 select2" required>
+                                                <select id="packageid" name="packageid" class="col-lg-5 col-md-5 col-sm-5 c-select-36 col-md-offset-2 select2" required>
                                                     <option value="">请选择套餐</option>
-                                                    <option value="半年流量">半年流量</option>
-                                                    <option value="年流量">年流量</option>
-                                                    <option value="特殊包">特殊包</option>
                                                 </select>
 
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="number" class="col-lg-3 col-md-3 col-sm-3 control-label">物联网卡数量</label>
-                                            <div class="col-lg-9 col-md-9 col-sm-9">
-                                                <input type="number" class="form-control" id="number" placeholder="请输入数量">
+                                            <label for="num" class="col-lg-2 col-md-2 col-sm-2 control-label">物联网卡数量</label>
+                                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                                <input type="number" class="form-control" name="num" id="num" placeholder="请输入数量">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label">备注</label>
-                                            <div class="col-lg-9 col-md-9 col-sm-9">
+                                            <label class="col-lg-2 col-md-2 col-sm-2 control-label">备注</label>
+                                            <div class="col-lg-4 col-md-4 col-sm-4">
                                                 <textarea rows="3" name="remark" placeholder="备注" style="width: 100%;"></textarea>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-lg-3 col-md-3 col-sm-2 control-label"><em class="text-danger">*&nbsp;</em>导入文件</label>
-                                            <div class="col-lg-9 col-md-9 col-sm-9">
+                                            <label class="col-lg-2 col-md-2 col-sm-2 control-label"><em class="text-danger">*&nbsp;</em>导入文件</label>
+                                            <div class="col-lg-4 col-md-4 col-sm-4">
                                                 <div class="input-group">
-                                                    <input id='showlocation' name="file" class="form-control c-select-36" readonly required>
+                                                    <input id='location' name="fileup" class="form-control c-select-36" required readonly>
                                                     <label class="input-group-btn">
-                                                        <input type="button" id="i-check" value="浏览文件" class="btn btn-primary" onclick="$('#i-file').click();$('#showlocation').focus();">
+                                                        <input type="button" id="i-check" value="浏览文件" class="btn btn-primary" onclick="$('#upload input').click();$('#location').focus();">
                                                     </label>
                                                 </div>
                                             </div>
-                                            <input type="file" name="file" id='i-file'  onchange="$('#showlocation').val($('#i-file').val());if($('#showlocation').val($('#i-file').val())!=''){$('#showlocation').blur();}" style="display: none" >
+                                            <a href="javascript:;" class="file " id="upload" onchange="$('#location').val($('#upload input').val());if($('#location').val($('#upload input').val())!=''){$('#location').blur();}">
+                                                <input type="file" name="file"  style="display: none">
+                                            </a>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"></label>
-                                            <div class="col-lg-9 col-md-9 col-sm-9">
-                                                <input type="hidden" name="act" value="add">
+                                            <label class="col-lg-2 col-md-2 col-sm-2 control-label"></label>
+                                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                                <input type="hidden" name="act" value="{$act}"/>
+                                                <input type="hidden" name="id" value="{$data.id}"/>
                                                 <button type="submit" id="submit" class="btn btn-success btn-small m-r-10">保存</button>
-                                                <a href="index.html" type="reset" class="btn btn-danger btn-small">取消</a>
+                                                <a href="{:U('Card/index')}" type="reset" class="btn btn-danger btn-small">取消</a>
                                             </div>
                                         </div>
                                     </form>
@@ -544,17 +546,50 @@
 <script src="../../assets/plugins/jquery-inputmask/jquery.inputmask.min.js" type="text/javascript"></script><!--输入框input输入内容格式限制插件-->
 <script src="../../assets/plugins/jquery-autonumeric/autoNumeric.js" type="text/javascript"></script> <!--数字格式化文本-->
 <script src="../../assets/plugins/dropzone/dropzone.min.js" type="text/javascript"></script>  <!--文件上传-->
-<script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
 
 <script src="../../assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script>
-<script src="../../assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
+<!--<script src="../../assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>-->
 <!--<script src="../../assets/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js" type="text/javascript"></script>-->
 <script src="../../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrap-tag/bootstrap-tagsinput.min.js" type="text/javascript"></script>
 
+<!--<script src="../../assets/js/form_validations.js" type="text/javascript"></script>-->
 <script src="../../webarch/js/webarch.js" type="text/javascript"></script>
-<script src="../../assets/js/form_validations.js" type="text/javascript"></script>
 <script src="../../assets/js/common.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL JS INIT -->
+<block name="extjs">
+    <script language="javascript" type="text/javascript">
+        $(function(){
+            //选择套餐
+            $("#packagetype").change(function(){
+                var type = $("#packagetype").val();
+                $.post('getPackages',"type="+type,function(data){
+                    if(data && data!='null'){
+                        var obj = jQuery.parseJSON(data);
+                        $("#packageid").empty();
+                        $("#packageid").append("<option value=''>请选择套餐</option>");
+                        $.each(obj,function(k,v){
+                            $("#packageid").append("<option value='"+v.id+"'>"+v.name+"</option>");
+                        })
+                    }else{
+                        console.log("没有返回值或返回null");
+                        return false;
+                    }
+                });
+            });
+
+
+            /* 设置达量断网阀值 */
+            $('#haspool').change(function () {
+                var chkval = $('#haspool').val();
+                if(chkval == '2') {
+                    $('#poolid').removeAttr('readonly');
+                }else{
+                    $('#poolid').attr('readonly','readonly');
+                }
+            });
+        });
+    </script>
+</block>
 </body>
 </html>

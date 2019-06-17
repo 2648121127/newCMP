@@ -287,94 +287,138 @@
                                 <div class="grid-body no-border">
                                     <div style="overflow: hidden;border-bottom: 1px solid #dddddd">
                                         <h3 style="font-size:18px;font-family:inherit;font-weight:500;color:#6f7b8a">物联网卡管理
-                                            <span style="float:right;font-size:12px;color:#fff;font-weight:bold;background: #0b9c8f;padding:0px 7px;border-radius: 5px;">共1页</span>
+                                            <span style="float:right;font-size:12px;color:#fff;font-weight:bold;background: #0b9c8f;padding:0px 7px;border-radius: 5px;">共 {$total} 项</span>
                                         </h3>
                                     </div>
                                     <div class="row" >
                                         <div class="p-t-10" style="overflow: hidden;border-bottom:1px solid #dddddd;margin:0px 15px;">
                                             <p>
-                                                <a data-toggle="modal" href="#refreshCard" type="button" class="btn btn-info btn-small m-r-5">
-                                                    <i class="fa fa-refresh"></i>
-                                                    更新数据
-                                                </a>
-                                                <a href="addcard.html" type="button" class="btn btn-info btn-small">
-                                                    <i class="fa fa-plus"></i>
-                                                    导入物联网卡
-                                                </a>
+                                                <php>if (in_array('1_1_5', $_SESSION['menupriv']) && $adminid == 1) { </php>
+                                                    <a data-toggle="modal" href="#refreshCard" type="button" class="btn btn-info btn-small m-r-5">
+                                                        <i class="fa fa-refresh"></i>
+                                                        更新数据
+                                                    </a>
+                                                <php>}</php>
+                                                <php>if (in_array('1_1_2', $_SESSION['menupriv']) ) { </php>
+                                                    <a href="{:U('Card/addcard')}" type="button" class="btn btn-info btn-small">
+                                                        <i class="fa fa-plus"></i>
+                                                        导入物联网卡
+                                                    </a>
+                                                <php>}</php>
                                             </p>
                                             <p>
-                                                <a href="allotcard.html" type="button" class="btn btn-danger btn-small m-r-5 m-t-5">
-                                                    <i class="fa fa-plus"></i>
-                                                    划拨物联网卡
-                                                </a>
-                                                <a href="addfakecard.html" type="button" class="btn btn-danger btn-small m-r-5 m-t-5">
-                                                    <i class="fa fa-plus"></i>
-                                                    匹配便捷短号
-                                                </a>
-                                                <a href="chgdealer.html" type="button" class="btn btn-danger btn-small m-r-5 m-t-5">
-                                                    <i class="fa fa-plus"></i>
-                                                    重连发卡商
-                                                </a>
-                                                <a href="chgpackage.html" type="button" class="btn btn-danger btn-small m-r-5 m-t-5">
-                                                    <i class="fa fa-plus"></i>
-                                                    更改套餐
-                                                </a>
-                                                <a href="changecard.html" type="button" class="btn btn-danger btn-small m-r-5 m-t-5">
-                                                    <i class="fa fa-plus"></i>
-                                                    补物联网卡
-                                                </a>
-                                                <a href="cancelcard.html" type="button" class="btn btn-danger btn-small m-r-5 m-t-5">
-                                                    <i class="fa fa-plus"></i>
-                                                    注销物联网卡
-                                                </a>
-                                                <a href="backcard.html" type="button" class="btn btn-danger btn-small m-r-5 m-t-5">
-                                                    <i class="fa fa-plus"></i>
-                                                    物联网卡回收
-                                                </a>
-                                                <a href="downloadcard.html" type="button" class="btn btn-danger btn-small m-r-5 m-t-5">
-                                                    <i class="fa fa-plus"></i>
-                                                    下载物联网卡列表
-                                                </a>
-                                                <a href="changecard.html" type="button" class="btn btn-danger btn-small m-r-5 m-t-5">
-                                                    <i class="fa fa-plus"></i>
-                                                    查询物联网卡流量
-                                                </a>
+                                                <php>if (in_array('1_1_3', $_SESSION['menupriv']) ) { </php>
+                                                    <a href="{:U('Card/allotcard')}" type="button" class="btn btn-danger btn-small m-r-5 m-t-5">
+                                                        <i class="fa fa-plus"></i>
+                                                        划拨物联网卡
+                                                    </a>
+                                                <php>}</php>
+                                                <php>if (in_array('1_1_9', $_SESSION['menupriv']) ) { </php>
+                                                    <a href="{:U('Card/addfakecard')}" type="button" class="btn btn-danger btn-small m-r-5 m-t-5">
+                                                        <i class="fa fa-plus"></i>
+                                                        匹配便捷短号
+                                                    </a>
+                                                <php>}</php>
+                                                <php>if (in_array('1_1_12', $_SESSION['menupriv']) ) { </php>
+                                                    <a href="{:U('Card/chgdealer')}" type="button" class="btn btn-danger btn-small m-r-5 m-t-5">
+                                                        <i class="fa fa-plus"></i>
+                                                        重连发卡商
+                                                    </a>
+                                                <php>}</php>
+                                                <php>if (in_array('1_1_13', $_SESSION['menupriv']) ) { </php>
+                                                    <a href="{:U('Card/chgpackage')}" type="button" class="btn btn-danger btn-small m-r-5 m-t-5">
+                                                        <i class="fa fa-plus"></i>
+                                                        更改套餐
+                                                    </a>
+                                                <php>}</php>
+                                                <php>if (in_array('1_1_14', $_SESSION['menupriv']) ) { </php>
+                                                    <a href="{:U('Card/changecard')}" type="button" class="btn btn-danger btn-small m-r-5 m-t-5">
+                                                        <i class="fa fa-plus"></i>
+                                                        补物联网卡
+                                                    </a>
+                                                <php>}</php>
+                                                <php>if (in_array('1_1_15', $_SESSION['menupriv']) ) { </php>
+                                                    <a href="{:U('Card/cancelcard')}" type="button" class="btn btn-danger btn-small m-r-5 m-t-5">
+                                                        <i class="fa fa-plus"></i>
+                                                        注销物联网卡
+                                                    </a>
+                                                <php>}</php>
+                                                <php>if (in_array('1_1_16', $_SESSION['menupriv']) ) { </php>
+                                                    <a href="{:U('Card/backcard')}" type="button" class="btn btn-danger btn-small m-r-5 m-t-5">
+                                                        <i class="fa fa-plus"></i>
+                                                        物联网卡回收
+                                                    </a>
+                                                <php>}</php>
+                                                <php>if (in_array('1_1_17', $_SESSION['menupriv']) ) { </php>
+                                                    <a href="{:U('Card/downloadcard')}" type="button" class="btn btn-danger btn-small m-r-5 m-t-5">
+                                                        <i class="fa fa-plus"></i>
+                                                        下载物联网卡列表
+                                                    </a>
+                                                <php>}</php>
+                                                <php>if (in_array('1_1_18', $_SESSION['menupriv']) ) { </php>
+                                                    <a href="{:U('Card/queryflow')}" type="button" class="btn btn-danger btn-small m-r-5 m-t-5">
+                                                        <i class="fa fa-plus"></i>
+                                                        查询物联网卡流量
+                                                    </a>
+                                                <php>}</php>
                                             </p>
                                             <p class="p-t-5">
-                                                <a href="activecard.html" type="button" class="btn btn-primary btn-small m-r-5">
-                                                    <i class="fa fa-plus"></i>
-                                                    激活
-                                                </a>
-                                                <a href="disabledcard.html" type="button" class="btn btn-primary btn-small m-r-5">
-                                                    <i class="fa fa-plus"></i>
-                                                    停机保号
-                                                </a>
-                                                <a href="singlecutnet.html" type="button" class="btn btn-primary btn-small m-r-5">
-                                                    <i class="fa fa-plus"></i>
-                                                    单独断网
-                                                </a>
-                                                <a href="offnetaction.html" type="button" class="btn btn-primary btn-small m-r-5">
-                                                    <i class="fa fa-plus"></i>
-                                                    达量断网
-                                                </a>
-                                                <a href="imeirerecord.html" type="button" class="btn btn-primary btn-small m-r-5">
-                                                    <i class="fa fa-plus"></i>
-                                                    机卡重绑
-                                                </a>
-                                                <a href="autonomylimit.html" type="button" class="btn btn-primary btn-small m-r-5">
-                                                    <i class="fa fa-plus"></i>
-                                                    自主限速
-                                                </a>
-                                                <a href="getallcardinfo.html" type="button" class="btn btn-primary btn-small m-r-5">
-                                                    <i class="fa fa-plus"></i>
-                                                    获取卡渠道商信息
-                                                </a>
+                                                <php>if (in_array('1_1_4', $_SESSION['menupriv']) ) { </php>
+                                                    <a href="{:U('Card/activecard')}" type="button" class="btn btn-primary btn-small m-r-5">
+                                                        <i class="fa fa-plus"></i>
+                                                        激活
+                                                    </a>
+                                                <php>}</php>
+                                                <php>if (in_array('1_1_6', $_SESSION['menupriv']) ) { </php>
+                                                    <a href="{:U('Card/disabledcard')}" type="button" class="btn btn-primary btn-small m-r-5">
+                                                        <i class="fa fa-plus"></i>
+                                                        停机保号
+                                                    </a>
+                                                <php>}</php>
+                                                <php>if (in_array('1_1_7', $_SESSION['menupriv']) ) { </php>
+                                                    <a href="{:U('Card/singlecutnet')}" type="button" class="btn btn-primary btn-small m-r-5">
+                                                        <i class="fa fa-plus"></i>
+                                                        单独断网
+                                                    </a>
+                                                <php>}</php>
+                                                <php>if (in_array('1_1_10', $_SESSION['menupriv']) ) { </php>
+                                                    <a href="{:U('Card/offnetaction')}" type="button" class="btn btn-primary btn-small m-r-5">
+                                                        <i class="fa fa-plus"></i>
+                                                        达量断网
+                                                    </a>
+                                                <php>}</php>
+                                                <php>if (in_array('1_1_11', $_SESSION['menupriv']) ) { </php>
+                                                    <a href="{:U('Card/imeirerecord')}" type="button" class="btn btn-primary btn-small m-r-5">
+                                                        <i class="fa fa-plus"></i>
+                                                        机卡重绑
+                                                    </a>
+                                                <php>}</php>
+                                                <php>if (in_array('1_1_19', $_SESSION['menupriv']) ) { </php>
+                                                    <a href="{:U('Card/autonomylimit')}" type="button" class="btn btn-primary btn-small m-r-5">
+                                                        <i class="fa fa-plus"></i>
+                                                        自主限速
+                                                    </a>
+                                                <php>}</php>
+                                                <php>if (in_array('1_1_20', $_SESSION['menupriv']) ) { </php>
+                                                    <a href="{:U('Card/getallcardinfo')}" type="button" class="btn btn-primary btn-small m-r-5">
+                                                        <i class="fa fa-plus"></i>
+                                                        获取卡渠道商信息
+                                                    </a>
+                                                <php>}</php>
+                                                <php>if ($adminid == 1 ) { </php>
+                                                    <a href="{:U('Card/getcardtemple')}" type="button" class="btn btn-primary btn-small m-r-5">
+                                                        <i class="fa fa-plus"></i>
+                                                        5000张卡下载
+                                                    </a>
+                                                <php>}</php>
                                             </p>
                                             <p class="p-t-5">
-                                                <a href="getcardbytime.html" type="button" class="btn btn-primary btn-small m-r-5">
-                                                    <i class="fa fa-plus"></i>
-                                                    紧急功能1
-                                                </a>
+                                                <if condition="$adminid eq 1 ">
+                                                    <a href="{:U('Card/getcardbytime')}" type="button" class="btn btn-primary btn-small m-r-5">
+                                                        <i class="fa fa-plus"></i>
+                                                        紧急功能1
+                                                    </a>
+                                                </if>
                                             </p>
                                         </div>
 
@@ -388,22 +432,22 @@
                                             <div class="form-group m-r-10">
                                                 <label class="form-group">&nbsp;&nbsp;ICCID号:</label>
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" placeholder="起始iccid">
+                                                    <input type="text" class="form-control" name="starticcid" value="{$starticcid}" placeholder="起始iccid" id="starticcid">
                                                 </div>
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" placeholder="结束iccid">
+                                                    <input type="text" class="form-control" name="endiccid" value="{$endiccid}" placeholder="截止iccid" id="endiccid">
                                                 </div>
                                             </div>
                                             <div class="form-group m-r-10">
                                                 <label class="form-group">接入号码:</label>
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" placeholder="接入号码">
+                                                    <input type="text" class="form-control" name="number" value="{$number}" placeholder="接入号码" id="number">
                                                 </div>
                                             </div>
                                             <div class="form-group m-r-10">
                                                 <label class=" form-group">便捷短号:</label>
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" placeholder="便捷短号">
+                                                    <input type="text" class="form-control" name="fakenumber" value="{$fakenumber}" placeholder="便捷短码" id="fakenumber">
                                                 </div>
                                             </div>
                                         </div>
@@ -411,20 +455,66 @@
                                             <div class="form-group m-r-10">
                                                 <label class="form-group">&nbsp;&nbsp;&nbsp;&nbsp;卡状态:</label>
                                                 <div class="form-group">
-                                                    <select id="carStu" style="min-width:169px;width:100%;height:36px !important;">
-                                                        <option value="1">Loading...</option>
-                                                        <option value="2">22222.</option>
-                                                        <option value="3">3333</option>
+                                                    <select id="status" name="status" style="min-width:169px;width:100%;height:36px !important;">
+                                                        <option value="0">选择状态</option>
+                                                        <volist name="statuslist" id="tp">
+                                                            <if condition="$status eq $tp['key']">
+                                                                <option value="{$tp.key}" selected="selected">{$tp.val}</option>
+                                                                <else/>
+                                                                <option value="{$tp.key}">{$tp.val}</option>
+                                                            </if>
+                                                        </volist>
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="form-group m-r-10">
                                                 <label class="form-group">断网状态:</label>
                                                 <div class="form-group">
-                                                    <select id="remote" style="min-width:169px;width:100%;height:36px !important;">
-                                                        <option value="1">Loading...</option>
-                                                        <option value="2">22222.</option>
-                                                        <option value="3">3333</option>
+                                                    <select name="cutnet" id="cutnet" style="min-width:169px;width:100%;height:36px !important;">
+                                                        <option value="0">选择断网状态</option>
+                                                        <if condition="$cutnet eq 1">
+                                                            <option value="1" selected="selected">正常</option>
+                                                            <option value="2">断网</option>
+                                                            <elseif condition="$cutnet eq 2"/>
+                                                            <option value="1" >正常</option>
+                                                            <option value="2" selected="selected">断网</option>
+                                                            <else/>
+                                                            <option value="1" >正常</option>
+                                                            <option value="2" >断网</option>
+                                                        </if>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group m-r-10">
+                                                <label class="form-group">定向状态:</label>
+                                                <div class="form-group">
+                                                    <select name="dirtype" id="dirtype" style="min-width:169px;width:100%;height:36px !important;">
+                                                        <option value="0">选择定向状态</option>
+                                                        <volist name="dirtypes" id="tp">
+                                                            <if condition="$dirtype eq $tp['key']">
+                                                                <option value="{$tp.key}" selected="selected">{$tp.val}</option>
+                                                                <else/>
+                                                                <option value="{$tp.key}">{$tp.val}</option>
+                                                            </if>
+                                                        </volist>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group m-r-10">
+                                                <label class="form-group">卡类型:</label>
+                                                <div class="form-group">
+                                                    <select name="category" id="category" style="min-width:169px;width:100%;height:36px !important;">
+                                                        <option value="0">选择卡类型</option>
+                                                        <if condition="$category eq 1">
+                                                            <option value="1" selected="selected">NB卡</option>
+                                                            <option value="2">4G卡</option>
+                                                            <elseif condition="$category eq 2"/>
+                                                            <option value="1" >NB卡</option>
+                                                            <option value="2" selected="selected">4G卡</option>
+                                                            <else/>
+                                                            <option value="1" >NB卡</option>
+                                                            <option value="2" >4G卡</option>
+                                                        </if>
                                                     </select>
                                                 </div>
                                             </div>
@@ -433,40 +523,63 @@
                                             <div class="form-group m-r-10">
                                                 <label class="form-group">分销用户:</label>
                                                 <div class="form-group">
-                                                    <select id="carStu1" style="min-width:169px;width:100%;height:36px !important;">
-                                                        <option value="1">一级分销用户</option>
-                                                        <option value="2">22222.</option>
-                                                        <option value="3">3333</option>
+                                                    <select id="firstuid" name="firstuid" style="min-width:169px;width:100%;height:36px !important;">
+                                                        <option value="">一级分销用户</option>
+                                                        <volist name="users" id="v">
+                                                            <if condition="$firstuid eq $v.uid ">
+                                                                <option value="{$v.uid}" selected="selected">{$v.nickname}</option>
+                                                                <else/>
+                                                                <option value="{$v.uid}">{$v.nickname}</option>
+                                                            </if>
+                                                        </volist>
                                                     </select>
                                                 </div>
                                                 <div class="form-group">
-                                                    <select id="carStu12" style="min-width:169px;width:100%;height:36px !important;">
-                                                        <option value="1">二级分销用户</option>
-                                                        <option value="2">22222.</option>
-                                                        <option value="3">3333</option>
+                                                    <select id="seconduid" name="seconduid" style="min-width:169px;width:100%;height:36px !important;">
+                                                        <option value="">二级分销用户</option>
+                                                        <volist name="users2" id="v">
+                                                            <if condition="$seconduid eq $v.uid ">
+                                                                <option value="{$v.uid}" selected="selected">{$v.nickname}</option>
+                                                                <else/>
+                                                                <option value="{$v.uid}">{$v.nickname}</option>
+                                                            </if>
+                                                        </volist>
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="form-group m-r-10">
                                                 <label class="form-group">发卡商:</label>
                                                 <div class="form-group">
-                                                    <select id="remote1" style="min-width:169px;width:100%;height:36px !important;">
-                                                        <option value="1">选择发卡商</option>
-                                                        <option value="2">22222.</option>
-                                                        <option value="3">3333</option>
+                                                    <select id="dealerid" name="dealerid" style="min-width:169px;width:100%;height:36px !important;">
+                                                        <option value="0">选择发卡商</option>
+                                                        <volist name="alldealers" id="v">
+                                                            <if condition="$dealerid eq $v.id ">
+                                                                <option value="{$v.id}" selected="selected">{$v.name}</option>
+                                                                <else/>
+                                                                <option value="{$v.id}">{$v.name}</option>
+                                                            </if>
+                                                        </volist>
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="form-group m-r-10">
-                                                <label class="form-group">主卡信息:</label>
-                                                <div class="form-group">
-                                                    <select id="remote3" style="min-width:169px;width:100%;height:36px !important;">
-                                                        <option value="1">选择主卡信息</option>
-                                                        <option value="2">22222.</option>
-                                                        <option value="3">3333</option>
-                                                    </select>
-                                                </div>
-                                            </div>
+                                            <!--<div class="form-group m-r-10">-->
+                                                <!--<label class="form-group">主卡信息:</label>-->
+                                                <!--<div class="form-group">-->
+                                                    <!--<select id="primaryid" name="primaryid" style="min-width:169px;width:100%;height:36px !important;">-->
+                                                        <!--<option value="">选择主卡信息</option>-->
+                                                        <!--<if condition="$primaryid eq 1 ">-->
+                                                        <!--<option value="1" selected="selected">是</option>-->
+                                                        <!--<option value="0">否</option>-->
+                                                        <!--<else if condition="$primaryid eq 0 "/>-->
+                                                        <!--<option value="1" >是</option>-->
+                                                        <!--<option value="0" selected="selected">否</option>-->
+                                                        <!--<else/>-->
+                                                        <!--<option value="1" >是</option>-->
+                                                        <!--<option value="0" >否</option>-->
+                                                        <!--</if>-->
+                                                    <!--</select>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
                                         </div>
                                         <div class="p-t-15">
                                             <div class="form-group m-r-10">
@@ -479,66 +592,243 @@
                                         </div>
                                     </form>
                                     <br>
-                                    <div ><!--class="table-responsive"-->
+                                    <div class="table-responsive"><!--class="table-responsive"-->
                                         <table class="table table-striped table-flip-scroll cf" style="border-top:1px solid #ddd">
-                                            <thead class="cf">
-                                            <tr>
-                                                <th>ICCID</th>
-                                                <th>接入号码</th>
-                                                <th>IMSI</th>
-                                                <th>卡状态</th>
-                                                <th>是否NB卡</th>
-                                                <th>定向分类</th>
-                                                <th>归属群组</th>
-                                                <th>发卡商名称</th>
-                                                <th>是否断网</th>
-                                                <th>详情</th>
-                                                <th>操作</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tr>
-                                                <td>weqq</td>
-                                                <td>wqw</td>
-                                                <td>aasa</td>
-                                                <td>Otto</td>
-                                                <td>Mark</td>
-                                                <td>Otto</td>
-                                                <td>Mark</td>
-                                                <td>dddd</td>
-                                                <td><span class="label label-success" onclick="if(!confirm('您是否确定要进行此操作？')){return  false;}" style="cursor: pointer">正常</span></td>
-                                                <td>
-                                                    <div style="min-width: 24px;">
-                                                        <a data-toggle="modal" href="#cardinfo" class="show-info">
-                                                            <i class="fa fa-info"></i>
-                                                        </a>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div style="min-width:90px;">
-                                                        <div class="btn-group">
-                                                            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" style="padding:2px 6px;padding-top:0px;">
-                                                                <i class="fa fa-chevron-down"></i>
-                                                            </button>
-                                                            <ul style="right:0;left:auto;" class="dropdown-menu slidedown" >
-                                                                <li><a type="button" data-toggle="modal" href="{:U('Card/singRequstApi',array('method'=>'requestRefresh', 'id'=>$vo['id']))}" onclick="if(!confirm('您是否确定要刷新该条记录？')){return  false;}"><i class="fa fa-edit"></i>刷新</a></li>
-                                                                <li><a type="button" data-toggle="modal" href="#qurCardStatus" onclick="setStaCardid({$vo.id},'{$vo.iccid}')"><i class="fa fa-edit"></i>卡状态</a></li>
-                                                                <li><a type="button" data-toggle="modal" href="#prodInstQuery" onclick="setProdInsCardid({$vo.id},'{$vo.iccid}')"><i class="fa fa-edit"></i>产品资料</a></li>
-                                                                <li><a type="button" data-toggle="modal" href="#qurCardPack" onclick="setPackCardid({$vo.id},'{$vo.iccid}')"><i class="fa fa-edit"></i>套餐使用量</a>
-                                                                <li><a type="button" data-toggle="modal" href="#activeCard" onclick="setActiveCardid({$vo.id},'{$vo.iccid}','requestServActive')"><i class="fa fa-edit"></i>激活</a></li>
-                                                                <li><a type="button" data-toggle="modal" href="#addDisablNum" onclick="setAddDisabNumid({$vo.id},'{$vo.iccid}','addDisabledNumber')"><i class="fa fa-edit"></i>停机保号</a></li>
-                                                                <li><a type="button" data-toggle="modal" href="#delDisablNum" onclick="setDelDisabNumid({$vo.id},'{$vo.iccid}','delDisabledNumber')"><i class="fa fa-edit"></i>恢复停机保号</a></li>
+                                            <if condition="$privtype eq 1 ">
+                                                <thead class="cf">
+                                                    <tr>
+                                                        <th>ICCID</th>
+                                                        <th>接入号码</th>
+                                                        <th>IMSI</th>
+                                                        <th>卡状态</th>
+                                                        <th>是否NB卡</th>
+                                                        <th>定向分类</th>
+                                                        <th>归属群组</th>
+                                                        <th>发卡商名称</th>
+                                                        <th>是否断网</th>
+                                                        <th>详情</th>
+                                                        <th>操作</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                <if condition="$data eq null">
+                                                    <tr>
+                                                        <td colspan="16" style="text-align:center;padding:30px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">没有数据</td>
+                                                    </tr>
+                                                    <else/>
+                                                    <volist name="data" id="vo">
+                                                        <tr>
+                                                            <td>{$vo.iccid}</td>
+                                                            <td>{$vo.number}</td>
+                                                            <td>{$vo.imsi}</td>
+                                                            <td>{$vo.status}</td>
+                                                            <td>{$vo.category}</td>
+                                                            <td><if condition="$vo.dirtype eq 1">非定向<elseif condition="$vo.dirtype eq 2" />定向<else/>无法识别</if></td>
+                                                            <td>{$vo.nickname}</td>
+                                                            <td>{$vo.dealername}</td>
+                                                            <td>
+                                                                <!--<span class="label label-success" onclick="if(!confirm('您是否确定要进行此操作？')){return  false;}" style="cursor: pointer">正常</span>-->
+                                                                <ul class="" style="list-style: none;margin-bottom: 0;">
+                                                                    <li>
+                                                                        <eq name="vo.iscutnet" value="0">
+                                                                            <a href="{:U('Card/singRequstApi',array('method'=>addSingleCutnet,'id'=>$vo['id']))}"  onclick="if(!confirm('您是否确定要进行此操作？')){return  false;}"  class="badge badge-success" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="点我断网">
+                                                                                正常
+                                                                            </a>
+                                                                            <else/>
+                                                                            <a href="{:U('Card/singRequstApi',array('method'=>delSingleCutnet,'id'=>$vo['id']))}"  onclick="if(!confirm('您是否确定要进行此操作？')){return  false;}" class="badge badge-danger" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="点我恢复断网">
+                                                                                断网
+                                                                            </a>
+                                                                        </eq>
+                                                                    </li>
+                                                                </ul>
+                                                            </td>
+                                                            <td>
+                                                                <div style="min-width: 24px;">
+                                                                    <a data-toggle="modal" href="#cardinfo" class="show-info" onclick="setCardid({$vo.id},'{$vo.iccid}','{$vo.number}','{$vo.packagename}')">
+                                                                        <i class="fa fa-info"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div style="min-width:90px;">
+                                                                    <div class="btn-group">
+                                                                        <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" style="padding:2px 6px;padding-top:0px;">
+                                                                            <i class="fa fa-chevron-down"></i>
+                                                                        </button>
+                                                                        <ul style="right:0;left:auto;" class="dropdown-menu slidedown" >
+                                                                            <li><a type="button" data-toggle="modal" href="{:U('Card/singRequstApi',array('method'=>'requestRefresh', 'id'=>$vo['id']))}" onclick="if(!confirm('您是否确定要刷新该条记录？')){return  false;}"><i class="fa fa-edit"></i>刷新</a></li>
+                                                                            <li><a type="button" data-toggle="modal" href="#qurCardStatus" onclick="setStaCardid({$vo.id},'{$vo.iccid}')"><i class="fa fa-edit"></i>卡状态</a></li>
+                                                                            <li><a type="button" data-toggle="modal" href="#prodInstQuery" onclick="setProdInsCardid({$vo.id},'{$vo.iccid}')"><i class="fa fa-edit"></i>产品资料</a></li>
+                                                                            <php>if (in_array('3_1_0', $_SESSION['menupriv']) && in_array('3_1_1', $_SESSION['menupriv']) ) { </php>
+                                                                                <li><a type="button" data-toggle="modal" href="#qurCardPack" onclick="setPackCardid({$vo.id},'{$vo.iccid}')"><i class="fa fa-edit"></i>套餐使用量</a></li>
+                                                                            <php>}</php>
+                                                                            <php>if (in_array('1_1_4', $_SESSION['menupriv']) ) { </php>
+                                                                                <li><a type="button" data-toggle="modal" href="#activeCard" onclick="setActiveCardid({$vo.id},'{$vo.iccid}','requestServActive')"><i class="fa fa-edit"></i>激活</a></li>
+                                                                            <php>}</php>
+                                                                            <php>if (in_array('1_1_6', $_SESSION['menupriv']) ) { </php>
+                                                                                <li><a type="button" data-toggle="modal" href="#addDisablNum" onclick="setAddDisabNumid({$vo.id},'{$vo.iccid}','addDisabledNumber')"><i class="fa fa-edit"></i>停机保号</a></li>
+                                                                                <li><a type="button" data-toggle="modal" href="#delDisablNum" onclick="setDelDisabNumid({$vo.id},'{$vo.iccid}','delDisabledNumber')"><i class="fa fa-edit"></i>恢复停机保号</a></li>
+                                                                            <php>}</php>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <!--<a href="javascript:;" class="btn btn-primary btn-xs btn-mini" type="button">修改</a>-->
+                                                                    <!--<a href="javascript:;" class="btn btn-danger btn-xs btn-mini" type="button" onclick="if(!confirm('您是否确定要删除此记录？')){return  false;}">删除</a>-->
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </volist>
+                                                </if>
+                                                </tbody>
+                                                <elseif condition="$privtype eq 2 "/>
+                                                <thead>
+                                                <tr>
+                                                    <th >便捷短码</th>
+                                                    <th >卡状态</th>
+                                                    <th >归属群组</th>
+                                                    <th >是否断网</th>
+                                                    <th >是否NB卡</th>
+                                                    <th>操作</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <if condition="$data eq null">
+                                                    <tr>
+                                                        <td colspan="6" style="text-align:center;padding:30px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">没有数据</td>
+                                                    </tr>
+                                                    <else/>
+                                                    <volist name="data" id="vo">
+                                                        <tr>
+                                                            <td>{$vo.fakenumber}</td>
+                                                            <td>{$vo.status}</td>
+                                                            <td>{$vo.nickname}</td>
+                                                            <td>
+                                                                <ul class="" style="list-style: none;margin-bottom: 0;">
+                                                                    <li>
+                                                                        <eq name="vo.iscutnet" value="0">
+                                                                            <a href="{:U('Card/singRequstApi',array('method'=>addSingleCutnet,'id'=>$vo['id']))}"  onclick="if(!confirm('您是否确定要进行此操作？')){return  false;}"  class="badge badge-success" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="点我断网">
+                                                                                正常
+                                                                            </a>
+                                                                            <else/>
+                                                                            <a href="{:U('Card/singRequstApi',array('method'=>delSingleCutnet,'id'=>$vo['id']))}"  onclick="if(!confirm('您是否确定要进行此操作？')){return  false;}" class="badge badge-danger" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="点我恢复断网">
+                                                                                断网
+                                                                            </a>
+                                                                        </eq>
 
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <!--<a href="javascript:;" class="btn btn-primary btn-xs btn-mini" type="button">修改</a>-->
-                                                        <!--<a href="javascript:;" class="btn btn-danger btn-xs btn-mini" type="button" onclick="if(!confirm('您是否确定要删除此记录？')){return  false;}">删除</a>-->
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            </tbody>
+                                                                    </li>
+                                                                </ul>
+                                                            </td>
+                                                            <td>{$vo.category}</td>
+                                                            <td>
+                                                                <div class="btn-group">
+                                                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                                                        <i class="fa fa-chevron-down"></i>
+                                                                    </button>
+                                                                    <ul style="right:0;left:auto;" class="dropdown-menu slidedown" >
+                                                                        <volist name="vo.mystatus" id="ro">
+                                                                            <li><a href="{:U('Card/singRequstApi',array('method'=>$ro['func'],'action'=>$ro['num'], 'id'=>$vo['id']))}" onclick="if(!confirm('您是否确定要进行此操作？')){return  false;}"><i class="fa fa-edit"></i> {$ro.status}</a></li>
+                                                                        </volist>
+                                                                        <li><a type="button" data-toggle="modal" href="#qurCardStatus" onclick="setStaCardid({$vo.id},'{$vo.iccid}')"><i class="fa fa-edit"></i>卡状态</a></li>
+                                                                        <li><a type="button" data-toggle="modal" href="#prodInstQuery" onclick="setProdInsCardid({$vo.id},'{$vo.iccid}')"><i class="fa fa-edit"></i>产品资料</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </volist>
+                                                </if>
+                                                </tbody>
+                                                <elseif condition="$privtype eq 3 "/>
+                                                <thead>
+                                                <tr>
+                                                    <th >ICCID</th>
+                                                    <th >接入号码</th>
+                                                    <th >便捷短码</th>
+                                                    <th >卡状态</th>
+                                                    <th >归属群组</th>
+                                                    <th >是否NB卡</th>
+                                                    <th>操作</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <if condition="$data eq null">
+                                                    <tr>
+                                                        <td colspan="8" style="text-align:center;padding:30px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">没有数据</td>
+                                                    </tr>
+                                                    <else/>
+                                                    <volist name="data" id="vo">
+                                                        <tr>
+                                                            <td>{$vo.iccid}</td>
+                                                            <td>{$vo.number}</td>
+                                                            <td>{$vo.fakenumber}</td>
+                                                            <td>{$vo.status}</td>
+                                                            <td>{$vo.nickname}</td>
+                                                            <td>{$vo.category}</td>
+                                                            <td>
+                                                                <div class="btn-group">
+                                                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                                                        <i class="fa fa-chevron-down"></i>
+                                                                    </button>
+                                                                    <ul style="right:0;left:auto;" class="dropdown-menu slidedown" >
+                                                                        <volist name="vo.mystatus" id="ro">
+                                                                            <li><a href="{:U('Card/singRequstApi',array('method'=>$ro['func'],'action'=>$ro['num'], 'id'=>$vo['id']))}" onclick="if(!confirm('您是否确定要进行此操作？')){return  false;}"><i class="fa fa-edit"></i> {$ro.status}</a></li>
+                                                                        </volist>
+                                                                        <li><a type="button" data-toggle="modal" href="#qurCardStatus" onclick="setStaCardid({$vo.id},'{$vo.iccid}')"><i class="fa fa-edit"></i>卡状态</a></li>
+                                                                        <li><a type="button" data-toggle="modal" href="#prodInstQuery" onclick="setProdInsCardid({$vo.id},'{$vo.iccid}')"><i class="fa fa-edit"></i>产品资料</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </volist>
+                                                </if>
+                                                </tbody>
+                                                <else/>
+                                                <thead>
+                                                <tr>
+                                                    <th >ICCID</th>
+                                                    <th >接入号码</th>
+                                                    <th >便捷短码</th>
+                                                    <th >卡状态</th>
+                                                    <th >归属群组</th>
+                                                    <th >是否NB卡</th>
+                                                    <th>操作</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <if condition="$data eq null">
+                                                    <tr>
+                                                        <td colspan="8" style="text-align:center;padding:30px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">没有数据</td>
+                                                    </tr>
+                                                    <else/>
+                                                    <volist name="data" id="vo">
+                                                        <tr>
+                                                            <td>{$vo.iccid}</td>
+                                                            <td>{$vo.number}</td>
+                                                            <td>{$vo.fakenumber}</td>
+                                                            <td>{$vo.status}</td>
+                                                            <td>{$vo.nickname}</td>
+                                                            <td>{$vo.category}</td>
+                                                            <td>
+                                                                <div class="btn-group">
+                                                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                                                        <i class="fa fa-chevron-down"></i>
+                                                                    </button>
+                                                                    <ul style="right:0;left:auto;" class="dropdown-menu slidedown" >
+                                                                        <volist name="vo.mystatus" id="ro">
+                                                                            <li><a href="{:U('Card/singRequstApi',array('method'=>$ro['func'],'action'=>$ro['num'], 'id'=>$vo['id']))}" onclick="if(!confirm('您是否确定要进行此操作？')){return  false;}"><i class="fa fa-edit"></i> {$ro.status}</a></li>
+                                                                        </volist>
+                                                                        <li><a type="button" data-toggle="modal" href="#qurCardStatus" onclick="setStaCardid({$vo.id},'{$vo.iccid}')"><i class="fa fa-edit"></i>卡状态</a></li>
+                                                                        <li><a type="button" data-toggle="modal" href="#prodInstQuery" onclick="setProdInsCardid({$vo.id},'{$vo.iccid}')"><i class="fa fa-edit"></i>产品资料</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </volist>
+                                                </if>
+                                                </tbody>
+                                            </if>
                                         </table>
+                                        <div class="panel-footer clearfix">
+                                            {$page}
+                                        </div>
                                     </div>
 
                                 </div>

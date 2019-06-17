@@ -34,10 +34,54 @@
                     },
                     fenlei:{
                         required: true
+                    },
+                    dirtype:{
+                        required: true
+                    },
+                    dealerid:{
+                        required: true
+                    },
+                    uid:{
+                        required: true
+                    },
+                    haspool:{
+                        required: true
+                    },
+                    packagetype:{
+                        required: true
+                    },
+                    packageid:{
+                        required: true
+                    },
+                    num:{
+                        required: true
+                    },
+                    fileup:{
+                        required: true
+                    },
+                    speedValue:{
+                        required: true
+                    },
+                    innertype:{
+                        required: true
+                    },
+                    datesel:{
+                        required: true
                     }
                 },
                 messages:{
-                    fenlei: "请输入网卡分类"
+                    fenlei: "该字段不能为空!",
+                    dirtype:'该字段不能为空!',
+                    dealerid:'该字段不能为空!',
+                    uid:'该字段不能为空!',
+                    haspool: "该字段不能为空!",
+                    packagetype:'该字段不能为空!',
+                    packageid:'该字段不能为空!',
+                    num:'该字段不能为空!',
+                    fileup:'该字段不能为空!',
+                    speedValue:'该字段不能为空!',
+                    innertype:'该字段不能为空!',
+                    datesel:'该字段不能为空!',
                 }
             });
         },
@@ -70,10 +114,46 @@
                         },
                         fenlei:{
                             required: true
+                        },
+                        dirtype:{
+                            required: true
+                        },
+                        dealerid:{
+                            required: true
+                        },
+                        uid:{
+                            required: true
+                        },
+                        haspool:{
+                            required: true
+                        },
+                        packagetype:{
+                            required: true
+                        },
+                        packageid:{
+                            required: true
+                        },
+                        fileup:{
+                            required: true
+                        },
+                        speedValue:{
+                            required: true
+                        },
+                        innertype:{
+                            required: true
                         }
                     },
                     messages:{
-                        fenlei: "请输入网卡分类"
+                        fenlei: "该字段不能为空!",
+                        dirtype:'该字段不能为空!',
+                        dealerid:'该字段不能为空!',
+                        uid:'该字段不能为空!',
+                        haspool: "该字段不能为空!",
+                        packagetype:'该字段不能为空!',
+                        packageid:'该字段不能为空!',
+                        fileup:'该字段不能为空!',
+                        speedValue:'该字段不能为空!',
+                        innertype:'该字段不能为空!',
                     }
                 }).element($(this)); //revalidate the chosen dropdown value and show error or success message for the input
             });

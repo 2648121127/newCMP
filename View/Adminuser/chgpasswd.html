@@ -27,9 +27,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="../../assets/plugins/animate.min.css" rel="stylesheet" type="text/css" />
     <link href="../../assets/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" />
-    <link href="../../assets/plugins/dropzone/css/dropzone.css" rel="stylesheet" type="text/css" />
-    <link href="../../assets/plugins/ios-switch/ios7-switch.css" rel="stylesheet" type="text/css" media="screen">
-    <link href="../../assets/plugins/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" type="text/css" />
+    <!--<link href="../../assets/plugins/dropzone/css/dropzone.css" rel="stylesheet" type="text/css" />-->
+    <!--<link href="../../assets/plugins/ios-switch/ios7-switch.css" rel="stylesheet" type="text/css" media="screen">-->
+    <!--<link href="../../assets/plugins/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" type="text/css" />-->
     <!-- END PLUGIN CSS -->
     <!-- BEGIN CORE CSS FRAMEWORK -->
     <link href="../../webarch/css/webarch.css" rel="stylesheet" type="text/css" />
@@ -389,32 +389,33 @@
                                         <h2 style="font-weight:500;color:#6f7b8a">修改密码</h2>
                                     </div>
 
-                                    <form class="form-horizontal col-lg-12 col-md-12 col-sm-12" action="" method="post">
+                                    <form class="form-horizontal col-lg-12 col-md-12 col-sm-12" action="__ACTION__" method="post">
                                         <div class="p-t-15"></div>
                                         <div class="form-group">
                                             <label class="col-lg-2 col-md-2 col-sm-2 control-label">原始密码</label>
                                             <div class="col-lg-10 col-md-10 col-sm-10">
-                                                <input type="password" class="form-control" placeholder="请输原始密码">
+                                                <input type="password" name="password" class="form-control" placeholder="请输原始密码">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-lg-2 col-md-2 col-sm-2 control-label">新密码</label>
                                             <div class="col-lg-10 col-md-10 col-sm-10">
-                                                <input type="password" class="form-control" placeholder="请输新密码">
+                                                <input type="password" name="passwordnew" class="form-control" placeholder="请输新密码">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-lg-2 col-md-2 col-sm-2 control-label">再次确认</label>
                                             <div class="col-lg-10 col-md-10 col-sm-10">
-                                                <input type="password" class="form-control" placeholder="请再次确认新密码">
+                                                <input type="password" name="passwordnew2" class="form-control" placeholder="请再次确认新密码">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-lg-2 col-md-2 col-sm-2 control-label"></label>
                                             <div class="col-lg-10 col-md-10 col-sm-10">
-                                                <input type="hidden" name="act" value="add">
+                                                <input type="hidden" name="act" value="{$act}"/>
+                                                <input type="hidden" name="id" value="{$data.id}"/>
                                                 <button type="submit" id="submit" class="btn btn-success btn-small m-r-10">保存</button>
-                                                <a href="../Index/dashboard.html" type="reset" class="btn btn-danger btn-small">取消</a>
+                                                <a href="{:U('Index/index')}" type="reset" class="btn btn-danger btn-small">取消</a>
                                             </div>
                                         </div>
                                     </form>
@@ -434,26 +435,25 @@
 <!-- BEGIN JS DEPENDECENCIES-->
 <script src="../../assets/plugins/jquery/jquery-1.11.3.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrapv3/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-block-ui/jqueryblockui.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
+<!--<script src="../../assets/plugins/jquery-block-ui/jqueryblockui.min.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>-->
 <script src="../../assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
 
-<script src="../../assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-inputmask/jquery.inputmask.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-autonumeric/autoNumeric.js" type="text/javascript"></script>
-<script src="../../assets/plugins/ios-switch/ios7-switch.js" type="text/javascript"></script>
-<script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js" type="text/javascript"></script>
-<script src="../../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js" type="text/javascript"></script>
-<script src="../../assets/plugins/bootstrap-tag/bootstrap-tagsinput.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/boostrap-clockpicker/bootstrap-clockpicker.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/dropzone/dropzone.min.js" type="text/javascript"></script>
+<!--<script src="../../assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/jquery-inputmask/jquery.inputmask.min.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/jquery-autonumeric/autoNumeric.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/ios-switch/ios7-switch.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/bootstrap-tag/bootstrap-tagsinput.min.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/boostrap-clockpicker/bootstrap-clockpicker.min.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/dropzone/dropzone.min.js" type="text/javascript"></script>-->
 
 <script src="../../webarch/js/webarch.js" type="text/javascript"></script>
-<script src="../../assets/js/form_elements.js" type="text/javascript"></script>
+<!--<script src="../../assets/js/form_elements.js" type="text/javascript"></script>-->
 <!-- END PAGE LEVEL JS INIT -->
 </body>
 </html>

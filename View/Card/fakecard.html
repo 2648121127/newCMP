@@ -386,7 +386,7 @@
                             <div class="grid simple ">
                                 <div class="grid-body no-border">
                                     <div style="overflow: hidden;border-bottom: 1px solid #dddddd">
-                                        <h3 style="font-weight:500;color:#6f7b8a">增加开卡记录</h3>
+                                        <h3 style="font-weight:500;color:#6f7b8a">匹配便捷短号</h3>
                                     </div>
                                     <div class="row" >
                                         <div class="col-md-12 col-sm-12">
@@ -407,7 +407,7 @@
                                         <div class="form-group">
                                             <label class="col-lg-3 col-md-3 col-sm-3 control-label">下载模板</label>
                                             <div class="col-lg-9 col-md-9 col-sm-9">
-                                                <a href="http://wlw.pinet.co/Public/Files/PinetM2MDeviceActionMembersImport.xls" class="btn btn-sm btn-success" type="button">
+                                                <a href="{$Think.WEB_ROOT}Public/Files/PinetM2MDeviceFakecardMembersImport.xls" class="btn btn-sm btn-success" type="button">
                                                     <i class="fa fa-download"></i>
                                                     下载模板
                                                 </a>
@@ -417,7 +417,7 @@
                                             <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>渠道商</label>
                                             <div class="col-lg-9 col-md-9 col-sm-9">
                                                 <select name="uid" id="uid" data-required="true" class="c-select-36 c-width-100" required>
-                                                    <option value="" >请选择渠道商</option>
+                                                    <option value="" >请选择分销商</option>
                                                     <volist name="admins" id="v">
                                                         <option value="{$v.uid}">{$v.nickname}</option>
                                                     </volist>
@@ -425,9 +425,9 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>选择套餐</label>
+                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label">选择套餐</label>
                                             <div class="col-lg-9 col-md-9 col-sm-9">
-                                                <select id="packagetype" name="packagetype" class="col-lg-5 col-md-5 col-sm-5 c-select-36" required>
+                                                <select id="packagetype" name="packagetype" class="col-lg-5 col-md-5 col-sm-5 c-select-36">
                                                     <option value="">请选择类别</option>
                                                     <option value="加餐包">加餐包</option>
                                                     <option value="月流量">月流量</option>
@@ -436,25 +436,25 @@
                                                     <option value="年流量">年流量</option>
                                                     <option value="特殊包">特殊包</option>
                                                 </select>
-                                                <select id="packageid" name="packageid" class="col-lg-5 col-md-5 col-sm-5 c-select-36 col-md-offset-2" required>
+                                                <select id="packageid" name="packageid" class="col-lg-5 col-md-5 col-sm-5 c-select-36 col-md-offset-2">
                                                     <option value="">请选择套餐</option>
                                                 </select>
 
                                             </div>
                                         </div>
+                                        <!--<div class="form-group">-->
+                                            <!--<label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>开卡日期</label>-->
+                                            <!--<div class="col-lg-9 col-md-9 col-sm-9">-->
+                                                <!--<div class="input-append success date" style="width:100%;">-->
+                                                    <!--<input type="text" name="time" class="form-control" required>-->
+                                                    <!--<span class="add-on" style="margin-left:-36px;"><span class="arrow"></span><i class="fa fa-th"></i></span>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
                                         <div class="form-group">
-                                            <label for="num" class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>开卡数量</label>
+                                            <label for="num" class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>物联网卡数量</label>
                                             <div class="col-lg-9 col-md-9 col-sm-9">
-                                                <input type="password" class="form-control" id="num" name="num" placeholder="请输入开卡数量" required>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>开卡日期</label>
-                                            <div class="col-lg-9 col-md-9 col-sm-9">
-                                                <div class="input-append success date" style="width:100%;">
-                                                    <input type="text" name="time" value="{$monthdate}" id="monthdate" class="datepicker form-control" required>
-                                                    <span class="add-on" style="margin-left:-36px;"><span class="arrow"></span><i class="fa fa-th"></i></span>
-                                                </div>
+                                                <input type="password" class="form-control" name="num" id="num" placeholder="请输入数量" required>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -462,6 +462,20 @@
                                             <div class="col-lg-9 col-md-9 col-sm-9">
                                                 <textarea rows="3" name="remark" placeholder="备注" style="width: 100%;"></textarea>
                                             </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>导入文件</label>
+                                            <div class="col-lg-9 col-md-9 col-sm-9">
+                                                <div class="input-group">
+                                                    <input id='location' name="fileup" class="form-control c-select-36" required readonly>
+                                                    <label class="input-group-btn">
+                                                        <input type="button" id="i-check" value="浏览文件" class="btn btn-primary" onclick="$('#upload input').click();$('#location').focus();">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <a href="javascript:;" class="file " id="upload" onchange="$('#location').val($('#upload input').val());if($('#location').val($('#upload input').val())!=''){$('#location').blur();}">
+                                                <input type="file" name="file"  style="display: none">
+                                            </a>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-lg-3 col-md-3 col-sm-3 control-label"></label>
@@ -493,32 +507,24 @@
 <script src="../../assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
 
 <script src="../../assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-inputmask/jquery.inputmask.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-autonumeric/autoNumeric.js" type="text/javascript"></script>
 <!--<script src="../../assets/plugins/ios-switch/ios7-switch.js" type="text/javascript"></script>-->
-<script src="../../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js" type="text/javascript"></script>
-<script src="../../assets/plugins/bootstrap-tag/bootstrap-tagsinput.min.js" type="text/javascript"></script>
-<!--<script src="../../assets/plugins/dropzone/dropzone.min.js" type="text/javascript"></script>-->
+<script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
+<!--<script src="../../assets/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/bootstrap-tag/bootstrap-tagsinput.min.js" type="text/javascript"></script>-->
+<script src="../../assets/plugins/dropzone/dropzone.min.js" type="text/javascript"></script>
 
 <script src="../../webarch/js/webarch.js" type="text/javascript"></script>
 <!--<script src="../../assets/js/form_elements.js" type="text/javascript"></script>-->
 <script src="../../assets/js/common.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL JS INIT -->
-
 <block name="extjs">
     <script language="javascript" type="text/javascript">
         $(document).ready(function(){
-
-            /* 时间控件 */
-            $('.datepicker').datepicker({
-                autoclose: true,
-                format: "yyyy-mm-dd",
-                todayHighlight: true
-            });
-
             $("#packagetype").change(function(){
                 var type = $("#packagetype").val();
                 $.post('getPackages',"type="+type,function(data){
