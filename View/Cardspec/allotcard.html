@@ -260,7 +260,7 @@
                         <li> <a href="../CmCard/index.html"> 物联网卡 </a> </li>
                         <li> <a href="../CmWorkorder/CmWorkorder.html"> 业务工单 </a> </li>
                         <li> <a href="../CmPackage/CmPackage.html"> 套餐管理 </a> </li>
-                        <li> <a href="../CmDealer/CmDealer.html">发卡商管理</a> </li>
+                        <li> <a href="../CmDealer/index.html">发卡商管理</a> </li>
                     </ul>
                 </li>
                 <li>
@@ -404,7 +404,7 @@
                                     </div>
 
 
-                                    <form class="form-horizontal col-lg-6 col-md-6 col-sm-6" action="#" id="form_traditional_validation" name="form_traditional_validation" role="form" autocomplete="off">
+                                    <form class="form-horizontal col-lg-6 col-md-6 col-sm-6" novalidate action="__ACTION__" method="post" id="form_traditional_validation" name="form_traditional_validation" role="form" autocomplete="off">
                                         <div class="p-t-15"></div>
                                         <div class="form-group">
                                             <label class="col-lg-3 col-md-3 col-sm-3 control-label">下载模板</label>
@@ -418,7 +418,7 @@
                                         <div class="form-group">
                                             <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>渠道商</label>
                                             <div class="col-lg-9 col-md-9 col-sm-9">
-                                                <select name="uid1" id="uid1" data-required="true" class="c-select-36 c-width-100" required>
+                                                <select name="uid" id="uid" data-required="true" class="c-select-36 c-width-100" required>
                                                     <option value="" >请选择分销商</option>
                                                     <volist name="admins" id="v">
                                                         <option value="{$v.uid}">{$v.nickname}</option>
@@ -429,7 +429,7 @@
                                         <div class="form-group">
                                             <label class="col-lg-3 col-md-3 col-sm-3 control-label">选择套餐</label>
                                             <div class="col-lg-9 col-md-9 col-sm-9">
-                                                <select id="packagetype" name="packagetype" class="col-lg-5 col-md-5 col-sm-5 c-select-36">
+                                                <select id="packagetype" name="packagetype1" class="col-lg-5 col-md-5 col-sm-5 c-select-36">
                                                     <option value="">请选择类别</option>
                                                     <option value="加餐包">加餐包</option>
                                                     <option value="月流量">月流量</option>
@@ -438,7 +438,7 @@
                                                     <option value="年流量">年流量</option>
                                                     <option value="特殊包">特殊包</option>
                                                 </select>
-                                                <select id="packageid" name="packageid" class="col-lg-5 col-md-5 col-sm-5 c-select-36 col-md-offset-2">
+                                                <select id="packageid" name="packageid1" class="col-lg-5 col-md-5 col-sm-5 c-select-36 col-md-offset-2">
                                                     <option value="">请选择套餐</option>
                                                 </select>
 
@@ -457,16 +457,18 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-lg-3 col-md-3 col-sm-2 control-label"><em class="text-danger">*&nbsp;</em>导入文件</label>
+                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>导入文件</label>
                                             <div class="col-lg-9 col-md-9 col-sm-9">
                                                 <div class="input-group">
-                                                    <input id='showlocation' name="file" class="form-control c-select-36" readonly required><!--onclick="$('#i-file').click();"-->
+                                                    <input id='location' name="fileup" class="form-control c-select-36" required readonly>
                                                     <label class="input-group-btn">
-                                                        <input type="button" id="i-check" value="浏览文件" class="btn btn-primary" onclick="$('#i-file').click();$('#showlocation').focus();">
+                                                        <input type="button" id="i-check" value="浏览文件" class="btn btn-primary" onclick="$('#upload input').click();$('#location').focus();">
                                                     </label>
                                                 </div>
                                             </div>
-                                            <input type="file" name="file" id='i-file'  onchange="$('#location').val($('#i-file').val());" style="display: none">
+                                            <a href="javascript:;" class="file " id="upload" onchange="$('#location').val($('#upload input').val());if($('#location').val($('#upload input').val())!=''){$('#location').blur();}">
+                                                <input type="file" name="files"  style="display: none">
+                                            </a>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-lg-3 col-md-3 col-sm-3 control-label"></label>
@@ -494,15 +496,14 @@
 <script src="../../assets/plugins/jquery/jquery-1.11.3.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrapv3/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-block-ui/jqueryblockui.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
+<!--<script src="../../assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>-->
 <script src="../../assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
-
-<script src="../../assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
+<!--<script src="../../assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>-->
 <script src="../../assets/plugins/jquery-inputmask/jquery.inputmask.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-autonumeric/autoNumeric.js" type="text/javascript"></script>
+<!--<script src="../../assets/plugins/jquery-autonumeric/autoNumeric.js" type="text/javascript"></script>-->
 <!--<script src="../../assets/plugins/ios-switch/ios7-switch.js" type="text/javascript"></script>-->
 <!--<script src="../../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js" type="text/javascript"></script>-->
 <!--<script src="../../assets/plugins/bootstrap-tag/bootstrap-tagsinput.min.js" type="text/javascript"></script>-->
@@ -512,20 +513,22 @@
 <!--<script src="../../assets/js/form_elements.js" type="text/javascript"></script>-->
 <script src="../../assets/js/common.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL JS INIT -->
-<script language="javascript" type="text/javascript">
-    $(document).ready(function(){
-        $("#packagetype").change(function(){
-            var type = $("#packagetype").val();
-            $.post('getPackages',"type="+type,function(data){
-                var obj = jQuery.parseJSON(data);
-                $("#packageid").empty();
-                $("#packageid").append("<option value=''>请选择套餐</option>");
-                $.each(obj,function(k,v){
-                    $("#packageid").append("<option value='"+v.id+"'>"+v.name+"</option>");
-                })
+<block name="extjs">
+    <script language="javascript" type="text/javascript">
+        $(document).ready(function(){
+            $("#packagetype").change(function(){
+                var type = $("#packagetype").val();
+                $.post('getPackages',"type="+type,function(data){
+                    var obj = jQuery.parseJSON(data);
+                    $("#packageid").empty();
+                    $("#packageid").append("<option value=''>请选择套餐</option>");
+                    $.each(obj,function(k,v){
+                        $("#packageid").append("<option value='"+v.id+"'>"+v.name+"</option>");
+                    })
+                });
             });
         });
-    });
-</script>
+    </script>
+</block>
 </body>
 </html>

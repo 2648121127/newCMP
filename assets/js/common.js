@@ -67,6 +67,54 @@
                     },
                     datesel:{
                         required: true
+                    },
+                    action:{
+                        required: true
+                    },
+                    quota:{
+                        required: true
+                    },
+                    type:{
+                        required: true
+                    },
+                    realdataList:{
+                        required: true
+                    },
+                    psdudodataList:{
+                        required: true
+                    },
+                    isdisabled:{
+                        required: true
+                    },
+                    time:{
+                        required: true
+                    },
+                    apiname:{
+                        required: true
+                    },
+                    realdata:{
+                        required: true
+                    },
+                    pseudodata:{
+                        required: true
+                    },
+                    totalflow:{
+                        required: true
+                    },
+                    opttype:{
+                        required: true
+                    },
+                    name:{
+                        required: true
+                    },
+                    groupid:{
+                        required: true
+                    },
+                    appkey:{
+                        required: true
+                    },
+                    secret:{
+                        required: true
                     }
                 },
                 messages:{
@@ -82,6 +130,23 @@
                     speedValue:'该字段不能为空!',
                     innertype:'该字段不能为空!',
                     datesel:'该字段不能为空!',
+                    action:'该字段不能为空!',
+                    quota:'该字段不能为空!',
+                    type:'该字段不能为空!',
+                    realdataList:'该字段不能为空!',
+                    psdudodataList:'该字段不能为空!',
+                    isdisabled:'该字段不能为空!',
+                    time:'该字段不能为空!',
+                    apiname:'该字段不能为空!',
+                    realdata:'该字段不能为空!',
+                    pseudodata:'该字段不能为空!',
+                    totalflow:'该字段不能为空!',
+                    opttype:'该字段不能为空!',
+                    name:'该字段不能为空!',
+                    groupid:'该字段不能为空!',
+                    appkey:'该字段不能为空!',
+                    secret:'该字段不能为空!',
+
                 }
             });
         },

@@ -1,0 +1,37 @@
+<extend name="Public:base"/>
+<block name="pagecont">
+    <div id="main-container">
+        <div class="padding-md">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3>错误信息提示</h3>
+                </div>
+                <div class="panel-body panel-heading">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4">
+                            <a href="javascript:void(0);" type="submit" class="btn btn-success" onclick="javascript:history.back(-1);">返回</a>
+                            <a href="{:U('CmCard/index')}" type="reset" class="btn btn-danger" >充值卡页面</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div>{$message}</div>
+                    <volist name="errarr" id="vo">
+                        <if condition="$vo.key eq 1">
+                            没有操作权限:&nbsp;&nbsp;{$vo.val}<br/>
+                            <elseif condition="$vo.key eq 2"/>
+                            操作失败:&nbsp;&nbsp;{$vo.val}<br/>
+                            <elseif condition="$vo.key eq 3"/>
+                            已存在该记录:&nbsp;&nbsp;{$vo.val}<br/>
+                            <elseif condition="$vo.key eq 4"/>
+                            该号码不存在:&nbsp;&nbsp;{$vo.val}<br/>
+                            <elseif condition="$vo.key eq 5"/>
+                            记录工单错误<br/>
+                            <else/>
+                        </if>
+                    </volist>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>

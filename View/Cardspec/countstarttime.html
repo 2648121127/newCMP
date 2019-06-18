@@ -258,7 +258,7 @@
                         <li> <a href="../CmCard/index.html"> 物联网卡 </a> </li>
                         <li> <a href="../CmWorkorder/CmWorkorder.html"> 业务工单 </a> </li>
                         <li> <a href="../CmPackage/CmPackage.html"> 套餐管理 </a> </li>
-                        <li> <a href="../CmDealer/CmDealer.html">发卡商管理</a> </li>
+                        <li> <a href="../CmDealer/index.html">发卡商管理</a> </li>
                     </ul>
                 </li>
                 <li>
@@ -402,12 +402,12 @@
                                         </div>
                                     </div>
 
-                                    <form class="form-horizontal col-lg-7 col-md-7 col-sm-7" action="#" id="form_traditional_validation" name="form_traditional_validation" role="form" autocomplete="off">
+                                    <form class="form-horizontal col-lg-7 col-md-7 col-sm-7" novalidate action="__ACTION__" method="post" id="form_traditional_validation" name="form_traditional_validation" role="form" autocomplete="off">
                                         <div class="p-t-15"></div>
                                         <div class="form-group">
                                             <label class="col-lg-3 col-md-3 col-sm-3 control-label">下载模板</label>
                                             <div class="col-lg-9 col-md-9 col-sm-9">
-                                                <a href="http://wlw.pinet.co/Public/Files/PinetM2MDeviceActionMembersImport.xls" class="btn btn-sm btn-success" type="button">
+                                                <a href="{$Think.WEB_ROOT}Public/Files/PinetM2MDeviceUsedflowImport.xls" class="btn btn-sm btn-success" type="button">
                                                     <i class="fa fa-download"></i>
                                                     下载模板
                                                 </a>
@@ -420,23 +420,25 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-lg-3 col-md-3 col-sm-2 control-label"><em class="text-danger">*&nbsp;</em>导入文件</label>
+                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>导入文件</label>
                                             <div class="col-lg-9 col-md-9 col-sm-9">
                                                 <div class="input-group">
-                                                    <input id='showlocation' name="file" class="form-control c-select-36" readonly required>
+                                                    <input id='location' name="fileup" class="form-control c-select-36" required readonly>
                                                     <label class="input-group-btn">
-                                                        <input type="button" id="i-check" value="浏览文件" class="btn btn-primary" onclick="$('#i-file').click();$('#showlocation').focus();">
+                                                        <input type="button" id="i-check" value="浏览文件" class="btn btn-primary" onclick="$('#upload input').click();$('#location').focus();">
                                                     </label>
                                                 </div>
                                             </div>
-                                            <input type="file" name="file" id='i-file'  onchange="$('#showlocation').val($('#i-file').val());if($('#showlocation').val($('#i-file').val())!=''){$('#showlocation').blur();}" style="display: none" >
+                                            <a href="javascript:;" class="file " id="upload" onchange="$('#location').val($('#upload input').val());if($('#location').val($('#upload input').val())!=''){$('#location').blur();}">
+                                                <input type="file" name="files"  style="display: none">
+                                            </a>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-lg-3 col-md-3 col-sm-3 control-label"></label>
                                             <div class="col-lg-9 col-md-9 col-sm-9">
-                                                <input type="hidden" name="act" value="add">
+                                                <input type="hidden" name="act" value="{$act}"/>
                                                 <button type="submit" id="submit" class="btn btn-success btn-small m-r-10">保存</button>
-                                                <a href="index.html" type="reset" class="btn btn-danger btn-small">取消</a>
+                                                <a href="{:U('Cardspec/index')}" type="reset" class="btn btn-danger btn-small">取消</a>
                                             </div>
                                         </div>
                                     </form>
@@ -462,16 +464,14 @@
 <script src="../../assets/plugins/jquery-inputmask/jquery.inputmask.min.js" type="text/javascript"></script><!--输入框input输入内容格式限制插件-->
 <script src="../../assets/plugins/jquery-autonumeric/autoNumeric.js" type="text/javascript"></script> <!--数字格式化文本-->
 <script src="../../assets/plugins/dropzone/dropzone.min.js" type="text/javascript"></script>  <!--文件上传-->
-<script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
-
 <script src="../../assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
 <!--<script src="../../assets/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js" type="text/javascript"></script>-->
-<script src="../../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js" type="text/javascript"></script>
-<script src="../../assets/plugins/bootstrap-tag/bootstrap-tagsinput.min.js" type="text/javascript"></script>
+<!--<script src="../../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/bootstrap-tag/bootstrap-tagsinput.min.js" type="text/javascript"></script>-->
 
 <script src="../../webarch/js/webarch.js" type="text/javascript"></script>
-<script src="../../assets/js/form_validations.js" type="text/javascript"></script>
+<!--<script src="../../assets/js/form_validations.js" type="text/javascript"></script>-->
 <script src="../../assets/js/common.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL JS INIT -->
 </body>

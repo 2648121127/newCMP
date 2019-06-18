@@ -247,7 +247,7 @@
                         <li> <a href="index.html"> 物联网卡 </a> </li>
                         <li> <a href="../CmWorkorder/CmWorkorder.html"> 业务工单 </a> </li>
                         <li> <a href="../CmPackage/CmPackage.html"> 套餐管理 </a> </li>
-                        <li> <a href="../CmDealer/CmDealer.html">发卡商管理</a> </li>
+                        <li> <a href="../CmDealer/index.html">发卡商管理</a> </li>
                     </ul>
                 </li>
                 <li>
@@ -375,34 +375,44 @@
                                 <div class="grid-body no-border">
                                     <div style="overflow: hidden;border-bottom: 1px solid #dddddd">
                                         <h3 style="font-size:18px;font-family:inherit;font-weight:500;color:#6f7b8a">移动物联网卡管理
-                                            <span style="float:right;font-size:12px;color:#fff;font-weight:bold;background: #0b9c8f;padding:0px 7px;border-radius: 5px;">共1页</span>
+                                            <span style="float:right;font-size:12px;color:#fff;font-weight:bold;background: #0b9c8f;padding:0px 7px;border-radius: 5px;">共 {$total} 项</span>
                                         </h3>
                                     </div>
                                     <div class="row" >
                                         <div class="p-t-10" style="overflow: hidden;border-bottom:1px solid #dddddd;margin:0px 15px;">
                                             <p class="p-t-5">
-                                                <a href="addcard.html" type="button" class="btn btn-danger btn-small btn-sm m-r-5">
-                                                    <i class="fa fa-plus"></i>
-                                                    导入物联网卡
-                                                </a>
-                                                <a href="allotcard.html"  type="button" class="btn btn-danger btn-sm btn-small m-r-5">
-                                                    <i class="fa fa-plus"></i>
-                                                    划拨物联网卡
-                                                </a>
-                                                <a href="chgpackage.html" type="button" class="btn btn-danger btn-small btn-sm m-r-5">
-                                                    <i class="fa fa-plus"></i>
-                                                    更改套餐
-                                                </a>
+                                                <php>if (in_array('11_1_2', $_SESSION['menupriv']) ) { </php>
+                                                    <a href="{:U('CmCard/addcard')}" type="button" class="btn btn-danger btn-small btn-sm m-r-5">
+                                                        <i class="fa fa-plus"></i>
+                                                        导入物联网卡
+                                                    </a>
+                                                <php>}</php>
+                                                <php>if (in_array('11_1_3', $_SESSION['menupriv']) ) { </php>
+                                                    <a href="{:U('CmCard/allotcard')}"  type="button" class="btn btn-danger btn-sm btn-small m-r-5">
+                                                        <i class="fa fa-plus"></i>
+                                                        划拨物联网卡
+                                                    </a>
+                                                <php>}</php>
+                                                <php>if (in_array('11_1_4', $_SESSION['menupriv']) ) { </php>
+                                                    <a href="{:U('CmCard/chgpackage')}" type="button" class="btn btn-danger btn-small btn-sm m-r-5">
+                                                        <i class="fa fa-plus"></i>
+                                                        更改套餐
+                                                    </a>
+                                                <php>}</php>
                                             </p>
                                             <p class="p-t-5">
-                                                <a href="statusmodify.html" type="button" class="btn btn-primary btn-small btn-sm m-r-5">
-                                                    <i class="fa fa-plus"></i>
-                                                    生命周期变更
-                                                </a>
-                                                <a href="memberswitch.html" type="button" class="btn btn-primary btn-small btn-sm m-r-5">
-                                                    <i class="fa fa-plus"></i>
-                                                    停开机
-                                                </a>
+                                                <php>if (in_array('11_1_5', $_SESSION['menupriv']) ) { </php>
+                                                    <a href="{:U('CmCard/statusmodify')}" type="button" class="btn btn-primary btn-small btn-sm m-r-5">
+                                                        <i class="fa fa-plus"></i>
+                                                        生命周期变更
+                                                    </a>
+                                                <php>}</php>
+                                                <php>if (in_array('11_1_6', $_SESSION['menupriv']) ) { </php>
+                                                    <a href="{:U('CmCard/memberswitch')}" type="button" class="btn btn-primary btn-small btn-sm m-r-5">
+                                                        <i class="fa fa-plus"></i>
+                                                        停开机
+                                                    </a>
+                                                <php>}</php>
                                             </p>
                                         </div>
 
@@ -416,25 +426,29 @@
                                             <div class="form-group m-r-10">
                                                 <label class="form-group">&nbsp;&nbsp;ICCID号:</label>
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" placeholder="起始iccid">
+                                                    <input type="text" class="form-control" name="starticcid" value="{$starticcid}" placeholder="起始iccid" id="starticcid">
                                                 </div>
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" placeholder="结束iccid">
+                                                    <input type="text" class="form-control" name="endiccid" value="{$endiccid}" placeholder="截止iccid" id="endiccid">
                                                 </div>
                                             </div>
                                             <div class="form-group m-r-10">
                                                 <label class="form-group">Msisdn:</label>
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" placeholder="接入号码">
+                                                    <input type="text" class="form-control" name="number" value="{$number}" placeholder="接入号码" id="number">
                                                 </div>
                                             </div>
                                             <div class="form-group m-r-10">
                                                 <label class="form-group">&nbsp;&nbsp;&nbsp;&nbsp;卡状态:</label>
                                                 <div class="form-group">
-                                                    <select style="min-width:169px;width:100%;height:36px !important;">
-                                                        <option value="1">Loading...</option>
-                                                        <option value="2">22222.</option>
-                                                        <option value="3">3333</option>
+                                                    <select id="status" name="status" style="min-width:169px;width:100%;height:36px !important;">
+                                                        <volist name="statuslist" id="v">
+                                                            <if condition="$status eq $v.key ">
+                                                                <option value="{$v.key}" selected="selected">{$v.val}</option>
+                                                                <else/>
+                                                                <option value="{$v.key}">{$v.val}</option>
+                                                            </if>
+                                                        </volist>
                                                     </select>
                                                 </div>
                                             </div>
@@ -443,37 +457,54 @@
                                             <div class="form-group m-r-10">
                                                 <label class="form-group">分销用户:</label>
                                                 <div class="form-group">
-                                                    <select id="carStu1" style="min-width:169px;width:100%;height:36px !important;">
+                                                    <select id="firstuid" name="firstuid" style="min-width:169px;width:100%;height:36px !important;">
                                                         <option value="">一级分销用户</option>
-                                                        <option value="2">22222.</option>
-                                                        <option value="3">3333</option>
+                                                        <volist name="users" id="v">
+                                                            <if condition="$firstuid eq $v.uid ">
+                                                                <option value="{$v.uid}" selected="selected">{$v.nickname}</option>
+                                                                <else/>
+                                                                <option value="{$v.uid}">{$v.nickname}</option>
+                                                            </if>
+                                                        </volist>
                                                     </select>
                                                 </div>
                                                 <div class="form-group">
-                                                    <select id="carStu12" style="min-width:169px;width:100%;height:36px !important;">
+                                                    <select id="seconduid" name="seconduid" style="min-width:169px;width:100%;height:36px !important;">
                                                         <option value="">二级分销用户</option>
-                                                        <option value="2">22222.</option>
-                                                        <option value="3">3333</option>
+                                                        <volist name="users2" id="v">
+                                                            <if condition="$seconduid eq $v.uid ">
+                                                                <option value="{$v.uid}" selected="selected">{$v.nickname}</option>
+                                                                <else/>
+                                                                <option value="{$v.uid}">{$v.nickname}</option>
+                                                            </if>
+                                                        </volist>
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="form-group m-r-10">
-                                                <label class="form-group">发卡商:</label>
-                                                <div class="form-group">
-                                                    <select id="remote1" style="min-width:169px;width:100%;height:36px !important;">
-                                                        <option value="1">选择发卡商</option>
-                                                        <option value="2">22222.</option>
-                                                        <option value="3">3333</option>
-                                                    </select>
+                                            <if condition="$adminid eq 1 ">
+                                                <div class="form-group m-r-10">
+                                                    <label class="form-group">发卡商:</label>
+                                                    <div class="form-group">
+                                                        <select id="dealerid" name="dealerid" style="min-width:169px;width:100%;height:36px !important;">
+                                                            <option value="0">选择发卡商</option>
+                                                            <volist name="alldealers" id="v">
+                                                                <if condition="$dealerid eq $v.id ">
+                                                                    <option value="{$v.id}" selected="selected">{$v.name}</option>
+                                                                    <else/>
+                                                                    <option value="{$v.id}">{$v.name}</option>
+                                                                </if>
+                                                            </volist>
+                                                        </select>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            </if>
                                         </div>
                                         <div class="p-t-15">
                                             <div class="form-group m-r-10">
                                                 <label class="form-group"></label>
                                                 <div class="form-group">
-                                                    <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="keywords">搜索</a>
-                                                    <a href="index.html" type="reset" class="btn btn-white btn-small">重置</a>
+                                                    <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="keyword">搜索</a>
+                                                    <a href="{:U('CmCard/index')}" type="reset" class="btn btn-white btn-small">重置</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -492,28 +523,40 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>ALERT</td>
-                                            <td>Marksdbfasbfhsla</td>
-                                            <td>Marksdbfasbfhsla</td>
-                                            <td>Otto</td>
-                                            <td>
-                                                <a data-toggle="modal" href="#cardinfo" class="btn btn-primary btn-xs btn-mini" type="button">详情</a>
-                                            </td>
-                                        </tr>
+                                        <if condition="$data eq null">
+                                            <tr>
+                                                <td colspan="16" style="text-align:center;padding:30px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">没有数据</td>
+                                            </tr>
+                                            <else/>
+                                            <volist name="data" id="vo">
+                                            <tr>
+                                                <td>{$vo.iccid}</td>
+                                                <td>{$vo.number}</td>
+                                                <td>{$vo.imsi}</td>
+                                                <td>{$vo.status}</td>
+                                                <td>{$vo.dealername}</td>
+                                                <td>{$vo.nickname}</td>
+                                                <td>
+                                                    <div style="min-width: 24px;">
+                                                        <a data-toggle="modal" href="#cardinfo" class="show-info" onclick="setCardid({$vo.id},'{$vo.iccid}','{$vo.number}','{$vo.packagename}')">
+                                                            <i class="fa fa-info"></i>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            </volist>
+                                        </if>
                                         </tbody>
                                     </table>
-                                    <!--<div class="panel-footer clearfix">-->
-                                        <!--{$page}-->
-                                    <!--</div>-->
+                                    <div class="panel-footer clearfix">
+                                        {$page}
+                                    </div>
                                     <!--查看卡片详细信息-->
                                     <div class="modal fade" id="cardinfo">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h4>Msisdn号：&nbsp&nbsp;<span class="msisdn"></span></h4>
+                                                    <h4 class="text-left">Msisdn号：&nbsp&nbsp;<span class="msisdn"></span></h4>
                                                 </div>
                                                 <!--<div class="modal-body cont_base" style="border-bottom: 1px solid #e5e5e5;margin: 0px 10px;">-->
                                                 <div class="modal-body cont_base">
@@ -541,28 +584,165 @@
         <!-- END PAGE -->
     </div>
 </div>
-<script src="assets/plugins/pace/pace.min.js" type="text/javascript"></script>
+<script src="../../assets/plugins/pace/pace.min.js" type="text/javascript"></script>
 <!-- BEGIN JS DEPENDECENCIES-->
 <script src="../../assets/plugins/jquery/jquery-1.11.3.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrapv3/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-block-ui/jqueryblockui.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
-<!-- END CORE JS DEPENDECENCIES-->
-<!-- BEGIN CORE TEMPLATE JS -->
+
 <script src="../../webarch/js/webarch.js" type="text/javascript"></script>
-<!--<script src="assets/js/chat.js" type="text/javascript"></script>-->
-<!-- END CORE TEMPLATE JS -->
-<!-- BEGIN PAGE LEVEL PLUGINS -->
-<script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-datatable/js/jquery.dataTables.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-datatable/extra/js/dataTables.tableTools.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/datatables-responsive/js/datatables.responsive.js" type="text/javascript"></script>
-<script src="../../assets/plugins/datatables-responsive/js/lodash.min.js" type="text/javascript"></script>
-<!-- END PAGE LEVEL JS INIT -->
-<script src="../../assets/js/datatables.js" type="text/javascript"></script>
+
+<block name="extjs">
+
+    <script language="javascript" type="text/javascript">
+
+        var currentShowCity=0;
+
+        $(document).ready(function(){
+            $("#keyword").click(function(){
+                var starticcid = $("#starticcid").val();
+                var endiccid = $("#endiccid").val();
+                var number = $("#number").val();
+                var status = $("#status").val();
+                var firstuid = $("#firstuid").val();
+                var seconduid = $("#seconduid").val();
+                var dealerid = $("#dealerid").val();
+                if(starticcid=='' && endiccid=='' && number=='' &&  status==0 && firstuid=='' && seconduid=='' && dealerid==''){
+                    alert('请选择查询条件');
+                }else{
+                    var url =  "{:U('CmCard/keywords')}"+"?act=keywords&starticcid="+starticcid+"&endiccid="+endiccid+"&number="+number+"&status="+status+"&firstuid="+firstuid+"&seconduid="+seconduid+"&dealerid="+dealerid;
+                    window.location = url;
+                }
+            });
+
+
+            //选择一级分销用户，筛选二级分销用户
+            $("#firstuid").change(function(){
+                var uid=$("#firstuid").val();
+//				$.post('getSecondUsers',"uid="+uid,function(data){
+                $.post("{:U('CmCard/getSecondUsers')}","uid="+uid,function(data){
+                    console.log(data);
+                    var obj = data;
+                    $("#seconduid").empty();
+                    $("#seconduid").append("<option value=''>二级分销用户</option>");
+                    $.each(obj,function(k,v){
+                        $("#seconduid").append("<option value='"+v.uid+"'>"+v.nickname+"</option>");
+                    })
+                });
+            });
+        });
+
+
+        //查询卡片详细信息
+        function setCardid(id,iccid,number,packagename){
+            $("#cardinfo").find('.msisdn').html(number);
+            $.post("{:U('CmCard/getCardinfo')}","cardid="+id,function(obj){
+                console.log(obj);
+                var isprimarycard = '否';
+                if(obj.isprimarycard == 1){
+                    isprimarycard = '是';
+                }
+                var msg = 'ID：86111'+obj.id+'<br/>'+
+                    '套餐名称：'+obj.packagename+'<br/>'+
+                    //						'便捷短码：'+obj.fakenumber+'<br/>'+
+                    '绑定手机号码：'+obj.mobilenumber+'<br/>'+
+                    '移动群组名称：'+obj.groupname+'<br/>'+
+                    '是否主卡：'+isprimarycard+'<br/>'+
+                    '用户发展时间：'+obj.developdate+'<br/>';
+                $("#cardinfo .cont_base").find('span').html(msg);
+
+//				var msg_status = '状态：'+obj.query_status.productStatusName+'<br/>变更日期：'+obj.query_status.servCreateDate;
+//				$("#cardinfo .cont_status").find('span').html(msg_status);
+
+            });
+        }
+
+
+
+        //查询卡状态
+        function setStaCardid(id,iccid){
+            $("#qurCardStatus").find('.iccid').html(iccid);
+            $.post("{:U('Card/singRequstApi')}","method=queryCardStatus"+"&id="+id,function(data){
+                console.log(data);
+
+                var obj = jQuery.parseJSON(data);
+                var msg = '状态：'+obj.productStatusName+'<br/>变更日期：'+obj.servCreateDate;
+                $("#qurCardStatus").find('.cont').html(msg);
+                $('#qurCardStatus').css('display','block');
+
+            });
+        }
+
+
+
+        //激活卡
+        function setActiveCardid(id,msisdn,method){
+            $("#activeCard").find('.msisdn').html(msisdn);
+            $.post("{:U('CmCard/singRequstApi')}","method="+method+"&id="+id,function(data){
+                console.log(data);
+                var obj = jQuery.parseJSON(data);
+
+                //如果已经激活过，则提示请不要重复操作
+                if(obj.productStatusCd != 19){
+                    $("#activeCard .err").html('<p style="color:#fff;background: #f00;padding:2px;">无激活操作可执行</p>');
+                }else{
+                    $("#activeCard .modal-footer .id").val(id);
+                    $("#activeCard .modal-footer .method").val(method);
+                    $("#activeCard .modal-footer .act").css('display','');
+                }
+
+//				var msg = '状态：'+obj.productStatusName+'<br/>变更日期：'+obj.servCreateDate;
+//				$("#qurCardStatus").find('.cont').html(msg);
+                $("#activeCard .cont .status span").html(obj.productStatusName);
+                $("#activeCard .cont .chgdate span").html(obj.servCreateDate);
+            });
+        }
+
+
+
+        //停机保号
+        function setAddDisabNumid(id,iccid,method){
+            $("#addDisablNum").find('.iccid').html(iccid);
+            $.post("{:U('Card/singRequstApi')}","method=queryCardStatus"+"&id="+id,function(data){
+                console.log(data);
+                var obj = jQuery.parseJSON(data);
+
+                //如果已经激活过，则提示请不要重复操作
+                if(obj.productStatusCd == 2){
+                    $("#addDisablNum .err").html('<p style="color:#fff;background: #f00;padding:2px;">该卡已停机</p>');
+                }else{
+                    $("#addDisablNum .modal-footer .id").val(id);
+                    $("#addDisablNum .modal-footer .method").val(method);
+                    $("#addDisablNum .modal-footer .disnumb").css('display','');
+                }
+            });
+        }
+        //恢复停机保号
+        function setDelDisabNumid(id,iccid,method){
+            $("#delDisablNum").find('.iccid').html(iccid);
+            $.post("{:U('Card/singRequstApi')}","method=queryCardStatus"+"&id="+id,function(data){
+                console.log(data);
+                var obj = jQuery.parseJSON(data);
+
+                //如果已经激活过，则提示请不要重复操作
+                if(obj.productStatusCd == 2){
+                    $("#delDisablNum .modal-footer .id").val(id);
+                    $("#delDisablNum .modal-footer .method").val(method);
+                    $("#delDisablNum .modal-footer .disnumb").css('display','');
+                }else{
+                    $("#delDisablNum .err").html('<p style="color:#fff;background: #f00;padding:2px;">该卡无法进行恢复停机保号操作</p>');
+
+                }
+            });
+        }
+
+
+    </script>
+
+</block>
 </body>
 </html>
