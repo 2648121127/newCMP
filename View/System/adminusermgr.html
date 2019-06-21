@@ -374,33 +374,39 @@
                                 <div class="grid-body no-border">
                                     <div style="overflow: hidden;border-bottom: 1px solid #dddddd">
                                         <h3 style="font-size:18px;font-family:inherit;font-weight:500;color:#6f7b8a">渠道商/分销商管理
-                                            <span style="float:right;font-size:12px;color:#fff;font-weight:bold;background: #0b9c8f;padding:0px 7px;border-radius: 5px;">共1页</span>
+                                            <span style="float:right;font-size:12px;color:#fff;font-weight:bold;background: #0b9c8f;padding:0px 7px;border-radius: 5px;">共 {$total} 页</span>
                                         </h3>
                                     </div>
-                                    <form class="form-inline">
-                                        <div class="row p-t-15" style="display: flex;display: -webkit-flex;align-items:center;">
-                                            <div class="col-lg-3 col-md-3 col-sm-3">
-                                                <input type="text" placeholder="请输入用户名" style="width:100%;min-height:34px;">
-                                            </div>
-                                            <div class="col-lg-3 col-md-3 col-sm-3">
-                                                <select style="width:100%;">
-                                                    <option value="">请选择用户级别</option>
-                                                    <option value="1">用户级别1</option>
-                                                    <option value="2">用户级别2</option>
-                                                    <option value="3">用户级别3</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-lg-3 col-md-3 col-sm-3">
-                                                <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="keywords">搜索</a>
-                                                <a href="adminusermgr.html" type="reset" class="btn btn-white btn-small">重置</a>
+                                    <php>if (in_array('4_2_9', $_SESSION['menupriv']) ) { </php>
+                                        <div class="form-inline">
+                                            <div class="row p-t-15" style="display: flex;display: -webkit-flex;align-items:center;">
+                                                <div class="col-lg-3 col-md-3 col-sm-3">
+                                                    <input type="text" name="nickname" id="nickname"  placeholder="请输入用户名称" value="{$nickname}" style="width:100%;min-height:36px;">
+                                                </div>
+                                                <div class="col-lg-3 col-md-3 col-sm-3">
+                                                    <select id="groupid" name="groupid" style="width:100%;">
+                                                        <option value="">请选择用户级别</option>
+                                                        <volist name="admingroup" id="v">
+                                                            <if condition="$groupid eq $v.id ">
+                                                                <option value="{$v.id}" selected="selected">{$v.groupname}</option>
+                                                                <else/>
+                                                                <option value="{$v.id}">{$v.groupname}</option>
+                                                            </if>
+                                                        </volist>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-3 col-md-3 col-sm-3">
+                                                    <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="keywords">搜索</a>
+                                                    <a href="{:U('System/adminusermgr')}" type="reset" class="btn btn-white btn-small">重置</a>
+                                                </div>
                                             </div>
                                         </div>
-                                    </form>
+                                    <php>}</php>
                                     <br>
                                     <div class="row" >
                                         <div class="p-t-10" style="overflow: hidden;margin:0px 15px;">
                                             <p>
-                                                <a href="adminuseredit.html" type="button" class="btn btn-primary btn-small btn-sm">
+                                                <a href="{:U('System/addadminuser')}" type="button" class="btn btn-primary btn-small btn-sm">
                                                     <i class="fa fa-plus"></i>
                                                     增加后台用户角色
                                                 </a>
@@ -446,7 +452,7 @@
                                                         <if condition="($vo.status eq 0) ">
                                                             <span class="label label-success">正常</span>
                                                             <else/>
-                                                            <!--<span class="label label-important" style="padding:5px">冻结</span>-->
+                                                            <span class="label label-important" style="padding:5px">冻结</span>
                                                         </if>
                                                     </td>
                                                     <td style="white-space: nowrap">
@@ -490,9 +496,9 @@
                                                 </if>
                                             </tbody>
                                         </table>
-                                        <!--<div class="panel-footer clearfix">-->
-                                            <!--{$page}-->
-                                        <!--</div>-->
+                                        <div class="panel-footer clearfix">
+                                            {$page}
+                                        </div>
 
                                         <!--modal ----- start-->
                                         <div class="modal fade" id="chgRoleModal">

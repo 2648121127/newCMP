@@ -400,31 +400,31 @@
                                             </strong>
                                         </div>
                                     </if>
-                                    <form class="form-horizontal validate col-lg-12 col-md-12 col-sm-12" action="#" class="form-horizontal validate col-lg-12 col-md-12 col-sm-12" id="form_traditional_validation" name="form_traditional_validation" novalidate="novalidate">
+                                    <form class="form-horizontal validate col-lg-12 col-md-12 col-sm-12" novalidate action="__ACTION__" method="post" class="form-horizontal validate col-lg-12 col-md-12 col-sm-12" id="form_traditional_validation" name="form_traditional_validation" novalidate="novalidate">
                                         <div class="p-t-15"></div>
                                         <div class="form-group">
                                             <label class="col-lg-2 col-md-2 col-sm-2 control-label"><em class="text-danger">*&nbsp;</em>结算金额</label>
                                             <div class="col-lg-6 col-md-6 col-sm-6">
-                                                <input type="text" class="form-control" name="num" placeholder="请输入结算金额" required>
+                                                <input type="text" class="form-control" name="amount" value="{$data.amount}" placeholder="请输入结算金额" required>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-lg-2 col-md-2 col-sm-2 control-label">订单数量</label>
                                             <div class="col-lg-6 col-md-6 col-sm-6">
-                                                <input type="text" class="form-control" name="num" placeholder="请输入订单数量">
+                                                <input type="text" class="form-control" name="ordernum" value="{$data.ordernum}" placeholder="请输入订单数量">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-lg-2 col-md-2 col-sm-2 control-label"><em class="text-danger">*&nbsp;</em>结算订单日期范围</label>
                                             <div class="col-lg-3 col-md-3 col-sm-3">
                                                 <div class="input-append success date" style="width:100%;">
-                                                    <input type="text" name="startdate" class="form-control" required>
+                                                    <input type="text" name="startdate" value="{$data.startdate}" class="datepicker form-control" required>
                                                     <span class="add-on" style="margin-left:-36px;"><span class="arrow"></span><i class="fa fa-th"></i></span>
                                                 </div>
                                             </div>
                                             <div class="col-lg-3 col-md-3 col-sm-3">
                                                 <div class="input-append success date" style="width:100%;">
-                                                    <input type="text" name="enddate" class="form-control" required>
+                                                    <input type="text" name="enddate" value="{$data.enddate}" class="datepicker form-control" required>
                                                     <span class="add-on" style="margin-left:-36px;"><span class="arrow"></span><i class="fa fa-th"></i></span>
                                                 </div>
                                             </div>
@@ -432,7 +432,7 @@
                                         <div class="form-group">
                                             <label class="col-lg-2 col-md-2 col-sm-2 control-label"><em class="text-danger">*&nbsp;</em>支付类型</label>
                                             <div class="col-lg-6 col-md-6 col-sm-6">
-                                                <select name="uid1" id="uid1" data-required="true" class="c-select-36 c-width-100" required>
+                                                <select name="type" class="c-select-36 c-width-100" required>
                                                     <option value="">请选择支付方式</option>
                                                     <if condition="$data['type'] eq 1">
                                                         <option value="1" selected="selected">微信</option>
@@ -457,7 +457,7 @@
                                         <div class="form-group">
                                             <label class="col-lg-2 col-md-2 col-sm-2 control-label"><em class="text-danger">*&nbsp;</em>收款用户</label>
                                             <div class="col-lg-6 col-md-6 col-sm-6">
-                                                <select name="uid2" id="uid2" data-required="true" class="c-select-36 c-width-100" required>
+                                                <select name="touid" class="c-select-36 c-width-100" required>
                                                     <option value="">请选择收款用户</option>
                                                     <volist name="toadmins" id="vo">
                                                         <if condition="$data['touid'] eq $vo['uid']">
@@ -473,20 +473,31 @@
                                             <label class="col-lg-2 col-md-2 col-sm-2 control-label"><em class="text-danger">*&nbsp;</em>支付凭证</label>
                                             <div class="col-lg-6 col-md-6 col-sm-6">
                                                 <div class="input-group">
-                                                    <input id='location' name="fileup" class="form-control c-select-36" onclick="$('#i-file').click();" required readonly>
+                                                    <input id='location' name="fileup" class="form-control c-select-36" required readonly>
                                                     <label class="input-group-btn">
-                                                        <input type="button" id="i-check" value="浏览文件" class="btn btn-primary" onclick="$('#i-file').click();">
+                                                        <input type="button" id="doc" onchange="javascript:setImagePreview();" value="浏览文件" class="btn btn-primary" onclick="$('#upload input').click();$('#location').focus();">
                                                     </label>
                                                 </div>
                                             </div>
-                                            <input type="file" name="file" id='i-file'  onchange="$('#location').val($('#i-file').val());" style="display: none">
+                                            <a href="javascript:;" class="file " id="upload" onchange="$('#location').val($('#upload input').val());if($('#location').val($('#upload input').val())!=''){$('#location').blur();}">
+                                                <input type="file" name="files" style="display: none">
+                                            </a>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 col-md-2 col-sm-2 control-label"></label>
+                                            <div class="ol-lg-6 col-md-6 col-sm-6" id="localImag" style="margin: 20px 0px;">
+                                                <img id="preview" src="{$Think.WEB_ROOT}{$data.voucher}">
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-lg-2 col-md-2 col-sm-2 control-label"></label>
                                             <div class="col-lg-6 col-md-6 col-sm-6">
-                                                <input type="hidden" name="act" value="add">
+                                                <input type="hidden" name="act" value="{$act}"/>
+                                                <input type="hidden" name="id" value="{$data.id}"/>
+                                                <input type="hidden" name="uid" value="{$uid}"/>
+                                                <input type="hidden" name="fromuid" value="{$fromuid}"/>
                                                 <button type="submit" id="submit" class="btn btn-success btn-small m-r-10">保存</button>
-                                                <a href="index.html" type="reset" class="btn btn-danger btn-small">取消</a>
+                                                <a href="{:U('Statistic/index')}" type="reset" class="btn btn-danger btn-small">取消</a>
                                             </div>
                                         </div>
                                     </form>
@@ -507,24 +518,87 @@
 <script src="../../assets/plugins/jquery/jquery-1.11.3.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrapv3/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-block-ui/jqueryblockui.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
+<!--<script src="../../assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>-->
 <script src="../../assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
 
 <script src="../../assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-inputmask/jquery.inputmask.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-autonumeric/autoNumeric.js" type="text/javascript"></script>
-<script src="../../assets/plugins/ios-switch/ios7-switch.js" type="text/javascript"></script>
-<script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js" type="text/javascript"></script>
-<script src="../../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js" type="text/javascript"></script>
-<script src="../../assets/plugins/bootstrap-tag/bootstrap-tagsinput.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/dropzone/dropzone.min.js" type="text/javascript"></script>
+<!--<script src="../../assets/plugins/jquery-inputmask/jquery.inputmask.min.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/jquery-autonumeric/autoNumeric.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/ios-switch/ios7-switch.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/bootstrap-tag/bootstrap-tagsinput.min.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/dropzone/dropzone.min.js" type="text/javascript"></script>-->
 
 <script src="../../webarch/js/webarch.js" type="text/javascript"></script>
-<script src="../../assets/js/form_elements.js" type="text/javascript"></script>
-<!-- END PAGE LEVEL JS INIT -->
+<script src="../../assets/js/common.js" type="text/javascript"></script>
+
+<block name="extjs">
+    <script language="javascript" type="text/javascript">
+        $(function(){
+            /* 时间控件 */
+            $('.input-append.date').datepicker({
+                autoclose: true,
+                format: "yyyy-mm-dd",
+                todayHighlight: true
+            });
+
+            $("#keyword").click(function(){
+                var keywords = $("#keywords").val();
+                if(keywords == ''){
+                    alert('请输入筛选关键字');
+                }else{
+                    var xx =  "{:U('Business/queryPakage')}"+"?act=keywords&keywords="+keywords;
+                    window.location =xx;
+                }
+            });
+            $("#keywords").keypress(function(e){
+                if (event.keyCode == 13) {
+                    event.cancelBubble = true;
+                    event.returnValue = false;
+                    $('#keyword').click();
+                }
+            });
+
+        });
+
+        function setImagePreview(avalue) {
+            var docObj=document.getElementById("doc");
+            var imgObjPreview=document.getElementById("preview");
+            if(docObj.files &&docObj.files[0])
+            {
+
+                imgObjPreview.style.display = 'block';
+                imgObjPreview.style.width = '260px';
+//				imgObjPreview.style.height = '180px';
+                imgObjPreview.src = window.URL.createObjectURL(docObj.files[0]);
+            }
+            else
+            {
+                docObj.select();
+                var imgSrc = document.selection.createRange().text;
+                var localImagId = document.getElementById("localImag");
+                localImagId.style.width = "260px";
+//				    localImagId.style.height = "180px";
+                try{
+                    localImagId.style.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+                    localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
+                }
+                catch(e)
+                {
+                    alert("您上传的图片格式不正确，请重新选择!");
+                    return false;
+                }
+                imgObjPreview.style.display = 'none';
+                document.selection.empty();
+            }
+            return true;
+        }
+    </script>
+</block>
+
 </body>
 </html>

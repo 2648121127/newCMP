@@ -388,34 +388,43 @@
                                     <div style="overflow: hidden;border-bottom: 1px solid #dddddd">
                                         <h3 style="font-weight:500;color:#6f7b8a">{$title}</h3>
                                     </div>
-                                    <form class="form-horizontal validate col-lg-12 col-md-12 col-sm-12" action="#" class="form-horizontal validate col-lg-12 col-md-12 col-sm-12" id="form_traditional_validation" name="form_traditional_validation" novalidate="novalidate">
+                                    <form class="form-horizontal validate col-lg-12 col-md-12 col-sm-12" novalidate action="__ACTION__" method="post" class="form-horizontal validate col-lg-12 col-md-12 col-sm-12" id="form_traditional_validation" name="form_traditional_validation" novalidate="novalidate">
                                         <div class="p-t-15"></div>
                                         <div class="form-group">
                                             <label class="col-lg-2 col-md-2 col-sm-2 control-label"><em class="text-danger">*&nbsp;</em>我的获利（元）</label>
                                             <div class="col-lg-6 col-md-6 col-sm-6">
-                                                <input type="text" class="form-control" name="ffee" placeholder="请输入获利" required>
+                                                <input type="text" class="form-control" placeholder="请输入获利"  name="ffee" value="{$data.ffee}" required>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-lg-2 col-md-2 col-sm-2 control-label"><em class="text-danger">*&nbsp;</em>分销商</label>
                                             <div class="col-lg-6 col-md-6 col-sm-6">
-                                                <select name="uid1" id="uid1" data-required="true" class="c-select-36 c-width-100" required>
-                                                    <option value="">请选择分销商</option>
-                                                </select>
+                                                <if condition="$act eq 'add'">
+                                                    <select name="suid" class="c-select-36 c-width-100" required>
+                                                        <option value="">请选择分销商</option>
+                                                        <volist name="admins" id="v">
+                                                            <option value="{$v.uid}">{$v.nickname}</option>
+                                                        </volist>
+                                                    </select>
+                                                <else/>
+                                                    <input class="form-control" type="text" value="{$data.snickname}" readonly="readonly">
+                                                    <input type="hidden" name="suid" value="{$data.suid}" readonly="readonly">
+                                                </if>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-lg-2 col-md-2 col-sm-2 control-label"><em class="text-danger">*&nbsp;</em>渠道商获利（元</label>
                                             <div class="col-lg-6 col-md-6 col-sm-6">
-                                                <input type="text" class="form-control" name="sfee" placeholder="请输入获利" required>
+                                                <input type="text" class="form-control" name="sfee" value="{$data.sfee}" placeholder="请输入获利" required>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-lg-2 col-md-2 col-sm-2 control-label"></label>
                                             <div class="col-lg-6 col-md-6 col-sm-6">
-                                                <input type="hidden" name="act" value="add">
+                                                <input type="hidden" name="act" value="{$act}"/>
+                                                <input type="hidden" name="id" value="{$data.id}"/>
                                                 <button type="submit" id="submit" class="btn btn-success btn-small m-r-10">保存</button>
-                                                <a href="index.html" type="reset" class="btn btn-danger btn-small">取消</a>
+                                                <a href="{:U('Proportion/index')}" type="reset" class="btn btn-danger btn-small">取消</a>
                                             </div>
                                         </div>
                                     </form>
@@ -436,24 +445,23 @@
 <script src="../../assets/plugins/jquery/jquery-1.11.3.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrapv3/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-block-ui/jqueryblockui.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
+<!--<script src="../../assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>-->
 <script src="../../assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
 
-<script src="../../assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-inputmask/jquery.inputmask.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-autonumeric/autoNumeric.js" type="text/javascript"></script>
-<script src="../../assets/plugins/ios-switch/ios7-switch.js" type="text/javascript"></script>
-<script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js" type="text/javascript"></script>
-<script src="../../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js" type="text/javascript"></script>
-<script src="../../assets/plugins/bootstrap-tag/bootstrap-tagsinput.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/dropzone/dropzone.min.js" type="text/javascript"></script>
+<!--<script src="../../assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/jquery-inputmask/jquery.inputmask.min.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/jquery-autonumeric/autoNumeric.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/ios-switch/ios7-switch.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/bootstrap-tag/bootstrap-tagsinput.min.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/dropzone/dropzone.min.js" type="text/javascript"></script>-->
 
 <script src="../../webarch/js/webarch.js" type="text/javascript"></script>
-<script src="../../assets/js/form_elements.js" type="text/javascript"></script>
-<!-- END PAGE LEVEL JS INIT -->
+<script src="../../assets/js/common.js" type="text/javascript"></script>
+
 </body>
 </html>

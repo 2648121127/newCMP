@@ -216,10 +216,10 @@
                 <li> <a href="../Adminuser/chgpasswd.html"><i class="material-icons">home</i> <span class="title">修改密码</span> <span class="selected"></span></a>
                 <li class="start "> <a href="../Index/dashboard.html"><i class="material-icons">home</i> <span class="title">Dashboard</span> <span class="selected"></span><span class="arrow "></span></a>
                 </li>
-                <li class="open active">
-                    <a href="javascript:;"> <i class="material-icons">airplay</i> <span class="title">实名制管理</span> <span class="open arrow"></span> </a>
+                <li>
+                    <a href="javascript:;"> <i class="material-icons">airplay</i> <span class="title">实名制管理</span> <span class=" arrow"></span> </a>
                     <ul class="sub-menu">
-                        <li> <a href="Realname.html"> 实名制信息 </a> </li>
+                        <li> <a href="../Realname/Realname.html"> 实名制信息 </a> </li>
                     </ul>
                 </li>
                 <li>
@@ -274,11 +274,11 @@
                         <li> <a href="../CmUseinfo/developdatemgr.html">物联网卡发展时间</a> </li>
                     </ul>
                 </li>
-                <li>
-                    <a href="javascript:;"> <i class="material-icons">playlist_add_check</i> <span class="title">电信利润管理</span> <span class="arrow"></span> </a>
+                <li class="open active">
+                    <a href="javascript:;"> <i class="material-icons">playlist_add_check</i> <span class="title">电信利润管理</span> <span class="open arrow"></span> </a>
                     <ul class="sub-menu">
                         <li> <a href="../Recharge/index.html"> 充值订单 </a> </li>
-                        <li> <a href="../Statistic/index.html"> 利润结算 </a> </li>
+                        <li> <a href="index.html"> 利润结算 </a> </li>
                         <li> <a href="../Proportion/index.html"> 利润分配 </a> </li>
                         <li> <a href="../Exportdata/index.html"> 账单统计 </a> </li>
                     </ul>
@@ -374,57 +374,74 @@
                             <div class="grid simple ">
                                 <div class="grid-body no-border">
                                     <div style="overflow: hidden;border-bottom: 1px solid #dddddd">
-                                        <h3 style="font-size:18px;font-family:inherit;font-weight:500;color:#6f7b8a">实名制管理
-                                            <span style="float:right;font-size:12px;color:#fff;font-weight:bold;background: #0b9c8f;padding:0px 7px;border-radius: 5px;">共 {$total} 项</span>
+                                        <h3 style="font-size:18px;font-family:inherit;font-weight:500;color:#6f7b8a">我的入账记录
+                                            <span style="float:right;font-size:12px;color:#fff;font-weight:bold;background: #0b9c8f;padding:0px 7px;border-radius: 5px;">共 {$total} 页</span>
                                         </h3>
                                     </div>
-                                    <form class="form-inline">
-                                        <div class="p-t-15">
-                                            <div class="form-group m-r-10">
-                                                <div class="form-group m-r-10">
-                                                    <input type="text" class="form-control" name="nickname" id="nickname"  placeholder="请输入渠道商名称" value="{$nickname}">
-                                                </div>
-                                                <label class="form-group">
-                                                    <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="keywords">搜索</a>
-                                                    <a href="{:U('Realname/index')}" type="reset" class="btn btn-white btn-small">重置</a>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </form>
                                     <br>
-                                    <table class="table table-striped table-flip-scroll cf" style="border-top:1px solid #ddd">
-                                        <thead class="cf">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-flip-scroll cf">
+                                            <thead class="cf">
                                             <tr>
-                                                <!--<th >ID</th>-->
-                                                <th >用户昵称</th>
-                                                <!--<th >是否实名制成功</th>-->
-                                                <th >实名制手机号码</th>
-                                                <!--<th >操作</th>-->
+                                                <th >结算单号</th>
+                                                <th >结算金额</th>
+                                                <th >订单数量</th>
+                                                <th >付款方式</th>
+                                                <!--<th >收款方</th>-->
+                                                <th >账单日期</th>
+                                                <!--<th >支付凭证</th>-->
+                                                <th >结算日期</th>
+                                                <th >操作</th>
                                             </tr>
-                                        </thead>
-                                        <tbody>
+                                            </thead>
+                                            <tbody>
                                             <if condition="$data eq null">
-                                                <td colspan="5" style="text-align:center;padding:30px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">没有数据</td>
+                                                <tr>
+                                                    <td colspan="9" style="text-align:center;padding:30px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">没有数据</td>
+                                                </tr>
                                                 <else/>
                                                 <volist name="data" id="vo">
                                                     <tr>
-                                                        <!--<td>{$vo.uid}</td>-->
-                                                        <td>{$vo.nickname}</td>
-                                                        <!--<td>{$vo.flowvalue}</td>-->
-                                                        <td>{$vo.certiteles}</td>
-                                                        <!--<td class="center">-->
-                                                        <!--<a href="{:U('Package/editpackage',array('id'=>$vo['id']))}" type="button" class="btn btn-outline btn-info btn-xs" >修改</a>-->
-                                                        <!--<a href="{:U('Package/deltpackage',array('id'=>$vo['id']))}" onclick="if(!confirm('您是否确定要删除此记录？')){return  false;}" class="btn btn-outline btn-danger btn-xs">删除</a>-->
-                                                        <!--</td>-->
+                                                        <td>PJS8650{$vo.id}</td>
+                                                        <td>¥{$vo.amount}</td>
+                                                        <td>{$vo.ordernum}</td>
+                                                        <td>{$vo.typeval}</td>
+                                                        <!--<td>{$vo.toadmin}</td>-->
+                                                        <td>[{$vo.startdate}]&nbsp;-&nbsp;[{$vo.enddate}]</td>
+                                                        <!--<td><img width="100px" src="{$Think.WEB_ROOT}{$vo.voucher}"/></td>-->
+                                                        <td>{$vo.createtime}</td>
+                                                        <td class="center">
+                                                            <!--<a href="{:U('Statistic/editstatistic',array('id'=>$vo['id'],'uid'=>$uid))}" type="button" class="btn btn-outline btn-info btn-xs" >修改</a>-->
+                                                            <a type="button" href="#showVoucher" onclick="setVouche('PJS8650{$vo.id}','{$Think.WEB_ROOT}{$vo.voucher}')" data-toggle="modal" class="btn btn-danger btn-xs btn-mini">查看支付凭证</a>
+                                                        </td>
                                                     </tr>
                                                 </volist>
                                             </if>
-                                        </tbody>
-                                    </table>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
                                     <div class="panel-footer clearfix">
                                         {$page}
                                     </div>
-
+                                    <!--查看支付凭证-->
+                                    <div class="modal fade" id="showVoucher">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header" id="title">
+                                                    <h4 class="text-left">支付凭证&nbsp;&nbsp;<span class="iccid"></span></h4>
+                                                </div>
+                                                <div class="modal-body" id="cont">
+                                                    <img src=""/>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <input type="hidden" class="cardstaid" name="cardstaid" value="" />
+                                                    <button class="btn btn-danger btn-sm" data-dismiss="modal" aria-hidden="true">关闭
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -446,19 +463,18 @@
 <script src="../../assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
+<script src="../../assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
 
 <script src="../../webarch/js/webarch.js" type="text/javascript"></script>
 
 <block name="extjs">
     <script language="javascript" type="text/javascript">
-        $(document).ready(function(){
-            $("#keywords").click(function(){
-                var nickname = $("#nickname").val();
-                var url =  "{:U('Realname/keywords')}"+"?act=keywords&nickname="+nickname;
-                window.location = url;
-            });
-
-        });
+        //查看支付凭证
+        function setVouche(id,url) {
+            console.log(url);
+            $('#showVoucher #title span').html(id);
+            $('#showVoucher #cont img').attr('src',url);
+        }
     </script>
 </block>
 

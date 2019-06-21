@@ -375,7 +375,7 @@
                                 <div class="grid-body no-border">
                                     <div style="overflow: hidden;border-bottom: 1px solid #dddddd">
                                         <h3 style="font-size:18px;font-family:inherit;font-weight:500;color:#6f7b8a">结算记录列表
-                                            <span style="float:right;font-size:12px;color:#fff;font-weight:bold;background: #0b9c8f;padding:0px 7px;border-radius: 5px;">共1页</span>
+                                            <span style="float:right;font-size:12px;color:#fff;font-weight:bold;background: #0b9c8f;padding:0px 7px;border-radius: 5px;">共 {$total} 项</span>
                                         </h3>
                                     </div>
                                     <form class="form-inline">
@@ -383,19 +383,19 @@
                                             <div class="form-group">
                                                 <label class="form-group">日期范围:</label>
                                                 <div class="input-append success date form-group">
-                                                    <input type="text" >
+                                                    <input type="text" value="{$startdate}" class="datepicker" id="startdate">
                                                     <span class="add-on" style="margin-left:-34px;"><span class="arrow"></span><i class="fa fa-th"></i></span>
                                                 </div>
                                                 <div class="input-append success date form-group">
-                                                    <input type="text" >
+                                                    <input type="text" value="{$enddate}" class="datepicker form-control" id="enddate">
                                                     <span class="add-on" style="margin-left:-34px;"><span class="arrow"></span><i class="fa fa-th"></i></span>
                                                 </div>
                                             </div>
                                             <div class="form-group m-r-10">
                                                 <label class="form-group"></label>
                                                 <div class="form-group">
-                                                    <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="keywords">搜索</a>
-                                                    <a href="../Recharge/index.html" type="reset" class="btn btn-white btn-small">重置</a>
+                                                    <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="keyworddate">搜索</a>
+                                                    <a href="{:U('Statistic/index')}" type="reset" class="btn btn-white btn-small">重置</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -431,7 +431,7 @@
                                                 <if condition="$adminid neq 1">
                                                     <a href="{:U('Statistic/selectEnterStatRecord',array('uid'=>$adminid))}" class="btn btn-small btn-sm btn-primary m-r-10" type="button"><i class="fa fa-share fa-lg"></i> 入账记录</a>
                                                 </if>
-                                                <a href="statisticedit.html" type="button" class="btn btn-danger btn-small btn-sm">
+                                                <a href="{:U('Statistic/addstatistic')}" type="button" class="btn btn-danger btn-small btn-sm">
                                                     <i class="fa fa-plus"></i>
                                                     增加结算
                                                 </a>
@@ -454,9 +454,9 @@
                                         <tbody>
 
                                         <if condition="$data eq null">
-                                            <!--<tr>-->
-                                                <!--<td colspan="7" style="text-align:center;padding:30px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">没有数据</td>-->
-                                            <!--</tr>-->
+                                            <tr>
+                                                <td colspan="7" style="text-align:center;padding:30px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">没有数据</td>
+                                            </tr>
                                             <else/>
                                             <volist name="data" id="vo">
                                                 <tr>
@@ -474,9 +474,9 @@
                                         </if>
                                         </tbody>
                                     </table>
-                                    <!--<div class="panel-footer clearfix">-->
-                                        <!--{$page}-->
-                                    <!--</div>-->
+                                    <div class="panel-footer clearfix">
+                                        {$page}
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -488,30 +488,77 @@
         <!-- END PAGE -->
     </div>
 </div>
-<script src="assets/plugins/pace/pace.min.js" type="text/javascript"></script>
+<script src="../../assets/plugins/pace/pace.min.js" type="text/javascript"></script>
 <!-- BEGIN JS DEPENDECENCIES-->
 <script src="../../assets/plugins/jquery/jquery-1.11.3.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrapv3/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-block-ui/jqueryblockui.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
+<!--<script src="../../assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>-->
 <script src="../../assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
-<!-- END CORE JS DEPENDECENCIES-->
-<!-- BEGIN CORE TEMPLATE JS -->
+
 <script src="../../webarch/js/webarch.js" type="text/javascript"></script>
-<!--<script src="assets/js/chat.js" type="text/javascript"></script>-->
-<!-- END CORE TEMPLATE JS -->
-<!-- BEGIN PAGE LEVEL PLUGINS -->
-<script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-datatable/js/jquery.dataTables.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-datatable/extra/js/dataTables.tableTools.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/datatables-responsive/js/datatables.responsive.js" type="text/javascript"></script>
-<script src="../../assets/plugins/datatables-responsive/js/lodash.min.js" type="text/javascript"></script>
-<!-- END PAGE LEVEL JS INIT -->
-<script src="../../assets/js/datatables.js" type="text/javascript"></script>
-<script src="../../assets/js/form_elements.js" type="text/javascript"></script>
+
+<block name="extjs">
+    <script language="javascript" type="text/javascript">
+        $(function(){
+            /* 时间控件 */
+            $('.input-append.date').datepicker({
+                autoclose: true,
+                format: "yyyy-mm-dd",
+                todayHighlight: true
+            });
+
+            $("#keyword").click(function(){
+                var touid = $("#touid").val();
+                if(touid == ''){
+                    alert('请选择筛选关键字');
+                }else{
+                    var url =  "{:U('Statistic/keywords')}"+"?act=keywords&touid="+touid;
+                    window.location = url;
+                }
+            });
+
+            $("#keywords").keypress(function(e){
+                if (event.keyCode == 13) {
+                    event.cancelBubble = true;
+                    event.returnValue = false;
+                    $('#keyword').click();
+                }
+            });
+
+
+            //根据日期查询
+            $("#keyworddate").click(function(){
+                var startdate = $("#startdate").val();
+                var enddate = $("#enddate").val();
+                if(startdate=='' && enddate==''){
+                    alert('请选择筛选关键字');
+                }else{
+                    if(startdate != ''){
+                        startdate = chgDateForm(startdate);
+                    }
+                    if(enddate != ''){
+                        enddate = chgDateForm(enddate);
+                    }
+                    var url =  "{:U('Statistic/keywordsdate')}"+"?act=keywords&startdate="+startdate+"&enddate="+enddate;
+                    window.location = url;
+                }
+            });
+
+            //转换日期格式 08/06/2018 转成20180608
+            function chgDateForm(data){
+                var datearr = data.split('/');
+                var newdate = datearr[2]+datearr[1]+datearr[0];
+                return newdate;
+            }
+        });
+
+    </script>
+</block>
+
 </body>
 </html>

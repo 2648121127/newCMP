@@ -375,13 +375,13 @@
                                 <div class="grid-body no-border">
                                     <div style="overflow: hidden;border-bottom: 1px solid #dddddd">
                                         <h3 style="font-size:18px;font-family:inherit;font-weight:500;color:#6f7b8a">接口权限角色组管理
-                                            <span style="float:right;font-size:12px;color:#fff;font-weight:bold;background: #0b9c8f;padding:0px 7px;border-radius: 5px;">共1页</span>
+                                            <span style="float:right;font-size:12px;color:#fff;font-weight:bold;background: #0b9c8f;padding:0px 7px;border-radius: 5px;">共 {$total} 项</span>
                                         </h3>
                                     </div>
                                     <div class="row" >
                                         <div class="p-t-10" style="overflow: hidden;border-bottom:1px solid #dddddd;margin:0px 15px;">
                                             <p>
-                                                <a href="interfaceprivgroupedit.html" type="button" class="btn btn-primary btn-small btn-sm">
+                                                <a href="{:U('Interfacepack/addinterfaceprivgroup')}" type="button" class="btn btn-primary btn-small btn-sm">
                                                     <i class="fa fa-plus"></i>
                                                     增加接口权限角色组
                                                 </a>
@@ -432,7 +432,9 @@
                                         </volist>
                                         </tbody>
                                     </table>
-
+                                    <div class="panel-footer clearfix">
+                                        {$page}
+                                    </div>
                                 </div>
                             </div>
                         </div>

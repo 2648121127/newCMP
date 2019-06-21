@@ -375,13 +375,13 @@
                                 <div class="grid-body no-border">
                                     <div style="overflow: hidden;border-bottom: 1px solid #dddddd">
                                         <h3 style="font-size:18px;font-family:inherit;font-weight:500;color:#6f7b8a">订单列表
-                                            <span style="float:right;font-size:12px;color:#fff;font-weight:bold;background: #0b9c8f;padding:0px 7px;border-radius: 5px;">共1页</span>
+                                            <span style="float:right;font-size:12px;color:#fff;font-weight:bold;background: #0b9c8f;padding:0px 7px;border-radius: 5px;">共 {$total} 项</span>
                                         </h3>
                                     </div>
                                     <div class="row" >
                                         <div class="p-t-10" style="overflow: hidden;border-bottom:1px solid #dddddd;margin:0px 15px;">
                                             <p>
-                                                <a href="downlist.html" type="button" class="btn btn-primary btn-small btn-sm">
+                                                <a href="{:U('Recharge/downlist')}" type="button" class="btn btn-primary btn-small btn-sm">
                                                     <i class="fa fa-plus"></i>
                                                     导出数据
                                                 </a>
@@ -394,19 +394,19 @@
                                             <div class="form-group m-r-10">
                                                 <label class="form-group">完整号码:</label>
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" placeholder="ICCID/接入号码">
+                                                    <input type="text" name="accnumber" placeholder="ICCID/接入号码" id="accnumber" class="form-control" value="{$accnumber}">
                                                 </div>
                                             </div>
                                             <div class="form-group m-r-10">
                                                 <label class=" form-group">便捷短号:</label>
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" placeholder="便捷短号">
+                                                    <input type="text" name="fakenumber"  placeholder="便捷短码" id="fakenumber" class="fg-two-col-four" value="{$fakenumber}">
                                                 </div>
                                             </div>
                                             <div class="form-group m-r-10">
                                                 <label class=" form-group">订单编号:</label>
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" placeholder="订单编号">
+                                                    <input type="text" name="tradeno"  placeholder="订单编号" id="tradeno" class="fg-two-col-four" value="{$tradeno}">
                                                 </div>
                                             </div>
                                         </div>
@@ -414,28 +414,38 @@
                                             <div class="form-group m-r-10">
                                                 <label class="form-group">分销用户:</label>
                                                 <div class="form-group">
-                                                    <select id="carStu1" style="min-width:169px;width:100%;height:36px !important;">
-                                                        <option value="1">一级分销用户</option>
-                                                        <option value="2">22222.</option>
-                                                        <option value="3">3333</option>
+                                                    <select id="firstuid" name="firstuid" style="min-width:169px;width:100%;height:36px !important;">
+                                                        <option value="">一级分销用户</option>
+                                                        <volist name="users" id="v">
+                                                            <if condition="$firstuid eq $v.uid ">
+                                                                <option value="{$v.uid}" selected="selected">{$v.nickname}</option>
+                                                                <else/>
+                                                                <option value="{$v.uid}">{$v.nickname}</option>
+                                                            </if>
+                                                        </volist>
                                                     </select>
                                                 </div>
                                                 <div class="form-group">
-                                                    <select id="carStu12" style="min-width:169px;width:100%;height:36px !important;">
-                                                        <option value="1">二级分销用户</option>
-                                                        <option value="2">22222.</option>
-                                                        <option value="3">3333</option>
+                                                    <select id="seconduid" name="seconduid" style="min-width:169px;width:100%;height:36px !important;">
+                                                        <option value="">二级分销用户</option>
+                                                        <volist name="users2" id="v">
+                                                            <if condition="$seconduid eq $v.uid ">
+                                                                <option value="{$v.uid}" selected="selected">{$v.nickname}</option>
+                                                                <else/>
+                                                                <option value="{$v.uid}">{$v.nickname}</option>
+                                                            </if>
+                                                        </volist>
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="form-group">日期范围:</label>
                                                 <div class="input-append success date form-group">
-                                                    <input type="text" >
+                                                    <input type="text" value="{$startdate}" class="datepicker" id="startdate" autocomplete="off">
                                                     <span class="add-on" style="margin-left:-34px;"><span class="arrow"></span><i class="fa fa-th"></i></span>
                                                 </div>
                                                 <div class="input-append success date form-group">
-                                                    <input type="text" >
+                                                    <input type="text" value="{$enddate}" class="datepicker" id="enddate" autocomplete="off">
                                                     <span class="add-on" style="margin-left:-34px;"><span class="arrow"></span><i class="fa fa-th"></i></span>
                                                 </div>
                                             </div>
@@ -443,55 +453,108 @@
                                                 <label class="form-group"></label>
                                                 <div class="form-group">
                                                     <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="keywords">搜索</a>
-                                                    <a href="index.html" type="reset" class="btn btn-white btn-small">重置</a>
+                                                    <a href="{:U('Recharge/index')}" type="reset" class="btn btn-white btn-small">重置</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </form>
                                     <br>
-                                    <table class="table table-striped table-flip-scroll cf" style="border-top:1px solid #ddd">
-                                        <thead class="cf">
-                                        <tr>
-                                            <th >ID</th>
-                                            <th >订单编号</th>
-                                            <th >付款帐号</th>
-                                            <th >便捷短码</th>
-                                            <th >ICCID号</th>
-                                            <th >接入号码</th>
-                                            <th >套餐名称</th>
-                                            <th >订单总金额</th>
-                                            <th >来源</th>
-                                            <th >支付日期</th>
-                                            <th >商户简称</th>
-                                            <php>if (in_array('2_1_2', $_SESSION['menupriv']) ) { </php>
-                                            <th >操作</th>
-                                            <php>}</php>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>ALERT</td>
-                                            <td>Marksda</td>
-                                            <td>Otto</td>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>ALERT</td>
-                                            <td>Marksda</td>
-                                            <td>Otto</td>
-                                            <td>Marksda</td>
-                                            <php>if (in_array('2_1_2', $_SESSION['menupriv']) ) { </php>
-                                            <td class="center">
-                                                <a type="button" href="#profitdetail" onclick="setProfitDetail({$vo.id})" data-toggle="modal" class="btn btn-primary btn-xs btn-mini">下载</a>
-                                            </td>
-                                            <php>}</php>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                    <!--<div class="panel-footer clearfix">-->
-                                        <!--{$page}-->
-                                    <!--</div>-->
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-flip-scroll cf" style="border-top:1px solid #ddd">
+                                            <thead class="cf">
+                                            <tr>
+                                                <th >ID</th>
+                                                <th >订单编号</th>
+                                                <th >付款帐号</th>
+                                                <th >便捷短码</th>
+                                                <th >ICCID号</th>
+                                                <th >接入号码</th>
+                                                <th >套餐名称</th>
+                                                <th >订单总金额</th>
+                                                <th >来源</th>
+                                                <th >支付日期</th>
+                                                <th >商户简称</th>
+                                                <php>if (in_array('2_1_2', $_SESSION['menupriv']) ) { </php>
+                                                <th >操作</th>
+                                                <php>}</php>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <if condition="$data eq null">
+                                                <tr>
+                                                    <td colspan="12" style="text-align:center;padding:30px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">没有数据</td>
+                                                </tr>
+                                                <else/>
+                                                <volist name="data" id="vo">
+                                                    <tr>
+                                                        <td>80062{$vo.id}</td>
+                                                        <td>{$vo.tradeno}</td>
+                                                        <td>{$vo.buyer}</td>
+                                                        <td>{$vo.fakenumber}</td>
+                                                        <td>{$vo.iccid}</td>
+                                                        <td>{$vo.number}</td>
+                                                        <td>{$vo.basepackage}</td>
+                                                        <td>¥{$vo.total}</td>
+                                                        <td><eq name="vo.payfrom" value="1">充值<else/>套餐续订</eq></td>
+                                                        <td>{$vo.paytime}</td>
+                                                        <td>{$vo.nickname}</td>
+                                                        <php>if (in_array('2_1_2', $_SESSION['menupriv']) ) { </php>
+                                                        <td class="center">
+                                                            <a type="button" href="#profitdetail" onclick="setProfitDetail({$vo.id})" data-toggle="modal" class="btn btn-primary btn-xs btn-mini">下载</a>
+                                                        </td>
+                                                        <php>}</php>
+                                                    </tr>
+                                                </volist>
+                                            </if>
+                                            </tbody>
+                                            <else/>
+                                            <thead>
+                                            <tr>
+                                                <th >ID</th>
+                                                <th >订单编号</th>
+                                                <th >OPENID</th>
+                                                <th >查询号码</th>
+                                                <th >订单总金额</th>
+                                                <th >来源</th>
+                                                <th >支付日期</th>
+                                                <php>if (in_array('2_1_2', $_SESSION['menupriv']) ) { </php>
+                                                <th >操作</th>
+                                                <php>}</php>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+
+                                            <if condition="$data eq null">
+                                                <tr>
+                                                    <td colspan="8" style="text-align:center;padding:30px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">没有数据</td>
+                                                </tr>
+                                                <else/>
+                                                <volist name="data" id="vo">
+                                                    <tr>
+                                                        <td>80062{$vo.id}</td>
+                                                        <td>{$vo.tradeno}</td>
+                                                        <td>{$vo.openid}</td>
+                                                        <td>{$vo.fakenumber}</td>
+                                                        <td>¥{$vo.total}</td>
+                                                        <td><eq name="vo.payfrom" value="1">充值<else/>套餐续订</eq></td>
+                                                        <td>{$vo.paytime}</td>
+                                                        <php>if (in_array('2_1_2', $_SESSION['menupriv']) ) { </php>
+                                                        <td class="center">
+                                                            <a type="button" href="#profitdetail" onclick="setProfitDetail({$vo.id})" data-toggle="modal" class="btn btn-xs btn-mini btn-danger">查看分利</a>
+                                                        </td>
+                                                        <php>}</php>
+                                                    </tr>
+                                                </volist>
+                                            </if>
+                                            </tbody>
+                                            </if>
+                                        </table>
+                                    </div>
+                                    <div class="panel-footer clearfix">
+                                        {$page}
+                                    </div>
+
+
                                     <!--查看利润详情-->
                                     <div class="modal fade" id="profitdetail">
                                         <div class="modal-dialog">
@@ -499,7 +562,7 @@
                                                 <div class="modal-header">
                                                     <button type="button" class="close" data-dismiss="modal"
                                                             aria-hidden="true">&times;</button>
-                                                    <h4><span id="chgadminname"></span>&nbsp;&nbsp;利润分配详情</h4>
+                                                    <h4 class="text-left"><span id="chgadminname"></span>&nbsp;&nbsp;利润分配详情</h4>
                                                 </div>
                                                 <div class="modal-body" >
                                                     <table class="table table-striped" id="">
@@ -541,30 +604,109 @@
         <!-- END PAGE -->
     </div>
 </div>
-<script src="assets/plugins/pace/pace.min.js" type="text/javascript"></script>
+<script src="../../assets/plugins/pace/pace.min.js" type="text/javascript"></script>
 <!-- BEGIN JS DEPENDECENCIES-->
 <script src="../../assets/plugins/jquery/jquery-1.11.3.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrapv3/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-block-ui/jqueryblockui.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
+<!--<script src="../../assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>-->
 <script src="../../assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
-<!-- END CORE JS DEPENDECENCIES-->
-<!-- BEGIN CORE TEMPLATE JS -->
+
 <script src="../../webarch/js/webarch.js" type="text/javascript"></script>
-<!--<script src="assets/js/chat.js" type="text/javascript"></script>-->
-<!-- END CORE TEMPLATE JS -->
-<!-- BEGIN PAGE LEVEL PLUGINS -->
-<script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-datatable/js/jquery.dataTables.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-datatable/extra/js/dataTables.tableTools.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/datatables-responsive/js/datatables.responsive.js" type="text/javascript"></script>
-<script src="../../assets/plugins/datatables-responsive/js/lodash.min.js" type="text/javascript"></script>
-<!-- END PAGE LEVEL JS INIT -->
-<script src="../../assets/js/datatables.js" type="text/javascript"></script>
-<script src="../../assets/js/form_elements.js" type="text/javascript"></script>
+
+<block name="extjs">
+    <script language="javascript" type="text/javascript">
+        $(function(){
+            /* 时间控件 */
+            $('.input-append.date').datepicker({
+                autoclose: true,
+                format: "yyyy-mm-dd",
+                todayHighlight: true
+            });
+        });
+
+        $("#keyword").click(function(){
+            var accnumber = $("#accnumber").val();
+            var fakenumber = $("#fakenumber").val();
+            var firstuid = $("#firstuid").val();
+            var seconduid = $("#seconduid").val();
+            var tradeno = $("#tradeno").val();
+            var startdate = $("#startdate").val();
+            var enddate = $("#enddate").val();
+            if(startdate != ''){
+                startdate = chgDateForm(startdate);
+            }
+            if(enddate != ''){
+                enddate = chgDateForm(enddate);
+            }
+            if(accnumber=='' && fakenumber=='' && firstuid=='' && seconduid=='' && tradeno=='' && startdate=='' && enddate==''){
+                alert('请输入筛选关键字');
+            }else{
+                var url =  "{:U('Recharge/keywords')}"+"?act=keywords&accnumber="+accnumber+"&fakenumber="+fakenumber+"&tradeno="+tradeno+"&firstuid="+firstuid+"&seconduid="+seconduid+"&startdate="+startdate+"&enddate="+enddate;
+                window.location = url;
+            }
+        });
+
+        $("#keywords").keypress(function(e){
+            if (event.keyCode == 13) {
+                event.cancelBubble = true;
+                event.returnValue = false;
+                $('#keyword').click();
+            }
+        });
+
+
+        //选择一级分销用户，筛选二级分销用户
+        $("#firstuid").change(function(){
+            var uid=$("#firstuid").val();
+            $.post('getSecondUsers',"uid="+uid,function(data){
+                console.log(data);
+                var obj = jQuery.parseJSON(data);
+                $("#seconduid").empty();
+                $("#seconduid").append("<option value=''>二级分销用户</option>");
+                $.each(obj,function(k,v){
+                    $("#seconduid").append("<option value='"+v.uid+"'>"+v.nickname+"</option>");
+                })
+            });
+        });
+
+        //转换日期格式 08/06/2018 转成20180608
+        function chgDateForm(data){
+            var datearr = data.split('/');
+            var newdate = datearr[2]+datearr[1]+datearr[0];
+            return newdate;
+        }
+
+        //查看利润分配详情
+        function setProfitDetail(id){
+            $.post("{:U('Recharge/profitdetail')}","id="+id,function(obj){
+                var str = '';
+                $(".profit-detail").html('');
+                $.each(obj,function(k,v){
+//					str += '<tr><td>'+v.groupname+'</td><td>'+ v.nickname+'</td><td>¥'+ v.totalfee+'</td><td>¥'+ v.fee+'</td></tr>';
+                    str += '<tr><td>'+v.groupname+'</td><td>'+ v.nickname+'</td><td>¥'+v.smallfee+'</td></tr>';
+                })
+                $(".profit-detail").append(str);
+            });
+        }
+
+
+        //下载数据
+        function fun_down_data(){
+            alert('hello');
+            var startdate = $('#down_startdate').val();
+            var enddate = $('#down_enddate').val();
+            $.post("{:U('Recharge/downloaddata')}","startdate="+startdate+'&enddate='+enddate,function(obj){
+                console.log(obj);
+            });
+        }
+    </script>
+</block>
+
+
 </body>
 </html>

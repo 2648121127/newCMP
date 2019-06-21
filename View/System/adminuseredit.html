@@ -457,23 +457,36 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-lg-3 col-md-3 col-sm-2 control-label"><em class="text-danger">*&nbsp;</em>公司logo</label>
+                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>公司logo</label>
                                             <div class="col-lg-9 col-md-9 col-sm-9">
                                                 <div class="input-group">
-                                                    <input id='showlocation' name="file" class="form-control c-select-36" readonly required>
+                                                    <input id='location' name="fileup" class="form-control c-select-36" required readonly>
                                                     <label class="input-group-btn">
-                                                        <input type="button" id="i-check" value="选择文件" class="btn btn-primary" onclick="$('#i-file').click();$('#showlocation').focus();">
+                                                        <input type="button" id="doc" onchange="javascript:setImagePreview();" value="浏览文件" class="btn btn-primary" onclick="$('#upload input').click();$('#location').focus();">
                                                     </label>
                                                 </div>
                                             </div>
-                                            <input type="file" name="file" id='i-file'  onchange="$('#showlocation').val($('#i-file').val());if($('#showlocation').val($('#i-file').val())!=''){$('#showlocation').blur();}" style="display: none" >
+                                            <a href="javascript:;" class="file " id="upload" onchange="$('#location').val($('#upload input').val());if($('#location').val($('#upload input').val())!=''){$('#location').blur();}">
+                                                <input type="file" name="files" style="display: none">
+                                            </a>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"></label>
+                                            <div class="col-lg-9 col-md-9 col-sm-9" id="localImag">
+                                                <if condition="$data.logo eq '' ">
+                                                    <img id="preview" src="{$Think.WEB_ROOT}{$Think.IMG_UPLOAD_ROOT}/defaultimg.png" style="width:120px;" >
+                                                    <else/>
+                                                    <img id="preview" src="{$Think.WEB_ROOT}{$Think.IMG_UPLOAD_ROOT}/{$data.logo}" style="width:120px;">
+                                                </if>
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-lg-3 col-md-3 col-sm-3 control-label"></label>
                                             <div class="col-lg-9 col-md-9 col-sm-9">
-                                                <input type="hidden" name="act" value="add">
+                                                <input type="hidden" name="act" value="{$act}"/>
+                                                <input type="hidden" name="id" value="{$data.uid}"/>
                                                 <button type="submit" id="submit" class="btn btn-success btn-small m-r-10">保存</button>
-                                                <a href="index.html" type="reset" class="btn btn-danger btn-small">取消</a>
+                                                <a href="{:U('System/adminusermgr')}" type="reset" class="btn btn-danger btn-small">取消</a>
                                             </div>
                                         </div>
                                     </form>
@@ -502,14 +515,53 @@
 <script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
 
 <script src="../../assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script>
-<script src="../../assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
+<!--<script src="../../assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>-->
 <!--<script src="../../assets/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js" type="text/javascript"></script>-->
-<script src="../../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js" type="text/javascript"></script>
-<script src="../../assets/plugins/bootstrap-tag/bootstrap-tagsinput.min.js" type="text/javascript"></script>
+<!--<script src="../../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/bootstrap-tag/bootstrap-tagsinput.min.js" type="text/javascript"></script>-->
 
 <script src="../../webarch/js/webarch.js" type="text/javascript"></script>
-<script src="../../assets/js/form_validations.js" type="text/javascript"></script>
+<!--<script src="../../assets/js/form_validations.js" type="text/javascript"></script>-->
 <script src="../../assets/js/common.js" type="text/javascript"></script>
-<!-- END PAGE LEVEL JS INIT -->
+
+<block name="extjs">
+    <script type="text/javascript">
+
+        function setImagePreview() {
+            var docObj=document.getElementById("doc");
+
+            var imgObjPreview=document.getElementById("preview");
+            if(docObj.files &&docObj.files[0])
+            {
+
+                imgObjPreview.style.display = 'block';
+                imgObjPreview.style.width = '120px';
+                //                imgObjPreview.style.height = '180px';
+                imgObjPreview.src = window.URL.createObjectURL(docObj.files[0]);
+            }
+            else
+            {
+                docObj.select();
+                var imgSrc = document.selection.createRange().text;
+                var localImagId = document.getElementById("localImag");
+                localImagId.style.width = "120px";
+                //                localImagId.style.height = "180px";
+                try{
+                    localImagId.style.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+                    localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
+                }
+                catch(e)
+                {
+                    alert("您上传的图片格式不正确，请重新选择!");
+                    return false;
+                }
+                imgObjPreview.style.display = 'none';
+                document.selection.empty();
+            }
+            return true;
+        }
+    </script>
+</block>
+
 </body>
 </html>
