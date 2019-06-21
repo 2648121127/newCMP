@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<!--[if lt IE 7]>  <View class="ie ie6 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 7]>     <View class="ie ie7 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 8]>     <View class="ie ie8 lte9 lte8"> <![endif]-->
+<!--[if IE 9]>     <View class="ie ie9 lte9"> <![endif]-->
+<!--[if gt IE 9]>  <View> <![endif]-->
+<!--[if !IE]><!-->
+<html>
+<!--<![endif]-->
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -10,8 +18,7 @@
     <!-- BEGIN PLUGIN CSS -->
     <link href="../../assets/plugins/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
     <link href="../../assets/plugins/bootstrap-select2/select2.css" rel="stylesheet" type="text/css" media="screen" />
-    <link href="../../assets/plugins/jquery-datatable/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
-    <link href="../../assets/plugins/datatables-responsive/css/datatables.responsive.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="../../assets/plugins/bootstrap-tag/bootstrap-tagsinput.css" rel="stylesheet" type="text/css" />
     <!-- END PLUGIN CSS -->
     <!-- BEGIN PLUGIN CSS -->
     <link href="../../assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" media="screen" />
@@ -20,10 +27,13 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="../../assets/plugins/animate.min.css" rel="stylesheet" type="text/css" />
     <link href="../../assets/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/plugins/dropzone/css/dropzone.css" rel="stylesheet" type="text/css" />
     <!-- END PLUGIN CSS -->
     <!-- BEGIN CORE CSS FRAMEWORK -->
     <link href="../../webarch/css/webarch.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../../webarch/css/common.css" type="text/css">
     <!-- END CORE CSS FRAMEWORK -->
+
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
@@ -212,6 +222,7 @@
             </div>
             <!-- END MINI-PROFILE -->
             <!-- BEGIN SIDEBAR MENU -->
+            <!--<p class="menu-title sm">BROWSE <span class="pull-right"><a href="javascript:;"><i class="material-icons">refresh</i></a></span></p>-->
             <ul>
                 <li> <a href="../Adminuser/chgpasswd.html"><i class="material-icons">home</i> <span class="title">修改密码</span> <span class="selected"></span></a>
                 <li class="start "> <a href="../Index/dashboard.html"><i class="material-icons">home</i> <span class="title">Dashboard</span> <span class="selected"></span><span class="arrow "></span></a>
@@ -220,6 +231,13 @@
                     <a href="javascript:;"> <i class="material-icons">airplay</i> <span class="title">实名制管理</span> <span class=" arrow"></span> </a>
                     <ul class="sub-menu">
                         <li> <a href="../Realname/Realname.html"> 实名制信息 </a> </li>
+                    </ul>
+                </li>
+                <li class="open active">
+                    <a href="javascript:;"> <i class="material-icons">invert_colors</i> <span class="title">自动补卡池流量监测</span> <span class="open arrow"></span> </a>
+                    <ul class="sub-menu">
+                        <li> <a href="index10G.html">3G定向月套餐流量池 </a> </li>
+                        <li> <a href="index15G.html">3G非定向月套餐流量池</a> </li>
                     </ul>
                 </li>
                 <li>
@@ -296,19 +314,19 @@
                         <li> <a href="../Business/gete2einfo.html"> 设备识别码（IMEI） </a> </li>
                     </ul>
                 </li>
-                <li class="open active">
-                    <a href="javascript:;"> <i class="material-icons">location_on</i> <span class="title">移动业务管理</span> <span class="open arrow"></span> </a>
+                <li>
+                    <a href="javascript:;"> <i class="material-icons">location_on</i> <span class="title">移动业务管理</span> <span class=" arrow"></span> </a>
                     <ul class="sub-menu">
-                        <li> <a href="group.html"> 集团信息 </a> </li>
-                        <li> <a href="number.html"> 号码管理 </a> </li>
-                        <li> <a href="status.html"> 状态管理 </a> </li>
-                        <li> <a href="functions.html"> 功能管理 </a> </li>
+                        <li> <a href="../CmZichan/group.html"> 集团信息 </a> </li>
+                        <li> <a href="../CmZichan/number.html"> 号码管理 </a> </li>
+                        <li> <a href="../CmZichan/status.html"> 状态管理 </a> </li>
+                        <li> <a href="../CmZichan/functions.html"> 功能管理 </a> </li>
                         <li> <a href="../CmZifei/memberpkg.html"> 套餐办理 </a> </li>
                         <li> <a href="../CmZifei/orderno.html"> 订单查询 </a> </li>
                         <li> <a href="../CmZifei/flow.html"> 流量查询 </a> </li>
                         <li> <a href="../CmZifei/share.html"> 流量共享管理</a> </li>
                         <li> <a href="../CmZifei/pool.html"> 流量池管理</a> </li>
-                        <li> <a href="bills.html"> 账单管理</a> </li>
+                        <li> <a href="../CmCaiwu/bills.html"> 账单管理</a> </li>
                     </ul>
                 </li>
                 <li>
@@ -340,7 +358,6 @@
                     </ul>
                 </li>
             </ul>
-
             <div class="clearfix"></div>
             <!-- END SIDEBAR MENU -->
         </div>
@@ -374,143 +391,11 @@
                             <div class="grid simple ">
                                 <div class="grid-body no-border">
                                     <div style="overflow: hidden;border-bottom: 1px solid #dddddd">
-                                        <h3 style="font-size:18px;font-family:inherit;font-weight:500;color:#6f7b8a">月费用查询</h3>
+                                        <h3 style="font-weight:500;color:#6f7b8a">2G定向月卡流量池流量使用情况</h3>
                                     </div>
-                                    <div class="p-t-5">
-                                        <ul class="nav nav-tabs" role="tablist">
-                                            <li class="active">
-                                                <a href="#tab1singleserch" role="tab" data-toggle="tab"><i class="fa fa-pencil p-r-5"></i>集团账单</a>
-                                            </li>
-                                            <li>
-                                                <a href="#tab1singleserch2" role="tab" data-toggle="tab"><i class="fa fa-pencil p-r-5"></i>单个号码账单</a>
-                                            </li>
-                                        </ul>
-                                        <div class="tab-content">
-                                            <div class="tab-pane active" id="tab1singleserch">
-                                                <div class="p-t-5">
-                                                    <h6 style="font-weight: bold;">集团信息</h6>
-                                                    <div class="table-responsive">
-                                                        <table class="table table-striped table-flip-scroll" style="border-top:1px solid #ddd">
-                                                            <thead class="cf">
-                                                            <tr>
-                                                                <th>集团名称</th>
-                                                                <th>号码总数</th>
-                                                                <th>测试期号码总数</th>
-                                                                <th>沉默期号码总数</th>
-                                                                <th>库存期号码总数</th>
-                                                                <th>正使用号码总数</th>
-                                                                <th>销户总数</th>
-                                                                <th>预约销户总数</th>
-                                                                <th>停机总数Array</th>
-                                                            </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                            <tr>
-                                                                <td>Mark</td>
-                                                                <td>Otto</td>
-                                                                <td>Mark</td>
-                                                                <td>Mark</td>
-                                                                <td>Mark</td>
-                                                                <td>Mark</td>
-                                                                <td>Mark</td>
-                                                                <td>Mark</td>
-                                                                <td>Mark</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Mark</td>
-                                                                <td>Otto</td>
-                                                                <td>Mark</td>
-                                                                <td>Mark</td>
-                                                                <td>Mark</td>
-                                                                <td>Mark</td>
-                                                                <td>Mark</td>
-                                                                <td>Mark</td>
-                                                                <td>Mark</td>
-                                                            </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                                <div class="p-t-50">
-                                                    <h6 style="font-weight: bold;">集团历史月账单（近六个月，不包含本月）</h6>
-                                                    <div class="table-responsive">
-                                                        <table class="table table-striped table-flip-scroll" style="border-top:1px solid #ddd">
-                                                            <thead class="cf">
-                                                            <tr>
-                                                                <th>月份</th>
-                                                                <th>总费用（元）</th>
-                                                                <th>代付费用（元）</th>
-                                                                <th>个付费用（元）</th>
-                                                            </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                            <tr>
-                                                                <td>Mark</td>
-                                                                <td>Otto</td>
-                                                                <td>Mark</td>
-                                                                <td>Mark</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Mark</td>
-                                                                <td>Otto</td>
-                                                                <td>Mark</td>
-                                                                <td>Mark</td>
-                                                            </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="tab-pane" id="tab1singleserch2">
-                                                <div class="p-t-5">
-                                                    <form class="form-inline p-b-30">
-                                                        <div class="row" style="display: flex;display: -webkit-flex;align-items:center;">
-                                                            <div class="col-lg-2 col-md-2 col-sm-2">
-                                                                <input type="text" placeholder="Msisdn/Iccid" style="width:100%;min-height:34px;">
-                                                            </div>
-                                                            <div class="col-lg-2 col-md-2 col-sm-2">
-                                                                <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="keywords3">搜索</a>
-                                                                <a href="bills.html" type="reset" class="btn btn-white btn-small">重置</a>
-                                                            </div>
-                                                        </div>
-                                                    </form>
-                                                    <h6 class="p-b-10" style="border-bottom:1px solid #ddd;font-weight: bold;">单个号码个人余额</h6>
-                                                    <div class="p-t-15 p-b-20" style="font-weight: bold;">余额：元</div>
-                                                    <h6 style="font-weight: bold;">单个号码历史月费用</h6>
-                                                    <div class="table-responsive">
-                                                        <table class="table table-striped table-flip-scroll" style="border-top:1px solid #ddd">
-                                                            <thead class="cf">
-                                                            <tr>
-                                                                <th>月份</th>
-                                                                <th>总费用（元）</th>
-                                                                <th>代付费用（元）</th>
-                                                                <th>个付费用（元）</th>
-                                                                <th>费用项</th>
-                                                                <th>费用名称</th>
-                                                            </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                            <tr>
-                                                                <td>Mark</td>
-                                                                <td>Otto</td>
-                                                                <td>Mark</td>
-                                                                <td>Mark</td>
-                                                                <td>Mark</td>
-                                                                <td>Mark</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Mark</td>
-                                                                <td>Otto</td>
-                                                                <td>Mark</td>
-                                                                <td>Mark</td>
-                                                                <td>Mark</td>
-                                                                <td>Mark</td>
-                                                            </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <p style="padding-left: 20px;">流量池未开通使用。。</p>
                                         </div>
                                     </div>
                                 </div>
@@ -528,32 +413,25 @@
 <!-- BEGIN JS DEPENDECENCIES-->
 <script src="../../assets/plugins/jquery/jquery-1.11.3.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrapv3/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-block-ui/jqueryblockui.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
+<script src="../../assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script> <!--表单验证-->
+<script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script> <!--下拉框插件-->
+<script src="../../assets/plugins/jquery-inputmask/jquery.inputmask.min.js" type="text/javascript"></script><!--输入框input输入内容格式限制插件-->
+<script src="../../assets/plugins/jquery-autonumeric/autoNumeric.js" type="text/javascript"></script> <!--数字格式化文本-->
+<script src="../../assets/plugins/dropzone/dropzone.min.js" type="text/javascript"></script>  <!--文件上传-->
 <script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
 
+<script src="../../assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-inputmask/jquery.inputmask.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-autonumeric/autoNumeric.js" type="text/javascript"></script>
-<script src="../../assets/plugins/ios-switch/ios7-switch.js" type="text/javascript"></script>
-<script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js" type="text/javascript"></script>
+<!--<script src="../../assets/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js" type="text/javascript"></script>-->
 <script src="../../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrap-tag/bootstrap-tagsinput.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/dropzone/dropzone.min.js" type="text/javascript"></script>
+<script src="../../assets/plugins/highcharts.js"></script>
 
 <script src="../../webarch/js/webarch.js" type="text/javascript"></script>
-
-<script src="../../assets/plugins/jquery-datatable/js/jquery.dataTables.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-datatable/extra/js/dataTables.tableTools.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/datatables-responsive/js/datatables.responsive.js" type="text/javascript"></script>
-<script src="../../assets/plugins/datatables-responsive/js/lodash.min.js" type="text/javascript"></script>
+<!--<script src="../../assets/js/form_validations.js" type="text/javascript"></script>-->
+<script src="../../assets/js/common.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL JS INIT -->
-<script src="../../assets/js/datatables.js" type="text/javascript"></script>
-<script src="../../assets/js/form_elements.js" type="text/javascript"></script>
 
 </body>
 </html>

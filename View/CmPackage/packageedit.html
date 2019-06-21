@@ -308,7 +308,7 @@
                         <li> <a href="../CmZifei/flow.html"> 流量查询 </a> </li>
                         <li> <a href="../CmZifei/share.html"> 流量共享管理</a> </li>
                         <li> <a href="../CmZifei/pool.html"> 流量池管理</a> </li>
-                        <li> <a href="../CmZichan/bills.html"> 账单管理</a> </li>
+                        <li> <a href="../CmCaiwu/bills.html"> 账单管理</a> </li>
                     </ul>
                 </li>
                 <li>
@@ -381,37 +381,44 @@
                                         <div class="form-group">
                                             <label class="col-lg-2 col-md-2 col-sm-2 control-label"><em class="text-danger">*&nbsp;</em>套餐名称</label>
                                             <div class="col-lg-10 col-md-10 col-sm-10">
-                                                <input type="text" name="nameTc" class="form-control" placeholder="请输入套餐名称" required>
+                                                <input type="text" class="form-control" placeholder="请输入套餐名称"  name="name" value="{$data.name}" required>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-lg-2 col-md-2 col-sm-2 control-label">套餐对应ID</label>
                                             <div class="col-lg-10 col-md-10 col-sm-10">
-                                                <input type="text" name="nameTc1"class="form-control" placeholder="请输入套餐对应ID">
+                                                <input type="text" class="form-control" placeholder="请输入套餐对应ID"  name="flowvalue" value="{$data.flowvalue}">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-lg-2 col-md-2 col-sm-2 control-label">单价</label>
                                             <div class="col-lg-10 col-md-10 col-sm-10">
-                                                <input type="text" name="nameDj" class="form-control" placeholder="请输入套餐单价">
+                                                <input type="text" class="form-control" placeholder="请输入套餐单价"  name="price" value="{$data.price}">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-lg-2 col-md-2 col-sm-2 control-label"><em class="text-danger">*&nbsp;</em>套餐类别</label>
                                             <div class="col-lg-10 col-md-10 col-sm-10">
-                                                <select style="width:100%;height:36px !important;" name="nameLei" required>
+                                                <select style="width:100%;height:36px !important;" name="category" required>
                                                     <option value="">请选择套餐类别</option>
-                                                    <option value="1">22222.</option>
-                                                    <option value="2">3333</option>
+                                                    <volist name="packgs" id="pkname">
+                                                        <if condition="$pkname eq $data['category']" >
+                                                            <option value="{$pkname}" selected="selected">{$pkname}</option>
+                                                            <else/>
+                                                            <option value="{$pkname}">{$pkname}</option>
+                                                        </if>
+                                                    </volist>
+                                                </select>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-lg-2 col-md-2 col-sm-2 control-label"></label>
                                             <div class="col-lg-10 col-md-10 col-sm-10">
-                                                <input type="hidden" name="act" value="add">
+                                                <input type="hidden" name="act" value="{$act}"/>
+                                                <input type="hidden" name="id" value="{$data.id}"/>
                                                 <button type="submit" id="submit" class="btn btn-success btn-small m-r-10">保存</button>
-                                                <a href="CmPackage.html" type="reset" class="btn btn-danger btn-small">取消</a>
+                                                <a href="{:U('CmPackage/index')}" type="reset" class="btn btn-danger btn-small">取消</a>
                                             </div>
                                         </div>
                                     </form>
@@ -432,24 +439,20 @@
 <script src="../../assets/plugins/jquery/jquery-1.11.3.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrapv3/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-block-ui/jqueryblockui.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
+<!--<script src="../../assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>-->
 <script src="../../assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
-<!-- END CORE JS DEPENDECENCIES-->
-<!-- BEGIN CORE TEMPLATE JS -->
+
+<!--<script src="../../assets/plugins/jquery-datatable/js/jquery.dataTables.min.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/jquery-datatable/extra/js/dataTables.tableTools.min.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/datatables-responsive/js/datatables.responsive.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/datatables-responsive/js/lodash.min.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/js/datatables.js" type="text/javascript"></script>-->
+
 <script src="../../webarch/js/webarch.js" type="text/javascript"></script>
-<!--<script src="assets/js/chat.js" type="text/javascript"></script>-->
-<!-- END CORE TEMPLATE JS -->
-<!-- BEGIN PAGE LEVEL PLUGINS -->
-<script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-datatable/js/jquery.dataTables.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-datatable/extra/js/dataTables.tableTools.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/datatables-responsive/js/datatables.responsive.js" type="text/javascript"></script>
-<script src="../../assets/plugins/datatables-responsive/js/lodash.min.js" type="text/javascript"></script>
-<!-- END PAGE LEVEL JS INIT -->
-<script src="../../assets/js/datatables.js" type="text/javascript"></script>
+<script src="../../assets/js/common.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL JS INIT -->
 </body>
 </html>

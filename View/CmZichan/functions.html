@@ -308,7 +308,7 @@
                         <li> <a href="../CmZifei/flow.html"> 流量查询 </a> </li>
                         <li> <a href="../CmZifei/share.html"> 流量共享管理</a> </li>
                         <li> <a href="../CmZifei/pool.html"> 流量池管理</a> </li>
-                        <li> <a href="bills.html"> 账单管理</a> </li>
+                        <li> <a href="../CmCaiwu/bills.html"> 账单管理</a> </li>
                     </ul>
                 </li>
                 <li>
@@ -378,41 +378,29 @@
                                     </div>
                                     <div class="p-t-5">
                                         <ul class="nav nav-tabs" role="tablist">
-                                            <li class="active">
-                                                <a href="#tab1singleserch" role="tab" data-toggle="tab"><i class="fa fa-pencil p-r-5"></i>单个号码功能管理</a>
-                                            </li>
-                                            <li>
-                                                <a href="#tab1batchserch" role="tab" data-toggle="tab"><i class="fa fa-pencil p-r-5"></i>批量号码功能管理</a>
-                                            </li>
+                                            <li class="{$type1}"><a href="#home1" role="tab" data-toggle="tab"><i class="fa fa-pencil p-r-5"></i>单个号码功能管理</a></li>
+                                            <li class="{$type2}"><a href="#home2" role="tab" data-toggle="tab"><i class="fa fa-pencil p-r-5"></i>批量号码功能管理</a></li>
 
                                         </ul>
                                         <div class="tab-content">
-                                            <div class="tab-pane active" id="tab1singleserch">
+                                            <div class="tab-pane fade {$type1}" id="home1">
                                                 <div class="p-t-5">
                                                     <ul class="nav nav-tabs" role="tablist">
-                                                        <li class="active">
-                                                            <a href="#tab2numberinfo" role="tab" data-toggle="tab">上网功能查询</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#tab2numberinfo2" role="tab" data-toggle="tab">语言功能查询</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#tab2activetime" role="tab" data-toggle="tab">短信功能查询</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#tab2surf" role="tab" data-toggle="tab">上网功能开停</a>
-                                                        </li>
+                                                        <li class="{$category1}"><a href="#inner1" role="tab" data-toggle="tab">上网功能查询</a></li>
+                                                        <li class="{$category2}"><a href="#inner2" role="tab" data-toggle="tab">语言功能查询</a></li>
+                                                        <li class="{$category3}"><a href="#inner3" role="tab" data-toggle="tab">短信功能查询</a></li>
+                                                        <li class="{$category4}"><a href="#inner4" role="tab" data-toggle="tab">上网功能开停</a></li>
                                                     </ul>
                                                     <div class="tab-content">
-                                                        <div class="tab-pane active" id="tab2numberinfo">
+                                                        <div class="tab-pane {$category1}" id="inner1">
                                                             <form class="form-inline p-b-30">
                                                                 <div class="row" style="display: flex;display: -webkit-flex;align-items:center;">
                                                                     <div class="col-lg-3 col-md-3 col-sm-3">
                                                                         <input type="text" placeholder="Msisdn" style="width:100%;min-height:34px;">
                                                                     </div>
                                                                     <div class="col-lg-3 col-md-3 col-sm-3">
-                                                                        <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="keywords">搜索</a>
-                                                                        <a href="functions.html" type="reset" class="btn btn-white btn-small">重置</a>
+                                                                        <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="btn-keyword1">搜索</a>
+                                                                        <a href="{:U('CmZichan/functions',array('type'=>'type1','category'=>'category1'))}" type="reset" class="btn btn-white btn-small">重置</a>
                                                                     </div>
                                                                 </div>
                                                             </form>
@@ -428,32 +416,34 @@
                                                                 </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                <tr>
-                                                                    <td>Mark</td>
-                                                                    <td>Otto</td>
-                                                                    <td>Mark</td>
-                                                                    <td>Mark</td>
-                                                                    <td>Mark</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Mark</td>
-                                                                    <td>Otto</td>
-                                                                    <td>Mark</td>
-                                                                    <td>Mark</td>
-                                                                    <td>Mark</td>
-                                                                </tr>
+                                                                    <if condition="$data.flow eq null">
+                                                                        <tr><td colspan="5" style="text-align:center;padding:15px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">没有数据</td></tr>
+                                                                        <elseif condition="$data['flow']['code'] eq 1 " />
+                                                                        <tr>
+                                                                            <td colspan="5" style="text-align:center;padding:15px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">{$data.flow.error}</td>
+                                                                        </tr>
+                                                                        <else/>
+                                                                        <tr>
+                                                                            <td>{$data.flow.msisdn}</td>
+                                                                            <td>{$data.flow.comtotalInfo.statusNew}</td>
+                                                                            <td>{$data.flow.comtotalInfo.statusTime}</td>
+                                                                            <td>{$data.flow.spetotalInfo.statusNew}</td>
+                                                                            <td>{$data.flow.spetotalInfo.statusTime}</td>
+                                                                        </tr>
+                                                                    </if>
                                                                 </tbody>
                                                             </table>
                                                         </div>
-                                                        <div class="tab-pane" id="tab2numberinfo2">
+                                                        <!-- 语音功能信息 -->
+                                                        <div class="tab-pane {$category2}" id="inner2">
                                                             <form class="form-inline p-b-30">
                                                                 <div class="row" style="display: flex;display: -webkit-flex;align-items:center;">
                                                                     <div class="col-lg-3 col-md-3 col-sm-3">
-                                                                        <input type="text" placeholder="Msisdn" style="width:100%;min-height:34px;">
+                                                                        <input type="text" name="keywords2" placeholder="Msisdn" id="keywords2" value="{$msisdn2}" style="width:100%;min-height:34px;">
                                                                     </div>
                                                                     <div class="col-lg-3 col-md-3 col-sm-3">
-                                                                        <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="keywords2">搜索</a>
-                                                                        <a href="functions.html" type="reset" class="btn btn-white btn-small">重置</a>
+                                                                        <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="btn-keyword2">搜索</a>
+                                                                        <a href="{:U('CmZichan/functions',array('type'=>'type1','category'=>'category2'))}" type="reset" class="btn btn-white btn-small">重置</a>
                                                                     </div>
                                                                 </div>
                                                             </form>
@@ -467,73 +457,98 @@
                                                                 </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                <tr>
-                                                                    <td>Otto</td>
-                                                                    <td>Mark</td>
-                                                                    <td>Mark</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Otto</td>
-                                                                    <td>Mark</td>
-                                                                    <td>Mark</td>
-                                                                </tr>
+                                                                    <if condition="$data.voice eq null">
+                                                                        <tr><td colspan="3" style="text-align:center;padding:15px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">没有数据</td></tr>
+                                                                        <elseif condition="$data['voice']['code'] eq 1 " />
+                                                                        <tr>
+                                                                            <td colspan="3" style="text-align:center;padding:15px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">{$data.voice.error}</td>
+                                                                        </tr>
+                                                                        <else/>
+                                                                        <tr>
+                                                                            <td>{$data.voice.msisdn}</td>
+                                                                            <td>{$data.voice.voicd}</td>
+                                                                            <td>{$data.voice.statusTime}</td>
+                                                                        </tr>
+                                                                    </if>
                                                                 </tbody>
                                                             </table>
                                                         </div>
-                                                        <div class="tab-pane" id="tab2activetime">
+                                                        <!-- 短信功能信息 -->
+                                                        <div class="tab-pane {$category3}" id="inner3">
                                                             <form class="form-inline p-b-30">
                                                                 <div class="row" style="display: flex;display: -webkit-flex;align-items:center;">
                                                                     <div class="col-lg-3 col-md-3 col-sm-3">
                                                                         <input type="text" placeholder="Msisdn" style="width:100%;min-height:34px;">
                                                                     </div>
                                                                     <div class="col-lg-3 col-md-3 col-sm-3">
-                                                                        <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="keywords3">搜索</a>
-                                                                        <a href="functions.html" type="reset" class="btn btn-white btn-small">重置</a>
+                                                                        <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="btn-keyword3">搜索</a>
+                                                                        <a href="{:U('CmZichan/functions',array('type'=>'type1','category'=>'category3'))}" type="reset" class="btn btn-white btn-small">重置</a>
                                                                     </div>
                                                                 </div>
                                                             </form>
                                                             <h6 style="font-weight: bold;">短信功能信息</h6>
-                                                            <table class="table table-striped table-flip-scroll table-responsive" style="border-top:1px solid #ddd">
+                                                            <table class="table table-striped table-flip-scroll" style="border-top:1px solid #ddd">
                                                                 <thead class="cf">
-                                                                <tr>
-                                                                    <th>Msisdn</th>
-                                                                    <th>状态</th>
-                                                                    <th>状态最后更新时间</th>
-                                                                </tr>
+                                                                    <tr>
+                                                                        <th>Msisdn</th>
+                                                                        <th>状态</th>
+                                                                        <th>状态最后更新时间</th>
+                                                                    </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                <tr>
-                                                                    <td>Mark</td>
-                                                                    <td>Mark</td>
-                                                                    <td>Otto</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Mark</td>
-                                                                    <td>Mark</td>
-                                                                    <td>Otto</td>
-                                                                </tr>
+                                                                    <if condition="$data.sms eq null">
+                                                                        <tr><td colspan="3" style="text-align:center;padding:15px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">没有数据</td></tr>
+                                                                        <elseif condition="$data['sms']['code'] eq 1 " />
+                                                                        <tr>
+                                                                            <td colspan="3" style="text-align:center;padding:15px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">{$data.sms.error}</td>
+                                                                        </tr>
+                                                                        <else/>
+                                                                        <tr>
+                                                                            <td>{$data.sms.msisdn}</td>
+                                                                            <td>{$data.sms.sms}</td>
+                                                                            <td>{$data.sms.statusTime}</td>
+                                                                        </tr>
+                                                                    </if>
                                                                 </tbody>
                                                             </table>
                                                         </div>
-                                                        <div class="tab-pane" id="tab2surf">
+
+                                                        <!-- 上网功能开停 -->
+                                                        <div class="tab-pane {$category4}" id="inner4">
                                                             <form class="form-inline p-b-30">
                                                                 <div class="row" style="display: flex;display: -webkit-flex;align-items:center;">
                                                                     <div class="col-lg-2 col-md-2 col-sm-2">
-                                                                        <input type="text" name="Msisdn" placeholder="Msisdn" style="width:100%;">
+                                                                        <input type="text" id="msisdn" name="msisdn" placeholder="Msisdn"  value="{$msisdn}" style="width:100%;">
                                                                     </div>
                                                                     <div class="col-lg-2 col-md-2 col-sm-2">
-                                                                        <input type="text" name="apnname" placeholder="apnname" style="width:100%;">
+                                                                        <input type="text" id="apnname" placeholder="apnname" value="{$apnname}" style="width:100%;">
                                                                     </div>
                                                                     <div class="col-lg-2 col-md-2 col-sm-2">
-                                                                        <select style="width:100%;height:36px !important;">
-                                                                            <option value="">操作类型</option>
-                                                                            <option value="1">停</option>
-                                                                            <option value="1">开</option>
+                                                                        <select id="opttype" name="opttype1" style="width:100%;height:36px !important;">
+                                                                            <volist name="opttypelist" id="v">
+                                                                                <if condition="$opttype eq $v.key ">
+                                                                                    <option value="{$v.key}" selected="selected">{$v.val}</option>
+                                                                                    <else/>
+                                                                                    <option value="{$v.key}">{$v.val}</option>
+                                                                                </if>
+                                                                            </volist>
                                                                         </select>
                                                                     </div>
                                                                     <div class="col-lg-3 col-md-3 col-sm-3">
-                                                                        <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="surfkeywords">搜索</a>
-                                                                        <a href="functions.html" type="reset" class="btn btn-white btn-small">重置</a>
+                                                                        <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="btn-keyword4">搜索</a>
+                                                                        <a href="{:U('CmZichan/functions',array('type'=>'type1','category'=>'category4'))}" type="reset" class="btn btn-white btn-small">重置</a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="panel-default">
+                                                                    <div class="panel-body no-padding" style="margin: 30px 0px;">
+                                                                        <div class="col-md-12">
+                                                                            <!--<h6>开停机处理情况</h6>-->
+                                                                            <if condition="$result neq '' ">
+                                                                                <div class="padding-sm bg-grey" style="color: #F00;margin: 10px 0px;">
+                                                                                    <p>{$result}</p>
+                                                                                </div>
+                                                                            </if>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </form>
@@ -541,38 +556,58 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="tab-pane" id="tab1batchserch">
+
+                                            <div class="tab-pane fade {$type2}" id="home2">
                                                 <div class="p-t-5">
                                                     <ul class="nav nav-tabs" role="tablist">
-                                                        <li class="active">
-                                                            <a href="#tab2batchserchinfo" role="tab" data-toggle="tab">上网功能查询</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#tab2batchserch2" role="tab" data-toggle="tab">语言功能查询</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#tab2batchactivetime" role="tab" data-toggle="tab">短信功能查询</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#tab2batchsurf" role="tab" data-toggle="tab">上网功能开停</a>
-                                                        </li>
+                                                        <li class="{$category1}"><a href="#ext1" role="tab" data-toggle="tab">上网功能查询</a></li>
+                                                        <li class="{$category2}"><a href="#ext2" role="tab" data-toggle="tab">语言功能查询</a></li>
+                                                        <li class="{$category3}"><a href="#ext3" role="tab" data-toggle="tab">短信功能查询</a></li>
+                                                        <li class="{$category4}"><a href="#ext3" role="tab" data-toggle="tab">上网功能开停</a></li>
                                                     </ul>
                                                     <div class="tab-content">
-                                                        <div class="tab-pane active" id="tab2batchserchinfo">
-                                                            <textarea rows="10" name="remark" placeholder="Msisdns（多个半角逗号分隔，最多100个）" style="width: 100%;"></textarea>
+                                                        <!-- 批量号码上网功能查询 -->
+                                                        <div class="tab-pane {$category1}" id="ext1">
+                                                            <textarea rows="10" name="remark" placeholder="Msisdns（多个半角逗号分隔，最多100个）" style="width: 100%;" id="keywords-batch1" value="">{$msisdns1}</textarea>
                                                             <div class="p-t-15 p-b-30">
-                                                                <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="batchkeywords">搜索</a>
-                                                                <a href="functions.html" type="reset" class="btn btn-white btn-small">重置</a>
+                                                                <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="btn-keyword-batch1">搜索</a>
+                                                                <a href="{:U('CmZichan/function',array('type'=>'type2','category'=>'category1'))}" type="reset" class="btn btn-white btn-small">重置</a>
+                                                            </div>
+                                                            <div class="panel-default">
+                                                                <div class="panel-body no-padding" style="margin: 30px 0px;">
+                                                                    <div class="col-md-12">
+                                                                        <if condition="$data1.code eq '0' ">
+                                                                            <div class="padding-sm bg-grey" style="color: #F00;margin: 10px 0px;">
+                                                                                <p>查询结果已生成，请<a href="{$Think.WEB_ROOT}UploadCm/excel/{$data1.filename}" class="btn btn-xs btn-mini btn-success" type="button">点击此处</a>下载</p>
+                                                                            </div>
+                                                                            <elseif condition="$data1.code eq '1' "/>
+                                                                            <div class="padding-sm bg-grey" style="color: #F00;margin: 10px 0px;">
+                                                                                <p>{$data1.error}</p>
+                                                                            </div>
+                                                                            <else/>
+                                                                        </if>
+
+
+                                                                        <if condition="$data1.noprivs neq '' ">
+                                                                            <div class="padding-sm bg-grey" style="color: #F00;margin: 10px 0px;">
+                                                                                <p>没有权限的号码：{$data1.noprivs}</p>
+                                                                            </div>
+                                                                        </if>
+
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <div class="tab-pane" id="tab2batchserch2">
-                                                            <textarea rows="10" name="remark" placeholder="Msisdns（多个半角逗号分隔，最多100个）" style="width: 100%;"></textarea>
+
+                                                        <!-- 批量号码语音功能信息 -->
+                                                        <div class="tab-pane {$category2}" id="ext2">
+                                                            <textarea rows="10" name="remark" placeholder="Msisdns（多个半角逗号分隔，最多100个）" style="width: 100%;" id="keywords-batch2" value="">{$msisdns2}</textarea>
                                                             <div class="p-t-15 p-b-30">
-                                                                <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="batchkeywords2">搜索</a>
-                                                                <a href="functions.html" type="reset" class="btn btn-white btn-small">重置</a>
+                                                                <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="btn-keyword-batch2">搜索</a>
+                                                                <a href="{:U('CmZichan/function',array('type'=>'type2','category'=>'category2'))}" type="reset" class="btn btn-white btn-small">重置</a>
                                                             </div>
                                                             <h6 style="font-weight: bold;">语音功能信息</h6>
-                                                            <table class="table table-striped table-flip-scroll table-responsive" style="border-top:1px solid #ddd">
+                                                            <table class="table table-striped table-flip-scroll" style="border-top:1px solid #ddd">
                                                                 <thead class="cf">
                                                                 <tr>
                                                                     <th>Msisdn</th>
@@ -581,27 +616,47 @@
                                                                 </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                <tr>
-                                                                    <td>Mark</td>
-                                                                    <td>Mark</td>
-                                                                    <td>Otto</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Mark</td>
-                                                                    <td>Mark</td>
-                                                                    <td>Otto</td>
-                                                                </tr>
+                                                                    <if condition="$data2.voice eq null">
+                                                                        <tr><td colspan="3" style="text-align:center;padding:15px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">没有数据</td></tr>
+                                                                        <elseif condition="$data2['voice']['code'] eq 1 " />
+                                                                        <tr>
+                                                                            <td colspan="3" style="text-align:center;padding:15px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">{$data2.voice.error}</td>
+                                                                        </tr>
+                                                                        <else/>
+                                                                        <volist name="data2.voice.statusList.list" id="vo">
+                                                                            <if condition="$vo.code eq '0' ">
+                                                                                <tr>
+                                                                                    <td>{$vo.msisdn}</td>
+                                                                                    <td>{$vo.voice}</td>
+                                                                                    <td>{$vo.statusTime}</td>
+                                                                                </tr>
+                                                                                <else/>
+                                                                                <tr>
+                                                                                    <td colspan="3" style="text-align:center;padding:15px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">{$vo.msisdn}{$vo.error}</td>
+                                                                                </tr>
+                                                                            </if>
+                                                                        </volist>
+                                                                    </if>
+
+                                                                    <if condition="$data2.noprivs neq '' ">
+                                                                        <div class="padding-sm bg-grey" style="color: #F00;margin: 10px 0px;">
+                                                                            <p>没有权限的号码：{$data2.noprivs}</p>
+                                                                        </div>
+                                                                    </if>
+
                                                                 </tbody>
                                                             </table>
                                                         </div>
-                                                        <div class="tab-pane" id="tab2batchactivetime">
-                                                            <textarea rows="10" name="remark" placeholder="Msisdns（多个半角逗号分隔，最多100个）" style="width: 100%;"></textarea>
+
+                                                        <!-- 批量号码短信功能信息 -->
+                                                        <div class="tab-pane {$category3}" id="ext3">
+                                                            <textarea rows="10" name="remark" placeholder="Msisdns（多个半角逗号分隔，最多100个）" style="width: 100%;"id="keywords-batch3" value="">{$msisdns3}</textarea>
                                                             <div class="p-t-15 p-b-30">
-                                                                <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="batchkeywords3">搜索</a>
-                                                                <a href="functions.html" type="reset" class="btn btn-white btn-small">重置</a>
+                                                                <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="btn-keyword-batch3">搜索</a>
+                                                                <a href="{:U('CmZichan/function',array('type'=>'type2','category'=>'category3'))}" type="reset" class="btn btn-white btn-small">重置</a>
                                                             </div>
                                                             <h6 style="font-weight: bold;">短信功能信息</h6>
-                                                            <table class="table table-striped table-flip-scroll table-responsive" style="border-top:1px solid #ddd">
+                                                            <table class="table table-striped table-flip-scroll" style="border-top:1px solid #ddd">
                                                                 <thead class="cf">
                                                                 <tr>
                                                                     <th>Msisdn</th>
@@ -610,32 +665,55 @@
                                                                 </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                <tr>
-                                                                    <td>Mark</td>
-                                                                    <td>Mark</td>
-                                                                    <td>Otto</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Mark</td>
-                                                                    <td>Mark</td>
-                                                                    <td>Otto</td>
-                                                                </tr>
+                                                                    <if condition="$data3.sms eq null">
+                                                                        <tr><td colspan="3" style="text-align:center;padding:15px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">没有数据</td></tr>
+                                                                        <elseif condition="$data3['sms']['code'] eq 1 " />
+                                                                        <tr>
+                                                                            <td colspan="3" style="text-align:center;padding:15px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">{$data3.sms.error}</td>
+                                                                        </tr>
+                                                                        <else/>
+                                                                        <volist name="data3.sms.statusList.list" id="vo">
+                                                                            <if condition="$vo.code eq '0' ">
+                                                                                <tr>
+                                                                                    <td>{$vo.msisdn}</td>
+                                                                                    <td>{$vo.voice}</td>
+                                                                                    <td>{$vo.statusTime}</td>
+                                                                                </tr>
+                                                                                <else/>
+                                                                                <tr>
+                                                                                    <td colspan="3" style="text-align:center;padding:15px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">{$vo.msisdn}{$vo.error}</td>
+                                                                                </tr>
+                                                                            </if>
+                                                                        </volist>
+                                                                    </if>
+
+                                                                    <if condition="$data3.noprivs neq '' ">
+                                                                        <div class="padding-sm bg-grey" style="color: #F00;margin: 10px 0px;">
+                                                                            <p>没有权限的号码：{$data3.noprivs}</p>
+                                                                        </div>
+                                                                    </if>
                                                                 </tbody>
                                                             </table>
                                                         </div>
-                                                        <div class="tab-pane" id="tab2batchsurf">
-                                                            <textarea rows="10" name="remark" placeholder="Msisdns（多个半角逗号分隔，最多100个）" style="width: 100%;"></textarea>
+
+                                                        <!-- 批量号码上网功能开停 -->
+                                                        <div class="tab-pane {$category4}" id="ext4">
+                                                            <textarea rows="10" name="remark" placeholder="Msisdns（多个半角逗号分隔，最多100个）" style="width: 100%;" id="keywords-batch4" value="">{$msisdns4}</textarea>
                                                             <div class="row p-t-15 p-b-30">
                                                                 <div class="col-lg-2 col-md-2 col-sm-2">
-                                                                    <select style="width:100%;height:36px !important;">
-                                                                        <option value="">操作类型</option>
-                                                                        <option value="1">停</option>
-                                                                        <option value="1">开</option>
+                                                                    <select id="opttype-batch" name="opttype-batch" style="width:100%;height:36px !important;">
+                                                                        <volist name="opttypelist" id="v">
+                                                                            <if condition="$opttypebatch eq $v.key ">
+                                                                                <option value="{$v.key}" selected="selected">{$v.val}</option>
+                                                                                <else/>
+                                                                                <option value="{$v.key}">{$v.val}</option>
+                                                                            </if>
+                                                                        </volist>
                                                                     </select>
                                                                 </div>
                                                                 <div class="col-lg-3 col-md-3 col-sm-3">
-                                                                    <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="surfkeywords3">搜索</a>
-                                                                    <a href="functions.html" type="reset" class="btn btn-white btn-small">重置</a>
+                                                                    <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="btn-keyword-batch4">搜索</a>
+                                                                    <a href="{:U('CmZichan/function',array('type'=>'type2','category'=>'category4'))}" type="reset" class="btn btn-white btn-small">重置</a>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -660,31 +738,23 @@
 <script src="../../assets/plugins/jquery/jquery-1.11.3.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrapv3/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-block-ui/jqueryblockui.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
+<!--<script src="../../assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>-->
 <script src="../../assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
 
-<script src="../../assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
+<!--<script src="../../assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>-->
 <script src="../../assets/plugins/jquery-inputmask/jquery.inputmask.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-autonumeric/autoNumeric.js" type="text/javascript"></script>
 <script src="../../assets/plugins/ios-switch/ios7-switch.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js" type="text/javascript"></script>
-<script src="../../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js" type="text/javascript"></script>
+<!--<script src="../../assets/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js" type="text/javascript"></script>-->
 <script src="../../assets/plugins/bootstrap-tag/bootstrap-tagsinput.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/dropzone/dropzone.min.js" type="text/javascript"></script>
 
 <script src="../../webarch/js/webarch.js" type="text/javascript"></script>
-
-<script src="../../assets/plugins/jquery-datatable/js/jquery.dataTables.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-datatable/extra/js/dataTables.tableTools.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/datatables-responsive/js/datatables.responsive.js" type="text/javascript"></script>
-<script src="../../assets/plugins/datatables-responsive/js/lodash.min.js" type="text/javascript"></script>
-<!-- END PAGE LEVEL JS INIT -->
-<script src="../../assets/js/datatables.js" type="text/javascript"></script>
-<script src="../../assets/js/form_elements.js" type="text/javascript"></script>
 
 </body>
 </html>

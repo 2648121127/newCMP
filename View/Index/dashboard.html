@@ -248,7 +248,7 @@
             <li> <a href="../CmZifei/flow.html"> 流量查询 </a> </li>
             <li> <a href="../CmZifei/share.html"> 流量共享管理</a> </li>
             <li> <a href="../CmZifei/pool.html"> 流量池管理</a> </li>
-            <li> <a href="../CmZichan/bills.html"> 账单管理</a> </li>
+            <li> <a href="../CmCaiwu/bills.html"> 账单管理</a> </li>
           </ul>
         </li>
         <li>
@@ -304,91 +304,103 @@
       </div>
       <div class="modal-body"> Widget settings form goes here </div>
     </div>
+
     <div class="clearfix"></div>
 
-    <!--<div class="content">-->
-    <!--</div>-->
     <div class="content">
       <div class="row">
-        <div class="col-sm-6 col-md-3">
-          <div class="panel-stat3 bg-danger">
-            <h2 class="m-top-none" id="userCount" style="font-size: 30px;color:#ffffff;font-weight: 500;">{$totalnum}</h2>
-            <h5 style="font-weight: 500;color:#ffffff;">物联网卡总数量</h5>
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="grid simple " style="background: #ffffff;">
+                <div class="grid-body no-border" style="padding-top:20px;">
+                  <div class="col-sm-6 col-md-3">
+                    <div class="panel-stat3 bg-danger">
+                      <h2 class="m-top-none" id="userCount" style="font-size: 30px;color:#ffffff;font-weight: 500;">{$totalnum}</h2>
+                      <h5 style="font-weight: 500;color:#ffffff;">物联网卡总数量</h5>
 
-            <div class="stat-icon">
-              <i class="fa fa-folder-o fa-3x"></i>
-            </div>
-            <i class="fa fa-folder-o fa-lg"></i>
+                      <div class="stat-icon">
+                        <i class="fa fa-folder-o fa-3x"></i>
+                      </div>
+                      <i class="fa fa-folder-o fa-lg"></i>
 
-            <!--<div class="loading-overlay">-->
-              <!--<i class="loading-icon fa fa-refresh fa-spin fa-lg"></i>-->
-            <!--</div>-->
-          </div>
-        </div>
-        <!-- /.col -->
-        <div class="col-sm-6 col-md-3">
-          <div class="panel-stat3 bg-info" style="background: #6caebd;">
-            <h2 class="m-top-none"><span id="serverloadCount" style="font-size: 30px;color:#ffffff;font-weight: 500;">{$activenum}</span></h2>
-            <h5 style="font-weight: 500;color:#ffffff;">已激活物联网卡数量</h5>
-            <i class="fa fa-folder-open-o fa-lg"></i><span class="m-left-xs">激活率 {$activerate}% </span>
+                      <!--<div class="loading-overlay">-->
+                      <!--<i class="loading-icon fa fa-refresh fa-spin fa-lg"></i>-->
+                      <!--</div>-->
+                    </div>
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-sm-6 col-md-3">
+                    <div class="panel-stat3 bg-info" style="background: #6caebd;">
+                      <h2 class="m-top-none"><span id="serverloadCount" style="font-size: 30px;color:#ffffff;font-weight: 500;">{$activenum}</span></h2>
+                      <h5 style="font-weight: 500;color:#ffffff;">已激活物联网卡数量</h5>
+                      <i class="fa fa-folder-open-o fa-lg"></i><span class="m-left-xs">激活率 {$activerate}% </span>
 
-            <div class="stat-icon">
-              <i class="fa fa-folder-open-o fa-3x"></i>
-            </div>
-            <!--<div class="loading-overlay">-->
-              <!--<i class="loading-icon fa fa-refresh fa-spin fa-lg"></i>-->
-            <!--</div>-->
-          </div>
-        </div>
-        <!-- /.col -->
-        <div class="col-sm-6 col-md-3">
-          <div class="panel-stat3 bg-warning" style="background-color: #f3ce85;">
-            <h2 class="m-top-none" id="orderCount" style="font-size: 30px;color:#ffffff;font-weight: 500;">{$totalflow|intval}</h2>
-            <h5 style="font-weight: 500;color:#ffffff;">流量池当月总流量</h5>
-            <i class="fa fa-tasks fa-lg"></i> 单位：GB
+                      <div class="stat-icon">
+                        <i class="fa fa-folder-open-o fa-3x"></i>
+                      </div>
+                      <!--<div class="loading-overlay">-->
+                      <!--<i class="loading-icon fa fa-refresh fa-spin fa-lg"></i>-->
+                      <!--</div>-->
+                    </div>
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-sm-6 col-md-3">
+                    <div class="panel-stat3 bg-warning" style="background-color: #f3ce85;">
+                      <h2 class="m-top-none" id="orderCount" style="font-size: 30px;color:#ffffff;font-weight: 500;">{$totalflow|intval}</h2>
+                      <h5 style="font-weight: 500;color:#ffffff;">流量池当月总流量</h5>
+                      <i class="fa fa-tasks fa-lg"></i> 单位：GB
 
-            <div class="stat-icon">
-              <i class="fa fa-tasks fa-3x"></i>
-            </div>
-            <!--<div class="loading-overlay">-->
-              <!--<i class="loading-icon fa fa-refresh fa-spin fa-lg"></i>-->
-            <!--</div>-->
-          </div>
-        </div>
-        <!-- /.col -->
-        <div class="col-sm-6 col-md-3">
-          <div class="panel-stat3 bg-success" style="background-color: #65cea7;">
-            <h2 class="m-top-none" id="visitorCount" style="font-size: 30px;color:#ffffff;font-weight: 500;">{$alreadyflow|intval}</h2>
-            <h5 style="font-weight: 500;color:#ffffff;">流量池当月已使用量</h5>
-            <i class="fa fa-bar-chart-o fa-lg"></i> 单位：GB
+                      <div class="stat-icon">
+                        <i class="fa fa-tasks fa-3x"></i>
+                      </div>
+                      <!--<div class="loading-overlay">-->
+                      <!--<i class="loading-icon fa fa-refresh fa-spin fa-lg"></i>-->
+                      <!--</div>-->
+                    </div>
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-sm-6 col-md-3">
+                    <div class="panel-stat3 bg-success" style="background-color: #65cea7;">
+                      <h2 class="m-top-none" id="visitorCount" style="font-size: 30px;color:#ffffff;font-weight: 500;">{$alreadyflow|intval}</h2>
+                      <h5 style="font-weight: 500;color:#ffffff;">流量池当月已使用量</h5>
+                      <i class="fa fa-bar-chart-o fa-lg"></i> 单位：GB
 
-            <div class="stat-icon">
-              <i class="fa fa-bar-chart-o fa-3x"></i>
-            </div>
-            <!--<div class="loading-overlay">-->
-              <!--<i class="loading-icon fa fa-refresh fa-spin fa-lg"></i>-->
-            <!--</div>-->
-          </div>
-        </div>
-        <!-- /.col -->
-      </div>
-      <!-- /.row -->
-      <div class="row">
-        <div class="col-sm-12 col-md-12">
-          <div class="panel panel-default">
-            <div class="panel panel-default">
-              <div class="panel-heading clearfix" style="border:1px #f1f1f1 solid;border-bottom: none;">
-                <span class="pull-left"><i class="fa fa-bar-chart-o fa-lg"></i> 最近6个月卡池情况</span>
+                      <div class="stat-icon">
+                        <i class="fa fa-bar-chart-o fa-3x"></i>
+                      </div>
+                      <!--<div class="loading-overlay">-->
+                      <!--<i class="loading-icon fa fa-refresh fa-spin fa-lg"></i>-->
+                      <!--</div>-->
+                    </div>
+                  </div>
+                  <!-- /.col -->
+
+                  <!-- /.row -->
+                  <div class="row">
+                    <div class="col-sm-12 col-md-12">
+                      <div class="panel panel-default">
+                        <div class="panel panel-default">
+                          <div class="panel-heading clearfix" style="border:1px #f1f1f1 solid;border-bottom: none;">
+                            <span class="pull-left"><i class="fa fa-bar-chart-o fa-lg"></i> 最近6个月卡池情况</span>
+                          </div>
+                          <div id="trafficWidget">
+                            <div id="placeholder" class="graph" style="height:300px"></div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div id="trafficWidget">
-                <div id="placeholder" class="graph" style="height:300px"></div>
-              </div>
             </div>
-
           </div>
         </div>
+
       </div>
     </div>
+
   </div>
   <!-- BEGIN CHAT -->
   <!-- END CHAT -->
@@ -405,11 +417,7 @@
 <script src="../../assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
-<!-- END CORE JS DEPENDECENCIES-->
-<!-- BEGIN CORE TEMPLATE JS -->
-<script src="../../webarch/js/webarch.js" type="text/javascript"></script>
-<!-- END CORE TEMPLATE JS -->
-<!-- BEGIN PAGE LEVEL JS -->
+
 <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 <script src="../../assets/plugins/jquery-ricksaw-chart/js/d3.v2.js"></script>
 <script src="../../assets/plugins/jquery-ricksaw-chart/js/rickshaw.min.js"></script>
@@ -421,11 +429,12 @@
 <script src="../../assets/plugins/jquery-flot/jquery.flot.animator.min.js"></script>
 <script src="../../assets/plugins/jquery-flot/jquery.flot.orderBars.js"></script>
 <script src="../../assets/plugins/jquery-sparkline/jquery-sparkline.js"></script>
-<!--<script src="assets/plugins/jquery-easy-pie-chart/js/jquery.easypiechart.min.js"></script>-->
-<!-- END PAGE LEVEL PLUGINS -->
-<script src="../../assets/js/charts.js" type="text/javascript"></script>
+
 <script src="../../assets/plugins/highcharts.js"></script>
-<script type="text/javascript">
+
+<script src="../../webarch/js/webarch.js" type="text/javascript"></script>
+<block name="extjs">
+  <script type="text/javascript">
 $(function(){
     var fulldata = [{$fullflow}];
     var useddata = [{$usedflow}];
@@ -483,51 +492,6 @@ $(function(){
 })
 
 </script>
-<!--<script type="text/javascript">-->
-    <!--$(function () {-->
-        <!--var fulldata = [{$fullflow}];-->
-        <!--var useddata = [{$usedflow}];-->
-        <!--var month = [{$month}];-->
-        <!--var pl = $.plot($("#placeholder"),-->
-            <!--[-->
-                <!--{ label: "总流量池", data: fulldata,colors:["#543494"]},-->
-                <!--{ label: "实际使用流量", data: useddata}-->
-            <!--],-->
-            <!--{-->
-                <!--series: {-->
-                    <!--lines: {show: true},-->
-                    <!--points: {show: true, radius: '4.5'}-->
-                <!--},-->
-                <!--grid: {hoverable: true, clickable: true, borderColor: '#000', borderWidth: 1},-->
-                <!--xaxis: {-->
-                    <!--ticks: month-->
-                <!--}-->
-            <!--});-->
-        <!--$("<div id='tooltip'></div>").css({-->
-            <!--position: "absolute",-->
-            <!--display: "none",-->
-            <!--border: "1px solid #222",-->
-            <!--padding: "4px",-->
-            <!--color: "#fff",-->
-            <!--"border-radius": "4px",-->
-            <!--"background-color": "rgb(0,0,0)",-->
-            <!--opacity: 0.90-->
-        <!--}).appendTo("body");-->
-        <!--$("#placeholder").bind("plothover", function (event, pos, item) {-->
-            <!--if (item) {-->
-                <!--var x = item.datapoint[0],  y = item.datapoint[1];-->
-                <!--var label = item.series.label;-->
-                <!--$("#tooltip").html(month[item.dataIndex][1]+label+" :<br/> " + y+" GB")-->
-                    <!--.css({top: item.pageY+5, left: item.pageX-100})-->
-                    <!--.fadeIn(200);-->
-            <!--} else {-->
-                <!--$("#tooltip").hide();-->
-            <!--}-->
-        <!--});-->
-
-    <!--});-->
-
-
-<!--</script>-->
+</block>
 </body>
 </html>

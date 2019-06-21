@@ -34,11 +34,11 @@
 }
 
 /*   表单验证提示信息设置  start*/
-#packagetype1-error,#dirtype-error,#haspool-error,#packagetype-error{
+#packagetype1-error,#dirtype-error,#haspool-error,#packagetype-error,#Dangerplacetype-error{
     position: absolute;
     top:36px;
 }
-#packageid2-error,#liuliangchi2-error,#packageid-error{
+#packageid2-error,#liuliangchi2-error,#packageid-error,#citysid-error{
     text-align: right;
 }
 .input-group-btn{
@@ -52,4 +52,104 @@
 }
 .input-group-btn{
     vertical-align:top;
+}
+
+
+/*登录后进入主页动画*/
+.animation-delay6 {
+    animation-delay: 1.1s;
+    -webkit-animation-delay: 1.1s;
+    -moz-animation-delay: 1.1s;
+    -ms-animation-delay: 1.1s;
+    -o-animation-delay: 1.1s;
+    animation-timing-function: ease;
+    -webkit-animation-timing-function: ease;
+    -moz-animation-timing-function: ease;
+    -ms-animation-timing-function: ease;
+    -o-animation-timing-function: ease;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+}
+.fadeInUp {
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+    -moz-animation-name: fadeInUp;
+    -ms-animation-name: fadeInUp;
+    -o-animation-name: fadeInUp;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -ms-animation-duration: 1s;
+    -o-animation-duration: 1s;
+}
+
+.bg-info{
+    background-color: #6bafbd;
+    color: #fff;
+}
+.bg-danger {
+    background-color: #fc8675!important;
+    color: #fff!important;
+}
+.bg-success {
+    background-color: #65cea7;
+    color: #fff;
+}
+.panel-stat1 {
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.panel-stat1 .value {
+    font-size: 60px;
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -ms-transition: all .4s ease;
+    -o-transition: all .4s ease;
+}
+.panel-stat1:hover .value {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transition: transform .4s ease;
+    -webkit-transition: -webkit-transform .4s ease;
+    -moz-transition: -moz-transform .4s ease;
+    -ms-transition: -ms-transform .4s ease;
+    -o-transition: -o-transform .4s ease;
+}
+.panel-stat1 .value {
+    font-size: 60px;
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -ms-transition: all .4s ease;
+    -o-transition: all .4s ease;
+}
+.panel-stat1 .title {
+    font-size: 16px;
+    margin-top: -15px;
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -ms-transition: all .4s ease;
+    -o-transition: all .4s ease;
+}
+.panel-stat1:hover .title {
+    transform: scale(0.85);
+    -webkit-transform: scale(0.85);
+    -moz-transform: scale(0.85);
+    -ms-transform: scale(0.85);
+    -o-transform: scale(0.85);
+    transition: transform .4s ease;
+    -webkit-transition: -webkit-transform .4s ease;
+    -moz-transition: -moz-transform .4s ease;
+    -ms-transition: -ms-transform .4s ease;
+    -o-transition: -o-transform .4s ease;
 }

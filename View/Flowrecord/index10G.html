@@ -326,7 +326,7 @@
                         <li> <a href="../CmZifei/flow.html"> 流量查询 </a> </li>
                         <li> <a href="../CmZifei/share.html"> 流量共享管理</a> </li>
                         <li> <a href="../CmZifei/pool.html"> 流量池管理</a> </li>
-                        <li> <a href="../CmZichan/bills.html"> 账单管理</a> </li>
+                        <li> <a href="../CmCaiwu/bills.html"> 账单管理</a> </li>
                     </ul>
                 </li>
                 <li>
@@ -453,8 +453,8 @@
 <script src="../../assets/js/form_validations.js" type="text/javascript"></script>
 <script src="../../assets/js/common.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL JS INIT -->
-
-<script>
+<block name="extjs">
+    <script>
     $(function () {
         //1.  最近24小时卡池流量使用情况
         Highcharts.chart('container-line', {
@@ -619,5 +619,6 @@
     })
 
 </script>
+</block>
 </body>
 </html>

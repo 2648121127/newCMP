@@ -308,7 +308,7 @@
                         <li> <a href="../CmZifei/flow.html"> 流量查询 </a> </li>
                         <li> <a href="../CmZifei/share.html"> 流量共享管理</a> </li>
                         <li> <a href="../CmZifei/pool.html"> 流量池管理</a> </li>
-                        <li> <a href="bills.html"> 账单管理</a> </li>
+                        <li> <a href="../CmCaiwu/bills.html"> 账单管理</a> </li>
                     </ul>
                 </li>
                 <li>
@@ -378,190 +378,278 @@
                                     </div>
                                     <div class="p-t-5">
                                         <ul class="nav nav-tabs" role="tablist">
-                                            <li class="active">
-                                                <a href="#tab1singleserch" role="tab" data-toggle="tab"><i class="fa fa-pencil p-r-5"></i>集团信息查询</a>
-                                            </li>
-                                            <li>
-                                                <a href="#tab1batchserch" role="tab" data-toggle="tab"><i class="fa fa-pencil p-r-5"></i>集团信息查询</a>
-                                            </li>
+                                            <li class="{$type1}"><a href="#home1" role="tab" data-toggle="tab"><i class="fa fa-pencil p-r-5"></i>集团信息查询</a></li>
+                                            <li class="{$type1}"><a href="#home2" role="tab" data-toggle="tab"><i class="fa fa-pencil p-r-5"></i>集团信息查询</a></li>
 
                                         </ul>
                                         <div class="tab-content">
-                                            <div class="tab-pane active" id="tab1singleserch">
+                                            <div class="tab-pane fade {$type1}" id="home1">
                                                 <div class="p-t-5">
                                                     <ul class="nav nav-tabs" role="tablist">
-                                                        <li class="active">
-                                                            <a href="#tab2numberinfo" role="tab" data-toggle="tab">集团信息查询</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#tab2numberinfo2" role="tab" data-toggle="tab">集团信息查询</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#tab2activetime" role="tab" data-toggle="tab">集团信息查询</a>
-                                                        </li>
-
+                                                        <li class="{$category1}"><a href="#page1" role="tab" data-toggle="tab">集团信息查询</a></li>
+                                                        <li class="{$category2}"><a href="#page2" role="tab" data-toggle="tab">集团信息查询</a></li>
+                                                        <li class="{$category3}"><a href="#page3" role="tab" data-toggle="tab">集团信息查询</a></li>
                                                     </ul>
                                                     <div class="tab-content">
-                                                        <div class="tab-pane active" id="tab2numberinfo">
+                                                        <!-- 单个号码查询 -->
+                                                        <div class="tab-pane fade {$category1}" id="page1">
                                                             <form class="form-inline p-b-30">
                                                                 <div class="row" style="display: flex;display: -webkit-flex;align-items:center;">
                                                                     <div class="col-lg-3 col-md-3 col-sm-3">
-                                                                        <input type="text" placeholder="Msisdn" style="width:100%;min-height:34px;">
+                                                                        <input type="text" name="keywords1" placeholder="Msisdn" id="keywords1" value="{$msisdn1}" style="width:100%;min-height:34px;">
                                                                     </div>
                                                                     <div class="col-lg-3 col-md-3 col-sm-3">
-                                                                        <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="keywords">搜索</a>
-                                                                        <a href="number.html" type="reset" class="btn btn-white btn-small">重置</a>
+                                                                        <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="btn-keyword1">搜索</a>
+                                                                        <a href="{:U('CmZichan/number',array('type'=>'type1','category'=>'category1'))}" type="reset" class="btn btn-white btn-small">重置</a>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+
+                                                            <!-- 号码信息 --->
+                                                            <h6 style="font-weight: bold;">号码信息</h6>
+                                                            <div class="table-responsive">
+                                                                <table class="table table-striped table-flip-scroll" style="border-top:1px solid #ddd">
+                                                                    <thead class="cf">
+                                                                    <tr>
+                                                                        <th>Msisdn</th>
+                                                                        <th>开户时间</th>
+                                                                        <th>号码状态</th>
+                                                                        <th>状态更新时间</th>
+                                                                        <th>套餐编码</th>
+                                                                        <th>套餐名称</th>
+                                                                        <th>套餐状态</th>
+                                                                        <th>套餐生效时间</th>
+                                                                        <th>套餐失效时间</th>
+                                                                    </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <if condition="$data.info eq null ">
+                                                                            <tr>
+                                                                                <td colspan="9" style="text-align:center;padding:15px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">没有数据</td>
+                                                                            </tr>
+
+                                                                            <elseif condition="$data['info']['code'] eq 1 " />
+                                                                            <tr>
+                                                                                <td colspan="9" style="text-align:center;padding:15px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">{$data.info.error}</td>
+                                                                            </tr>
+
+                                                                            <else />
+                                                                            <volist name="data.info.packages.list" id="vo">
+                                                                                <tr>
+                                                                                    <td>{$data.info.msisdn}</td>
+                                                                                    <td>{$data.info.openTime}</td>
+                                                                                    <td>{$data.info.status}</td>
+                                                                                    <td>{$data.info.statusTime}</td>
+                                                                                    <td>{$vo.pkgCode}</td>
+                                                                                    <td>{$vo.pkgName}</td>
+                                                                                    <td>{$vo.pkgStatus}</td>
+                                                                                    <td>{$vo.pkgEfftTime}</td>
+                                                                                    <td>{$vo.pkgExpireTime}</td>
+                                                                                </tr>
+                                                                            </volist>
+                                                                        </if>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- 码号信息 -->
+                                                        <div class="tab-pane fade {$category2}" id="page2">
+                                                            <form class="form-inline p-b-30">
+                                                                <div class="row" style="display: flex;display: -webkit-flex;align-items:center;">
+                                                                    <div class="col-lg-3 col-md-3 col-sm-3">
+                                                                        <input type="text" placeholder="Msisdn/Iccid/Imsi/Imei" id="keywords2" value="{$msisdn2}" style="width:100%;min-height:34px;">
+                                                                    </div>
+                                                                    <div class="col-lg-3 col-md-3 col-sm-3">
+                                                                        <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="btn-keyword2">搜索</a>
+                                                                        <a href="{:U('CmZichan/number',array('type'=>'type1','category'=>'category2'))}" type="reset" class="btn btn-white btn-small">重置</a>
                                                                     </div>
                                                                 </div>
                                                             </form>
                                                             <h6 style="font-weight: bold;">号码信息</h6>
-                                                            <table class="table table-striped table-flip-scroll table-responsive" style="border-top:1px solid #ddd">
-                                                                <thead class="cf">
-                                                                <tr>
-                                                                    <th>Msisdn</th>
-                                                                    <th>开户时间</th>
-                                                                    <th>号码状态</th>
-                                                                    <th>状态更新时间</th>
-                                                                    <th>套餐编码</th>
-                                                                    <th>套餐名称</th>
-                                                                    <th>套餐状态</th>
-                                                                    <th>套餐生效时间</th>
-                                                                    <th>套餐失效时间</th>
-                                                                </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td>Mark</td>
-                                                                    <td>Otto</td>
-                                                                    <td>Mark</td>
-                                                                    <td>Mark</td>
-                                                                    <td>Mark</td>
-                                                                    <td>Otto</td>
-                                                                    <td>Mark</td>
-                                                                    <td>Mark</td>
-                                                                    <td>Mark</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Mark</td>
-                                                                    <td>Otto</td>
-                                                                    <td>Mark</td>
-                                                                    <td>Mark</td>
-                                                                    <td>Mark</td>
-                                                                    <td>Otto</td>
-                                                                    <td>Mark</td>
-                                                                    <td>Mark</td>
-                                                                    <td>Mark</td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
+                                                            <div class="table-responsive">
+                                                                <table class="table table-striped table-flip-scroll" style="border-top:1px solid #ddd">
+                                                                    <thead class="cf">
+                                                                    <tr>
+                                                                        <th>Msisdn</th>
+                                                                        <th>Iccid</th>
+                                                                        <th>Imsi</th>
+                                                                        <th>Imei</th>
+                                                                    </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <if condition="$data.iccid eq null">
+                                                                            <tr>
+                                                                                <td colspan="4" style="text-align:center;padding:15px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">没有数据</td>
+                                                                            </tr>
+                                                                            <elseif condition="$data['iccid']['code'] eq 1 " />
+                                                                            <tr>
+                                                                                <td colspan="4" style="text-align:center;padding:15px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">{$data.iccid.error}</td>
+                                                                            </tr>
+                                                                            <else/>
+                                                                            <tr>
+                                                                                <td>{$data.iccid.msisdn}</td>
+                                                                                <td>{$data.iccid.iccid}</td>
+                                                                                <td>{$data.iccid.imsi}</td>
+                                                                                <td>{$data.iccid.imei}</td>
+                                                                            </tr>
+                                                                        </if>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
                                                         </div>
-                                                        <div class="tab-pane" id="tab2numberinfo2">
+                                                        <div class="tab-pane fade {$category3}" id="page3">
                                                             <form class="form-inline p-b-30">
                                                                 <div class="row" style="display: flex;display: -webkit-flex;align-items:center;">
                                                                     <div class="col-lg-3 col-md-3 col-sm-3">
-                                                                        <input type="text" placeholder="Msisdn/Iccid/Imsi/Imei" style="width:100%;min-height:34px;">
+                                                                        <input type="text" name="keywords3" placeholder="Msisdn" id="keywords3" value="{$msisdn3}" style="width:100%;min-height:34px;">
                                                                     </div>
                                                                     <div class="col-lg-3 col-md-3 col-sm-3">
-                                                                        <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="keywords2">搜索</a>
-                                                                        <a href="number.html" type="reset" class="btn btn-white btn-small">重置</a>
+                                                                        <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="btn-keyword3">搜索</a>
+                                                                        <a href="{:U('CmZichan/number',array('type'=>'type1','category'=>'category3'))}" type="reset" class="btn btn-white btn-small">重置</a>
                                                                     </div>
                                                                 </div>
                                                             </form>
-                                                            <h6 style="font-weight: bold;">号码信息</h6>
-                                                            <table class="table table-striped table-flip-scroll table-responsive" style="border-top:1px solid #ddd">
-                                                                <thead class="cf">
-                                                                <tr>
-                                                                    <th>Msisdn</th>
-                                                                    <th>Iccid</th>
-                                                                    <th>Imsi</th>
-                                                                    <th>Imei</th>
-                                                                </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td>Mark</td>
-                                                                    <td>Otto</td>
-                                                                    <td>Mark</td>
-                                                                    <td>Mark</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Mark</td>
-                                                                    <td>Otto</td>
-                                                                    <td>Mark</td>
-                                                                    <td>Mark</td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                        <div class="tab-pane" id="tab2activetime">
-                                                            <form class="form-inline p-b-30">
-                                                                <div class="row" style="display: flex;display: -webkit-flex;align-items:center;">
-                                                                    <div class="col-lg-3 col-md-3 col-sm-3">
-                                                                        <input type="text" placeholder="Msisdn" style="width:100%;min-height:34px;">
-                                                                    </div>
-                                                                    <div class="col-lg-3 col-md-3 col-sm-3">
-                                                                        <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="keywords3">搜索</a>
-                                                                        <a href="number.html" type="reset" class="btn btn-white btn-small">重置</a>
-                                                                    </div>
-                                                                </div>
-                                                            </form>
+
+                                                            <!-- 号码激活时间 --->
                                                             <h6 style="font-weight: bold;">号码激活时间信息</h6>
-                                                            <table class="table table-striped table-flip-scroll table-responsive" style="border-top:1px solid #ddd">
-                                                                <thead class="cf">
-                                                                <tr>
-                                                                    <th>Msisdn</th>
-                                                                    <th>号码激活时间</th>
-                                                                </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td>Mark</td>
-                                                                    <td>Otto</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Mark</td>
-                                                                    <td>Otto</td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
+                                                            <div class="table-responsive">
+                                                                <table class="table table-striped table-flip-scroll" style="border-top:1px solid #ddd">
+                                                                    <thead class="cf">
+                                                                    <tr>
+                                                                        <th>Msisdn</th>
+                                                                        <th>号码激活时间</th>
+                                                                    </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <if condition="$data.actitime eq null">
+                                                                            <tr>
+                                                                                <td colspan="9" style="text-align:center;padding:15px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">没有数据</td>
+                                                                            </tr>
+                                                                            <elseif condition="$data['actitime']['code'] eq 1 " />
+                                                                            <tr>
+                                                                                <td colspan="9" style="text-align:center;padding:15px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">{$data.actitime.error}</td>
+                                                                            </tr>
+                                                                            <else/>
+                                                                            <tr>
+                                                                                <td>{$data.actitime.msisdn}</td>
+                                                                                <td>{$data.actitime.time}</td>
+                                                                            </tr>
+                                                                        </if>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="tab-pane" id="tab1batchserch">
+                                            <div class="tab-pane fade {$type2}" id="home2">
                                                 <div class="p-t-5">
                                                     <ul class="nav nav-tabs" role="tablist">
-                                                        <li class="active">
-                                                            <a href="#tab2batchserchinfo" role="tab" data-toggle="tab">集团信息查询</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#tab2batchserch2" role="tab" data-toggle="tab">集团信息查询</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#tab2batchactivetime" role="tab" data-toggle="tab">集团信息查询</a>
-                                                        </li>
-
+                                                        <li class="{$category1}"><a href="#inner1" role="tab" data-toggle="tab">集团信息查询</a></li>
+                                                        <li class="{$category2}"><a href="#inner2" role="tab" data-toggle="tab">集团信息查询</a></li>
+                                                        <li class="{$category3}"><a href="#inner3" role="tab" data-toggle="tab">集团信息查询</a></li>
                                                     </ul>
                                                     <div class="tab-content">
-                                                        <div class="tab-pane active" id="tab2batchserchinfo">
-                                                            <textarea rows="10" name="remark" placeholder="Msisdns（多个半角逗号分隔，最多100个）" style="width: 100%;"></textarea>
+                                                        <!-- 批量号码查询 -->
+                                                        <div class="tab-pane fade {$category1}" id="inner1">
+                                                            <textarea rows="10" placeholder="Msisdns（多个半角逗号分隔，最多100个）" id="keywords4" value="" style="width:100%;">{$msisdns1}</textarea>
                                                             <div class="p-t-15 p-b-30">
-                                                                <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="batchkeywords">搜索</a>
-                                                                <a href="number.html" type="reset" class="btn btn-white btn-small">重置</a>
+                                                                <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="btn-keyword4">搜索</a>
+                                                                <a href="{:U('CmZichan/number',array('type'=>'type2','category'=>'category1'))}" type="reset" class="btn btn-white btn-small">重置</a>
+                                                            </div>
+                                                            <div class="panel-default">
+                                                                <div class="panel-body no-padding" style="margin: 30px 0px;">
+                                                                    <div class="col-md-12">
+                                                                        <!--<h6>号码信息</h6>-->
+                                                                        <if condition="$data1.code eq '0' ">
+                                                                            <div class="padding-sm bg-grey" style="color: #F00;margin: 10px 0px;">
+                                                                                <p>查询结果已生成，请<a href="{$Think.WEB_ROOT}UploadCm/excel/{$data1.filename}" class="btn btn-sm btn-success btn-mini" type="button">点击此处</a>下载</p>
+                                                                            </div>
+                                                                            <elseif condition="$data1.code eq '1' "/>
+                                                                            <div class="padding-sm bg-grey" style="color: #F00;margin: 10px 0px;">
+                                                                                <p>{$data1.error}</p>
+                                                                            </div>
+                                                                            <else/>
+                                                                        </if>
+
+
+                                                                        <if condition="$data1.noprivs neq '' ">
+                                                                            <div class="padding-sm bg-grey" style="color: #F00;margin: 10px 0px;">
+                                                                                <p>没有权限的号码：{$data1.noprivs}</p>
+                                                                            </div>
+                                                                        </if>
+
+
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <div class="tab-pane" id="tab2batchserch2">
-                                                            <textarea rows="10" name="remark" placeholder="Msisdns（多个半角逗号分隔，最多100个）" style="width: 100%;"></textarea>
+
+                                                        <!-- 批量码号查询 -->
+                                                        <div class="tab-pane fade {$category2}" id="inner2">
+                                                            <textarea rows="10" name="remark" placeholder="Msisdns（多个半角逗号分隔，最多100个）" style="width: 100%;" id="keywords5" value="">{$msisdns2}</textarea>
                                                             <div class="p-t-15 p-b-30">
-                                                                <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="batchkeywords2">搜索</a>
-                                                                <a href="number.html" type="reset" class="btn btn-white btn-small">重置</a>
+                                                                <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="btn-keyword5">搜索</a>
+                                                                <a href="{:U('CmZichan/number',array('type'=>'type2','category'=>'category2'))}" type="reset" class="btn btn-white btn-small">重置</a>
+                                                            </div>
+                                                            <div class="panel-default">
+                                                                <div class="panel-body no-padding" style="margin: 30px 0px;">
+                                                                    <div class="col-md-12">
+                                                                        <!--<h6>码号信息</h6>-->
+                                                                        <if condition="$data2.code eq '0' ">
+                                                                            <div class="padding-sm bg-grey" style="color: #F00;margin: 10px 0px;">
+                                                                                <p>查询结果已生成，请<a href="{$Think.WEB_ROOT}UploadCm/excel/{$data2.filename}" class="btn btn-sm btn-success btn-mini" type="button">点击此处</a>下载</p>
+                                                                            </div>
+                                                                            <elseif condition="$data2.code eq '1' "/>
+                                                                            <div class="padding-sm bg-grey" style="color: #F00;margin: 10px 0px;">
+                                                                                <p>{$data2.error}</p>
+                                                                            </div>
+                                                                            <else/>
+                                                                        </if>
+
+                                                                        <if condition="$data2.noprivs neq '' ">
+                                                                            <div class="padding-sm bg-grey" style="color: #F00;margin: 10px 0px;">
+                                                                                <p>没有权限的号码：{$data2.noprivs}</p>
+                                                                            </div>
+                                                                        </if>
+
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <div class="tab-pane" id="tab2batchactivetime">
-                                                            <textarea rows="10" name="remark" placeholder="Msisdns（多个半角逗号分隔，最多100个）" style="width: 100%;"></textarea>
+
+                                                        <!-- 批量激活时间查询 -->
+                                                        <div class="tab-pane fade {$category3}" id="inner3">
+                                                            <textarea rows="10" name="remark" placeholder="Msisdns（多个半角逗号分隔，最多100个）" style="width: 100%;" id="keywords6" value="">{$msisdns3}</textarea>
                                                             <div class="p-t-15 p-b-30">
-                                                                <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="batchkeywords3">搜索</a>
-                                                                <a href="number.html" type="reset" class="btn btn-white btn-small">重置</a>
+                                                                <a href="#" type="button" class="btn btn-success btn-small m-r-10" id="btn-keyword6">搜索</a>
+                                                                <a href="{:U('CmZichan/number',array('type'=>'type2','category'=>'category3'))}" type="reset" class="btn btn-white btn-small">重置</a>
+                                                            </div>
+                                                            <div class="panel-default">
+                                                                <div class="panel-body no-padding" style="margin: 30px 0px;">
+                                                                    <div class="col-md-12">
+                                                                        <!--<h6>激活时间信息</h6>-->
+                                                                        <if condition="$data3.code eq '0' ">
+                                                                            <div class="padding-sm bg-grey" style="color: #F00;margin: 10px 0px;">
+                                                                                <p>查询结果已生成，请<a href="{$Think.WEB_ROOT}UploadCm/excel/{$data3.filename}" class="btn btn-sm btn-success btn-mini" type="button">点击此处</a>下载</p>
+                                                                            </div>
+                                                                            <elseif condition="$data3.code eq '1' "/>
+                                                                            <div class="padding-sm bg-grey" style="color: #F00;margin: 10px 0px;">
+                                                                                <p>{$data3.error}</p>
+                                                                            </div>
+                                                                            <else/>
+                                                                        </if>
+
+                                                                        <if condition="$data3.noprivs neq '' ">
+                                                                            <div class="padding-sm bg-grey" style="color: #F00;margin: 10px 0px;">
+                                                                                <p>没有权限的号码：{$data3.noprivs}</p>
+                                                                            </div>
+                                                                        </if>
+
+
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -585,31 +673,102 @@
 <script src="../../assets/plugins/jquery/jquery-1.11.3.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrapv3/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-block-ui/jqueryblockui.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
+<!--<script src="../../assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>-->
 <script src="../../assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
-
 <script src="../../assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-inputmask/jquery.inputmask.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-autonumeric/autoNumeric.js" type="text/javascript"></script>
 <script src="../../assets/plugins/ios-switch/ios7-switch.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js" type="text/javascript"></script>
+<!--<script src="../../assets/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js" type="text/javascript"></script>-->
 <script src="../../assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrap-tag/bootstrap-tagsinput.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/dropzone/dropzone.min.js" type="text/javascript"></script>
 
 <script src="../../webarch/js/webarch.js" type="text/javascript"></script>
 
-<script src="../../assets/plugins/jquery-datatable/js/jquery.dataTables.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-datatable/extra/js/dataTables.tableTools.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/datatables-responsive/js/datatables.responsive.js" type="text/javascript"></script>
-<script src="../../assets/plugins/datatables-responsive/js/lodash.min.js" type="text/javascript"></script>
-<!-- END PAGE LEVEL JS INIT -->
-<script src="../../assets/js/datatables.js" type="text/javascript"></script>
-<script src="../../assets/js/form_elements.js" type="text/javascript"></script>
+<block name="extjs">
+
+    <script language="javascript" type="text/javascript">
+        $(document).ready(function(){
+
+            //单个信息查询，号码信息
+            $("#btn-keyword1").click(function(){
+                var keywords = $("#keywords1").val();
+                if(keywords == ''){
+                    alert('请输入筛选关键字');
+                }else{
+                    var xx =  "{:U('CmZichan/number_keywords_single_info')}"+"?act=keywords&keyword="+keywords;
+                    window.location =xx;
+                }
+            });
+
+            //单个信息查询，码号信息
+            $("#btn-keyword2").click(function(){
+                var keywords = $("#keywords2").val();
+                if(keywords == ''){
+                    alert('请输入筛选关键字');
+                }else{
+                    var xx =  "{:U('CmZichan/number_keywords_single_iccid')}"+"?act=keywords&keyword="+keywords;
+                    window.location =xx;
+                }
+            });
+
+
+            //单个信息查询，激活时间
+            $("#btn-keyword3").click(function(){
+                var keywords = $("#keywords3").val();
+                if(keywords == ''){
+                    alert('请输入筛选关键字');
+                }else{
+                    var xx =  "{:U('CmZichan/number_keywords_single_actitime')}"+"?act=keywords&keyword="+keywords;
+                    window.location =xx;
+                }
+            });
+
+
+            //批量信息查询，号码信息
+            $("#btn-keyword4").click(function(){
+                var keywords = $("#keywords4").val();
+                if(keywords == ''){
+                    alert('请输入筛选关键字');
+                }else{
+                    var xx =  "{:U('CmZichan/number_keywords_batch_info')}"+"?act=keywords&keywords="+keywords;
+                    window.location =xx;
+                }
+            });
+
+            //批量信息查询，码号信息
+            $("#btn-keyword5").click(function(){
+                var keywords = $("#keywords5").val();
+                if(keywords == ''){
+                    alert('请输入筛选关键字');
+                }else{
+                    var xx =  "{:U('CmZichan/number_keywords_batch_iccid')}"+"?act=keywords&keywords="+keywords;
+                    window.location =xx;
+                }
+            });
+
+
+            //批量信息查询，激活时间
+            $("#btn-keyword6").click(function(){
+                var keywords = $("#keywords6").val();
+                if(keywords == ''){
+                    alert('请输入筛选关键字');
+                }else{
+                    var xx =  "{:U('CmZichan/number_keywords_batch_actitime')}"+"?act=keywords&keywords="+keywords;
+                    window.location =xx;
+                }
+            });
+
+        });
+    </script>
+
+
+</block>
+
 
 </body>
 </html>

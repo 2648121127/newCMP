@@ -311,7 +311,7 @@
                         <li> <a href="../CmZifei/flow.html"> 流量查询 </a> </li>
                         <li> <a href="../CmZifei/share.html"> 流量共享管理</a> </li>
                         <li> <a href="../CmZifei/pool.html"> 流量池管理</a> </li>
-                        <li> <a href="../CmZichan/bills.html"> 账单管理</a> </li>
+                        <li> <a href="../CmCaiwu/bills.html"> 账单管理</a> </li>
                     </ul>
                 </li>
                 <li>
@@ -384,16 +384,13 @@
                                         <div class="form-group">
                                             <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>选择省市</label>
                                             <div class="col-lg-9 col-md-9 col-sm-9">
-                                                <select id="packagetype1" name="packagetype1" class="col-lg-5 col-md-5 col-sm-5 c-select-36 select2" required>
+                                                <select id="Dangerplacetype" name="Dangerplacetype" class="col-lg-5 col-md-5 col-sm-5 c-select-36 select2" required>
                                                     <option value="">请选择省</option>
-                                                    <option value="江苏">江苏</option>
-                                                    <option value="安徽">安徽</option>
-                                                    <option value="福建">福建</option>
-                                                    <option value="四川">四川</option>
-                                                    <option value="广州">广州</option>
-                                                    <option value="甘肃">甘肃</option>
+                                                    <foreach name="city" item="vo">
+                                                        <option value="{$vo.id}">{$vo.cityname}</option>
+                                                    </foreach>
                                                 </select>
-                                                <select id="packageid2" name="packageid2" class="col-lg-5 col-md-5 col-sm-5 c-select-36 col-md-offset-2 select2" required>
+                                                <select id="citysid" name="citysid" class="col-lg-5 col-md-5 col-sm-5 c-select-36 col-md-offset-2 select2" required>
                                                     <option value="">请选择市</option>
                                                 </select>
 
@@ -402,9 +399,10 @@
                                         <div class="form-group">
                                             <label class="col-lg-3 col-md-3 col-sm-3 control-label"></label>
                                             <div class="col-lg-8 col-md-8 col-sm-8">
-                                                <input type="hidden" name="act" value="add">
+                                                <input type="hidden" name="act" value="{$act}"/>
+                                                <input type="hidden" name="id" value="{$data.id}"/>
                                                 <button type="submit" id="submit" class="btn btn-success btn-small m-r-10">保存</button>
-                                                <a href="Dangerplace.html" type="reset" class="btn btn-danger btn-small">取消</a>
+                                                <a href="{:U('Dangerplace/index')}" type="reset" class="btn btn-danger btn-small">取消</a>
                                             </div>
                                         </div>
                                     </form>
@@ -420,29 +418,39 @@
         <!-- END PAGE -->
     </div>
 </div>
-<script src="assets/plugins/pace/pace.min.js" type="text/javascript"></script>
+<script src="../../assets/plugins/pace/pace.min.js" type="text/javascript"></script>
 <!-- BEGIN JS DEPENDECENCIES-->
 <script src="../../assets/plugins/jquery/jquery-1.11.3.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrapv3/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-block-ui/jqueryblockui.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
+<!--<script src="../../assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>-->
 <script src="../../assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
 <!-- END CORE JS DEPENDECENCIES-->
 <!-- BEGIN CORE TEMPLATE JS -->
+
+<script src="../../assets/js/common.js" type="text/javascript"></script>
 <script src="../../webarch/js/webarch.js" type="text/javascript"></script>
-<!--<script src="assets/js/chat.js" type="text/javascript"></script>-->
-<!-- END CORE TEMPLATE JS -->
-<!-- BEGIN PAGE LEVEL PLUGINS -->
-<script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-datatable/js/jquery.dataTables.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-datatable/extra/js/dataTables.tableTools.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/datatables-responsive/js/datatables.responsive.js" type="text/javascript"></script>
-<script src="../../assets/plugins/datatables-responsive/js/lodash.min.js" type="text/javascript"></script>
-<!-- END PAGE LEVEL JS INIT -->
-<script src="../../assets/js/datatables.js" type="text/javascript"></script>
-<script src="../../assets/js/form_validations.js" type="text/javascript"></script>
-<!-- END PAGE LEVEL JS INIT -->
+
+<block name="extjs">
+    <script language="javascript" type="text/javascript">
+        $(document).ready(function(){
+            $("#Dangerplacetype").change(function(){
+                var type = $("#Dangerplacetype").val();
+                $.post("{:U('Dangerplace/getCitys')}","type="+type,function(data){
+                    var obj = jQuery.parseJSON(data);
+                    $("#citysid").empty();
+                    $("#citysid").append("<option value=''>请选择市</option>");
+                    $.each(obj,function(k,v){
+                        $("#citysid").append("<option value='"+v.cityname+"'>"+v.cityname+"</option>");
+                    })
+                });
+            });
+        });
+    </script>
+</block>
+
+
 </body>

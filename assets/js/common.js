@@ -115,6 +115,30 @@
                     },
                     secret:{
                         required: true
+                    },
+                    category:{
+                        required: true
+                    },
+                    Dangerplacetype:{
+                        required: true
+                    },
+                    citysid:{
+                        required: true
+                    },
+                    filepath:{
+                        required: true
+                    },
+                    fee:{
+                        required: true
+                    },
+                    datemonth:{
+                        required: true
+                    },
+                    countdate:{
+                        required: true
+                    },
+                    pool:{
+                        required: true
                     }
                 },
                 messages:{
@@ -146,6 +170,14 @@
                     groupid:'该字段不能为空!',
                     appkey:'该字段不能为空!',
                     secret:'该字段不能为空!',
+                    category:'该字段不能为空!',
+                    Dangerplacetype:'该字段不能为空!',
+                    citysid:'该字段不能为空!',
+                    filepath:'请输入文件路径!',
+                    fee:'请输入费用!',
+                    datemonth:'该字段不能为空!',
+                    countdate:'该字段不能为空!',
+                    pool:'该字段不能为空!',
 
                 }
             });

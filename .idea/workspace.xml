@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70e25ccc-44ab-4b7a-aa71-334cdf648655" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/View/Cardspec/errorpage.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/View/CmCard/errorpage.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Public/Images/pinetlogo.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/View/CmInterfacepack/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/View/Document/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/View/Exportdata/activeamount.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/View/Exportdata/activedata.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/View/Flowrecord/index2G.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/View/Flowrecord/index3G.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/View/Index/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/View/Index/login.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/View/Interfacepack/index.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/View/Actionlog/index.html" afterPath="$PROJECT_DIR$/View/Actionlog/index.html" />
       <change beforePath="$PROJECT_DIR$/View/Actionlog/packageedit.html" afterPath="$PROJECT_DIR$/View/Actionlog/packageedit.html" />
@@ -74,20 +82,20 @@
       <change beforePath="$PROJECT_DIR$/View/CmCard/index.html" afterPath="$PROJECT_DIR$/View/CmCard/index.html" />
       <change beforePath="$PROJECT_DIR$/View/CmCard/memberswitch.html" afterPath="$PROJECT_DIR$/View/CmCard/memberswitch.html" />
       <change beforePath="$PROJECT_DIR$/View/CmCard/statusmodify.html" afterPath="$PROJECT_DIR$/View/CmCard/statusmodify.html" />
-      <change beforePath="$PROJECT_DIR$/View/CmDealer/CmDealer.html" afterPath="$PROJECT_DIR$/View/CmDealer/index.html" />
-      <change beforePath="$PROJECT_DIR$/View/CmDealer/addDealercm.html" afterPath="$PROJECT_DIR$/View/CmDealer/dealeredit.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmDealer/dealeredit.html" afterPath="$PROJECT_DIR$/View/CmDealer/dealeredit.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmDealer/index.html" afterPath="$PROJECT_DIR$/View/CmDealer/index.html" />
       <change beforePath="$PROJECT_DIR$/View/CmInterfacepack/interfaceedit.html" afterPath="$PROJECT_DIR$/View/CmInterfacepack/interfaceedit.html" />
       <change beforePath="$PROJECT_DIR$/View/CmInterfacepack/interfacemgr.html" afterPath="$PROJECT_DIR$/View/CmInterfacepack/interfacemgr.html" />
       <change beforePath="$PROJECT_DIR$/View/CmInterfacepack/interfaceprivgroupedit.html" afterPath="$PROJECT_DIR$/View/CmInterfacepack/interfaceprivgroupedit.html" />
       <change beforePath="$PROJECT_DIR$/View/CmInterfacepack/interfaceprivgroupmgr.html" afterPath="$PROJECT_DIR$/View/CmInterfacepack/interfaceprivgroupmgr.html" />
       <change beforePath="$PROJECT_DIR$/View/CmInterfacepack/privgrppriv.html" afterPath="$PROJECT_DIR$/View/CmInterfacepack/privgrppriv.html" />
-      <change beforePath="$PROJECT_DIR$/View/CmPackage/CmPackage.html" afterPath="$PROJECT_DIR$/View/CmPackage/CmPackage.html" />
-      <change beforePath="$PROJECT_DIR$/View/CmPackage/addPackagecm.html" afterPath="$PROJECT_DIR$/View/CmPackage/addPackagecm.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmPackage/CmPackage.html" afterPath="$PROJECT_DIR$/View/CmPackage/index.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmPackage/addPackagecm.html" afterPath="$PROJECT_DIR$/View/CmPackage/packageedit.html" />
       <change beforePath="$PROJECT_DIR$/View/CmUseinfo/activeratemgr.html" afterPath="$PROJECT_DIR$/View/CmUseinfo/activeratemgr.html" />
       <change beforePath="$PROJECT_DIR$/View/CmUseinfo/developdatemgr.html" afterPath="$PROJECT_DIR$/View/CmUseinfo/developdatemgr.html" />
       <change beforePath="$PROJECT_DIR$/View/CmUseinfo/poolusedmgr.html" afterPath="$PROJECT_DIR$/View/CmUseinfo/poolusedmgr.html" />
-      <change beforePath="$PROJECT_DIR$/View/CmWorkorder/CmWorkorder.html" afterPath="$PROJECT_DIR$/View/CmWorkorder/CmWorkorder.html" />
-      <change beforePath="$PROJECT_DIR$/View/CmZichan/bills.html" afterPath="$PROJECT_DIR$/View/CmZichan/bills.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmWorkorder/CmWorkorder.html" afterPath="$PROJECT_DIR$/View/CmWorkorder/index.html" />
+      <change beforePath="$PROJECT_DIR$/View/CmZichan/bills.html" afterPath="$PROJECT_DIR$/View/CmCaiwu/bills.html" />
       <change beforePath="$PROJECT_DIR$/View/CmZichan/functions.html" afterPath="$PROJECT_DIR$/View/CmZichan/functions.html" />
       <change beforePath="$PROJECT_DIR$/View/CmZichan/group.html" afterPath="$PROJECT_DIR$/View/CmZichan/group.html" />
       <change beforePath="$PROJECT_DIR$/View/CmZichan/number.html" afterPath="$PROJECT_DIR$/View/CmZichan/number.html" />
@@ -97,14 +105,14 @@
       <change beforePath="$PROJECT_DIR$/View/CmZifei/orderno.html" afterPath="$PROJECT_DIR$/View/CmZifei/orderno.html" />
       <change beforePath="$PROJECT_DIR$/View/CmZifei/pool.html" afterPath="$PROJECT_DIR$/View/CmZifei/pool.html" />
       <change beforePath="$PROJECT_DIR$/View/CmZifei/share.html" afterPath="$PROJECT_DIR$/View/CmZifei/share.html" />
-      <change beforePath="$PROJECT_DIR$/View/Dangerplace/Dangerplace.html" afterPath="$PROJECT_DIR$/View/Dangerplace/Dangerplace.html" />
+      <change beforePath="$PROJECT_DIR$/View/Dangerplace/Dangerplace.html" afterPath="$PROJECT_DIR$/View/Dangerplace/index.html" />
       <change beforePath="$PROJECT_DIR$/View/Dangerplace/adddangerplace.html" afterPath="$PROJECT_DIR$/View/Dangerplace/adddangerplace.html" />
       <change beforePath="$PROJECT_DIR$/View/Dangerplace/changecard.html" afterPath="$PROJECT_DIR$/View/Dangerplace/changecard.html" />
       <change beforePath="$PROJECT_DIR$/View/Dangerplace/highriskhistory.html" afterPath="$PROJECT_DIR$/View/Dangerplace/highriskhistory.html" />
-      <change beforePath="$PROJECT_DIR$/View/Dealer/Dealer.html" afterPath="$PROJECT_DIR$/View/Dealer/Dealer.html" />
+      <change beforePath="$PROJECT_DIR$/View/Dealer/Dealer.html" afterPath="$PROJECT_DIR$/View/Dealer/index.html" />
       <change beforePath="$PROJECT_DIR$/View/Dealer/addDealer.html" afterPath="$PROJECT_DIR$/View/Dealer/addDealer.html" />
-      <change beforePath="$PROJECT_DIR$/View/Dealer/editdealer.html" afterPath="$PROJECT_DIR$/View/Dealer/editdealer.html" />
-      <change beforePath="$PROJECT_DIR$/View/Exportdata/addcountdata.html" afterPath="$PROJECT_DIR$/View/Exportdata/addcountdata.html" />
+      <change beforePath="$PROJECT_DIR$/View/Dealer/editdealer.html" afterPath="$PROJECT_DIR$/View/Dealer/dealeredit.html" />
+      <change beforePath="$PROJECT_DIR$/View/Exportdata/addcountdata.html" afterPath="$PROJECT_DIR$/View/Exportdata/countdata.html" />
       <change beforePath="$PROJECT_DIR$/View/Exportdata/addctccdata.html" afterPath="$PROJECT_DIR$/View/Exportdata/addctccdata.html" />
       <change beforePath="$PROJECT_DIR$/View/Exportdata/getcountdata.html" afterPath="$PROJECT_DIR$/View/Exportdata/getcountdata.html" />
       <change beforePath="$PROJECT_DIR$/View/Exportdata/index.html" afterPath="$PROJECT_DIR$/View/Exportdata/index.html" />
@@ -146,6 +154,7 @@
       <change beforePath="$PROJECT_DIR$/View/Workorderspec/index.html" afterPath="$PROJECT_DIR$/View/Workorderspec/index.html" />
       <change beforePath="$PROJECT_DIR$/assets/js/common.js" afterPath="$PROJECT_DIR$/assets/js/common.js" />
       <change beforePath="$PROJECT_DIR$/sidebarTest1.html" afterPath="$PROJECT_DIR$/sidebarTest1.html" />
+      <change beforePath="$PROJECT_DIR$/webarch/css/common.css" afterPath="$PROJECT_DIR$/webarch/css/common.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -159,28 +168,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="statusmodify.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/CmCard/statusmodify.html">
+      <file leaf-file-name="addctccdata.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/View/Exportdata/addctccdata.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="507" column="0" lean-forward="false" selection-start-line="507" selection-start-column="0" selection-end-line="507" selection-end-column="72" />
+            <state relative-caret-position="246">
+              <caret line="386" column="63" lean-forward="false" selection-start-line="386" selection-start-column="44" selection-end-line="386" selection-end-column="63" />
               <folding>
-                <element signature="e#9877#9883#0" expanded="true" />
-                <element signature="e#9883#9889#0" expanded="true" />
-                <element signature="e#10254#10260#0" expanded="true" />
-                <element signature="e#10260#10266#0" expanded="true" />
-                <element signature="e#24014#24020#0" expanded="true" />
-                <element signature="e#27396#27402#0" expanded="true" />
+                <element signature="e#27310#27316#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="interfaceedit.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/View/CmInterfacepack/interfaceedit.html">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/View/Index/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="264">
+              <caret line="79" column="29" lean-forward="false" selection-start-line="79" selection-start-column="29" selection-end-line="79" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/View/Interfacepack/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -189,8 +203,8 @@
       <file leaf-file-name="common.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webarch/css/common.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="38" column="13" lean-forward="false" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+            <state relative-caret-position="633">
+              <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -199,8 +213,8 @@
       <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="574">
-              <caret line="147" column="38" lean-forward="false" selection-start-line="147" selection-start-column="38" selection-end-line="147" selection-end-column="38" />
+            <state relative-caret-position="280">
+              <caret line="179" column="36" lean-forward="false" selection-start-line="179" selection-start-column="36" selection-end-line="179" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -219,9 +233,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.btn-small</find>
-      <find>37px</find>
-      <find>select</find>
       <find>.select</find>
       <find>height: 34px !important;</find>
       <find>modalSlideUp</find>
@@ -249,6 +260,9 @@
       <find>datepicker</find>
       <find>datesel</find>
       <find>format: &quot;yyyy-mm-dd&quot;,</find>
+      <find>category</find>
+      <find>$fullflow</find>
+      <find>logo</find>
     </findStrings>
     <replaceStrings>
       <replace>32</replace>
@@ -263,57 +277,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/View/Card/autonomylimit.html" />
-        <option value="$PROJECT_DIR$/View/Card/backcard.html" />
-        <option value="$PROJECT_DIR$/View/Card/cardchggroup.html" />
-        <option value="$PROJECT_DIR$/View/Card/changecard.html" />
-        <option value="$PROJECT_DIR$/View/Card/chgdealer.html" />
-        <option value="$PROJECT_DIR$/View/Card/chgpackage.html" />
-        <option value="$PROJECT_DIR$/View/Card/disabledcard.html" />
-        <option value="$PROJECT_DIR$/View/Card/downloadcard.html" />
-        <option value="$PROJECT_DIR$/View/Card/getallcardinfo.html" />
-        <option value="$PROJECT_DIR$/View/Card/getcardbytime.html" />
-        <option value="$PROJECT_DIR$/View/Card/imeirerecord.html" />
-        <option value="$PROJECT_DIR$/View/Card/index.html" />
-        <option value="$PROJECT_DIR$/View/Card/offnetaction.html" />
-        <option value="$PROJECT_DIR$/View/Card/singlecutnet.html" />
-        <option value="$PROJECT_DIR$/View/Cardspec/addcard.html" />
-        <option value="$PROJECT_DIR$/View/Cardspec/chgoffnetvalue.html" />
-        <option value="$PROJECT_DIR$/View/Cardspec/chgpseudo.html" />
-        <option value="$PROJECT_DIR$/View/Actionlog/packageedit.html" />
-        <option value="$PROJECT_DIR$/View/Addpoolcard/addpoolcard.html" />
-        <option value="$PROJECT_DIR$/View/Cardspec/countstarttime.html" />
-        <option value="$PROJECT_DIR$/View/Addpoolcard/index.html" />
-        <option value="$PROJECT_DIR$/View/AhCard/activecard.html" />
-        <option value="$PROJECT_DIR$/View/AhCard/addcard.html" />
-        <option value="$PROJECT_DIR$/View/Cardspec/downcard.html" />
-        <option value="$PROJECT_DIR$/View/Cardspec/downdisabledcard.html" />
-        <option value="$PROJECT_DIR$/View/AhCard/allotcard.html" />
-        <option value="$PROJECT_DIR$/View/Cardspec/downoffnetcard.html" />
-        <option value="$PROJECT_DIR$/View/Cardspec/downstart.html" />
-        <option value="$PROJECT_DIR$/View/Cardspec/downunusedcard.html" />
-        <option value="$PROJECT_DIR$/View/Cardspec/downusedcard.html" />
-        <option value="$PROJECT_DIR$/View/Cardspec/errorpage.html" />
-        <option value="$PROJECT_DIR$/View/Cardspec/index.html" />
-        <option value="$PROJECT_DIR$/View/Cardspec/allotcard.html" />
-        <option value="$PROJECT_DIR$/View/Cardspec/isdelete.html" />
-        <option value="$PROJECT_DIR$/View/Cardspec/isdisabled.html" />
-        <option value="$PROJECT_DIR$/View/Cardspec/isoffnet.html" />
-        <option value="$PROJECT_DIR$/View/Cardspec/saveoffnetflow.html" />
-        <option value="$PROJECT_DIR$/View/Cardspec/savespecflow.html" />
-        <option value="$PROJECT_DIR$/View/Cardspecinfo/index.html" />
-        <option value="$PROJECT_DIR$/View/Cardspecinfo/cardspecinfoedit.html" />
-        <option value="$PROJECT_DIR$/View/Cardspec/saveusedflow.html" />
-        <option value="$PROJECT_DIR$/View/CmCard/errorpage.html" />
         <option value="$PROJECT_DIR$/View/CmCard/addcard.html" />
         <option value="$PROJECT_DIR$/View/CmCard/allotcard.html" />
         <option value="$PROJECT_DIR$/View/CmCard/chgpackage.html" />
         <option value="$PROJECT_DIR$/View/CmCard/index.html" />
         <option value="$PROJECT_DIR$/View/CmCard/memberswitch.html" />
         <option value="$PROJECT_DIR$/View/CmCard/statusmodify.html" />
-        <option value="$PROJECT_DIR$/assets/js/common.js" />
         <option value="$PROJECT_DIR$/View/CmDealer/dealeredit.html" />
         <option value="$PROJECT_DIR$/View/CmDealer/index.html" />
+        <option value="$PROJECT_DIR$/View/CmInterfacepack/interfaceedit.html" />
+        <option value="$PROJECT_DIR$/View/CmInterfacepack/interfacemgr.html" />
+        <option value="$PROJECT_DIR$/View/CmInterfacepack/interfaceprivgroupedit.html" />
+        <option value="$PROJECT_DIR$/View/CmInterfacepack/interfaceprivgroupmgr.html" />
+        <option value="$PROJECT_DIR$/View/CmInterfacepack/privgrppriv.html" />
+        <option value="$PROJECT_DIR$/View/CmInterfacepack/index.html" />
+        <option value="$PROJECT_DIR$/View/CmPackage/index.html" />
+        <option value="$PROJECT_DIR$/View/CmPackage/packageedit.html" />
+        <option value="$PROJECT_DIR$/View/CmWorkorder/index.html" />
+        <option value="$PROJECT_DIR$/View/CmZichan/functions.html" />
+        <option value="$PROJECT_DIR$/View/CmCaiwu/bills.html" />
+        <option value="$PROJECT_DIR$/View/CmZichan/group.html" />
+        <option value="$PROJECT_DIR$/View/CmZichan/number.html" />
+        <option value="$PROJECT_DIR$/View/CmZichan/status.html" />
+        <option value="$PROJECT_DIR$/View/CmZifei/flow.html" />
+        <option value="$PROJECT_DIR$/View/CmZifei/memberpkg.html" />
+        <option value="$PROJECT_DIR$/View/CmZifei/orderno.html" />
+        <option value="$PROJECT_DIR$/View/CmZifei/pool.html" />
+        <option value="$PROJECT_DIR$/View/CmZifei/share.html" />
+        <option value="$PROJECT_DIR$/View/Dangerplace/adddangerplace.html" />
+        <option value="$PROJECT_DIR$/View/Dangerplace/changecard.html" />
+        <option value="$PROJECT_DIR$/View/Dangerplace/Dangerplace.html" />
+        <option value="$PROJECT_DIR$/View/Dangerplace/index.html" />
+        <option value="$PROJECT_DIR$/View/Dangerplace/highriskhistory.html" />
+        <option value="$PROJECT_DIR$/View/Dealer/dealeredit.html" />
+        <option value="$PROJECT_DIR$/View/Dealer/index.html" />
+        <option value="$PROJECT_DIR$/View/Exportdata/index.html" />
+        <option value="$PROJECT_DIR$/View/Exportdata/activeamount.html" />
+        <option value="$PROJECT_DIR$/View/Exportdata/activedata.html" />
+        <option value="$PROJECT_DIR$/View/Exportdata/addcountdata.html" />
+        <option value="$PROJECT_DIR$/View/Exportdata/addctccdata.html" />
+        <option value="$PROJECT_DIR$/assets/js/common.js" />
+        <option value="$PROJECT_DIR$/View/Exportdata/countdata.html" />
+        <option value="$PROJECT_DIR$/View/Exportdata/getcountdata.html" />
+        <option value="$PROJECT_DIR$/View/Flowrecord/index10G.html" />
+        <option value="$PROJECT_DIR$/View/Flowrecord/index15G.html" />
+        <option value="$PROJECT_DIR$/View/Flowrecord/index2G.html" />
+        <option value="$PROJECT_DIR$/View/Flowrecord/index3G.html" />
+        <option value="$PROJECT_DIR$/View/Index/dashboard.html" />
+        <option value="$PROJECT_DIR$/webarch/css/common.css" />
+        <option value="$PROJECT_DIR$/View/Index/index.html" />
+        <option value="$PROJECT_DIR$/View/Index/login.html" />
+        <option value="$PROJECT_DIR$/View/Interfacepack/index.html" />
       </list>
     </option>
   </component>
@@ -355,7 +369,18 @@
             <path>
               <item name="NewPinet" type="b2602c69:ProjectViewProjectNode" />
               <item name="NewPinet" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="Application" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NewPinet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NewPinet" type="462c0819:PsiDirectoryNode" />
+              <item name="Public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NewPinet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NewPinet" type="462c0819:PsiDirectoryNode" />
+              <item name="Public" type="462c0819:PsiDirectoryNode" />
+              <item name="Images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="NewPinet" type="b2602c69:ProjectViewProjectNode" />
@@ -366,7 +391,7 @@
               <item name="NewPinet" type="b2602c69:ProjectViewProjectNode" />
               <item name="NewPinet" type="462c0819:PsiDirectoryNode" />
               <item name="View" type="462c0819:PsiDirectoryNode" />
-              <item name="CmInterfacepack" type="462c0819:PsiDirectoryNode" />
+              <item name="Interfacepack" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -392,18 +417,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Public/Images" />
+      <recent name="$PROJECT_DIR$/View/Document" />
       <recent name="$PROJECT_DIR$/View/CmCard" />
       <recent name="$PROJECT_DIR$/View/Cardspec" />
       <recent name="$PROJECT_DIR$/View/Card" />
-      <recent name="$PROJECT_DIR$/View/Index" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Application/Admin" />
+      <recent name="$PROJECT_DIR$/View/CmCaiwu" />
       <recent name="$PROJECT_DIR$/View/Index" />
       <recent name="$PROJECT_DIR$/html/Paramsign" />
-      <recent name="$PROJECT_DIR$/html/CmZifei" />
-      <recent name="$PROJECT_DIR$/html/Business" />
-      <recent name="$PROJECT_DIR$/html/Exportdata" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -441,34 +466,34 @@
       <workItem from="1558953645069" duration="4826000" />
       <workItem from="1559180653418" duration="74746000" />
       <workItem from="1560150321823" duration="11130000" />
-      <workItem from="1560236312584" duration="70176000" />
+      <workItem from="1560236312584" duration="102554000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="366767000" />
+    <option name="totallyTimeSpent" value="399145000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38757765" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38757765" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32971016" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="CSS Styles" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20652173" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="CSS Styles" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20652173" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -512,351 +537,241 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/View/Card/downloadcard.html">
+    <entry file="file://$PROJECT_DIR$/View/CmInterfacepack/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="473" column="108" lean-forward="true" selection-start-line="473" selection-start-column="108" selection-end-line="473" selection-end-column="108" />
+        <state relative-caret-position="431">
+          <caret line="413" column="49" lean-forward="false" selection-start-line="413" selection-start-column="49" selection-end-line="413" selection-end-column="49" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/CmInterfacepack/privgrppriv.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="454" column="108" lean-forward="true" selection-start-line="454" selection-start-column="108" selection-end-line="454" selection-end-column="108" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/Card/getallcardinfo.html">
+    <entry file="file://$PROJECT_DIR$/View/CmPackage/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="709">
+          <caret line="492" column="8" lean-forward="false" selection-start-line="492" selection-start-column="8" selection-end-line="492" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/CmUseinfo/developdatemgr.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6740">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/CmUseinfo/activeratemgr.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6928">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/CmPackage/packageedit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
-          <caret line="467" column="31" lean-forward="true" selection-start-line="467" selection-start-column="31" selection-end-line="467" selection-end-column="31" />
+          <caret line="455" column="31" lean-forward="false" selection-start-line="455" selection-start-column="31" selection-end-line="455" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/Card/getcardbytime.html">
+    <entry file="file://$PROJECT_DIR$/View/CmCaiwu/bills.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="466" column="74" lean-forward="true" selection-start-line="466" selection-start-column="74" selection-end-line="466" selection-end-column="74" />
+        <state relative-caret-position="2179">
+          <caret line="460" column="84" lean-forward="false" selection-start-line="460" selection-start-column="84" selection-end-line="460" selection-end-column="84" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/Card/imeirerecord.html">
+    <entry file="file://$PROJECT_DIR$/View/CmWorkorder/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="494" column="74" lean-forward="true" selection-start-line="494" selection-start-column="74" selection-end-line="494" selection-end-column="74" />
+        <state relative-caret-position="281">
+          <caret line="438" column="148" lean-forward="false" selection-start-line="438" selection-start-column="117" selection-end-line="438" selection-end-column="148" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/Card/disabledcard.html">
+    <entry file="file://$PROJECT_DIR$/View/CmZichan/group.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="465" column="46" lean-forward="true" selection-start-line="452" selection-start-column="40" selection-end-line="465" selection-end-column="46" />
+        <state relative-caret-position="660">
+          <caret line="454" column="0" lean-forward="true" selection-start-line="454" selection-start-column="0" selection-end-line="454" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/Card/offnetaction.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="488" column="46" lean-forward="true" selection-start-line="475" selection-start-column="40" selection-end-line="488" selection-end-column="46" />
-          <folding>
-            <element signature="e#29237#29243#0" expanded="false" />
-            <element signature="n#style#0;n#input#0;n#a#0;n#div#8;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Card/singlecutnet.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="465" column="46" lean-forward="true" selection-start-line="452" selection-start-column="40" selection-end-line="465" selection-end-column="46" />
-          <folding>
-            <element signature="e#27215#27221#0" expanded="false" />
-            <element signature="n#style#0;n#input#0;n#a#0;n#div#6;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Cardspec/chgoffnetvalue.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="434" column="46" lean-forward="true" selection-start-line="421" selection-start-column="40" selection-end-line="434" selection-end-column="46" />
-          <folding>
-            <element signature="e#24702#24708#0" expanded="false" />
-            <element signature="n#style#0;n#input#0;n#a#0;n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Cardspec/chgpseudo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="452" column="46" lean-forward="true" selection-start-line="439" selection-start-column="40" selection-end-line="452" selection-end-column="46" />
-          <folding>
-            <element signature="e#26218#26224#0" expanded="false" />
-            <element signature="n#style#0;n#input#0;n#a#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Cardspec/addcard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-184">
-          <caret line="500" column="46" lean-forward="true" selection-start-line="487" selection-start-column="40" selection-end-line="500" selection-end-column="46" />
-          <folding>
-            <element signature="e#30203#30209#0" expanded="false" />
-            <element signature="n#style#0;n#input#0;n#a#0;n#div#8;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Actionlog/packageedit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="467" column="74" lean-forward="true" selection-start-line="467" selection-start-column="74" selection-end-line="467" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Actionlog/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9094">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Addpoolcard/addpoolcard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="376" column="72" lean-forward="true" selection-start-line="376" selection-start-column="72" selection-end-line="376" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/form_validations.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3414">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Addpoolcard/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="394" column="57" lean-forward="true" selection-start-line="394" selection-start-column="57" selection-end-line="394" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Adminuser/chgpasswd.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8069">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/AhCard/activecard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="514" column="72" lean-forward="false" selection-start-line="514" selection-start-column="72" selection-end-line="514" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/AhCard/addcard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="513" column="74" lean-forward="false" selection-start-line="513" selection-start-column="74" selection-end-line="513" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Cardspec/downcard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1195">
-          <caret line="523" column="33" lean-forward="true" selection-start-line="523" selection-start-column="33" selection-end-line="523" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Cardspec/countstarttime.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="414" column="46" lean-forward="true" selection-start-line="405" selection-start-column="40" selection-end-line="414" selection-end-column="46" />
-          <folding>
-            <element signature="e#24692#24698#0" expanded="false" />
-            <element signature="n#style#0;n#input#0;n#a#0;n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Cardspec/downdisabledcard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="647">
-          <caret line="438" column="46" lean-forward="true" selection-start-line="438" selection-start-column="46" selection-end-line="438" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/AhCard/allotcard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
-          <caret line="561" column="8" lean-forward="true" selection-start-line="535" selection-start-column="0" selection-end-line="561" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webarch/css/common.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="38" column="13" lean-forward="false" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Business/querytraffic.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2758">
-          <caret line="582" column="16" lean-forward="false" selection-start-line="582" selection-start-column="16" selection-end-line="582" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Cardspec/downoffnetcard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="920">
-          <caret line="421" column="46" lean-forward="true" selection-start-line="413" selection-start-column="40" selection-end-line="421" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Cardspec/downusedcard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="463" column="72" lean-forward="true" selection-start-line="463" selection-start-column="72" selection-end-line="463" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Cardspec/errorpage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Cardspec/downunusedcard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-203">
-          <caret line="421" column="46" lean-forward="true" selection-start-line="413" selection-start-column="40" selection-end-line="421" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Cardspec/downstart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="478" column="37" lean-forward="true" selection-start-line="478" selection-start-column="16" selection-end-line="478" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Cardspec/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1897">
-          <caret line="980" column="13" lean-forward="true" selection-start-line="980" selection-start-column="13" selection-end-line="980" selection-end-column="13" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Cardspec/isdelete.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="472" column="74" lean-forward="true" selection-start-line="472" selection-start-column="74" selection-end-line="472" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Cardspec/isdisabled.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="465" column="25" lean-forward="true" selection-start-line="465" selection-start-column="25" selection-end-line="465" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Cardspec/allotcard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="471" column="46" lean-forward="true" selection-start-line="458" selection-start-column="40" selection-end-line="471" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Cardspec/isoffnet.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="445" column="46" lean-forward="true" selection-start-line="432" selection-start-column="40" selection-end-line="445" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Cardspec/saveoffnetflow.html">
+    <entry file="file://$PROJECT_DIR$/View/CmZichan/number.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="403">
-          <caret line="431" column="46" lean-forward="true" selection-start-line="418" selection-start-column="40" selection-end-line="431" selection-end-column="46" />
+          <caret line="601" column="190" lean-forward="false" selection-start-line="601" selection-start-column="159" selection-end-line="601" selection-end-column="190" />
+          <folding>
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/CmZichan/status.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5129">
+          <caret line="637" column="42" lean-forward="false" selection-start-line="637" selection-start-column="42" selection-end-line="637" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/Cardspec/savespecflow.html">
+    <entry file="file://$PROJECT_DIR$/View/CmZichan/functions.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="439" column="46" lean-forward="true" selection-start-line="426" selection-start-column="40" selection-end-line="439" selection-end-column="46" />
+        <state relative-caret-position="326">
+          <caret line="580" column="178" lean-forward="false" selection-start-line="580" selection-start-column="159" selection-end-line="580" selection-end-column="178" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/CmZifei/memberpkg.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="653" column="66" lean-forward="false" selection-start-line="653" selection-start-column="66" selection-end-line="653" selection-end-column="66" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#if#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#if#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#if#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1561001124998" expanded="false" signature="31911:31929" ph="..." />
+            <marker date="1561001124998" expanded="false" signature="32175:32200" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/CmZifei/orderno.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="709">
+          <caret line="563" column="0" lean-forward="true" selection-start-line="563" selection-start-column="0" selection-end-line="563" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/Cardspecinfo/index.html">
+    <entry file="file://$PROJECT_DIR$/View/CmZifei/flow.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-209">
-          <caret line="396" column="57" lean-forward="true" selection-start-line="396" selection-start-column="57" selection-end-line="396" selection-end-column="57" />
+        <state relative-caret-position="241">
+          <caret line="655" column="97" lean-forward="true" selection-start-line="655" selection-start-column="97" selection-end-line="655" selection-end-column="97" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/Cardspecinfo/cardspecinfoedit.html">
+    <entry file="file://$PROJECT_DIR$/View/CmZifei/pool.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="896">
-          <caret line="455" column="116" lean-forward="true" selection-start-line="455" selection-start-column="116" selection-end-line="455" selection-end-column="116" />
+        <state relative-caret-position="709">
+          <caret line="597" column="0" lean-forward="true" selection-start-line="597" selection-start-column="0" selection-end-line="597" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/CmCard/errorpage.html">
+    <entry file="file://$PROJECT_DIR$/View/CmZifei/share.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        <state relative-caret-position="709">
+          <caret line="551" column="8" lean-forward="false" selection-start-line="551" selection-start-column="8" selection-end-line="551" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/Cardspec/saveusedflow.html">
+    <entry file="file://$PROJECT_DIR$/View/Dangerplace/adddangerplace.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="431" column="46" lean-forward="false" selection-start-line="418" selection-start-column="40" selection-end-line="431" selection-end-column="46" />
+        <state relative-caret-position="336">
+          <caret line="438" column="37" lean-forward="false" selection-start-line="438" selection-start-column="37" selection-end-line="438" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Dangerplace/changecard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="444" column="6" lean-forward="true" selection-start-line="444" selection-start-column="6" selection-end-line="444" selection-end-column="6" />
+          <folding>
+            <element signature="e#23744#23750#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Dangerplace/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="454" column="0" lean-forward="false" selection-start-line="454" selection-start-column="0" selection-end-line="454" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Dangerplace/highriskhistory.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="468" column="74" lean-forward="false" selection-start-line="468" selection-start-column="74" selection-end-line="468" selection-end-column="74" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Dealer/addDealer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="82" lean-forward="true" selection-start-line="21" selection-start-column="82" selection-end-line="21" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Document/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Dealer/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="438" column="106" lean-forward="true" selection-start-line="438" selection-start-column="106" selection-end-line="438" selection-end-column="106" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Dealer/dealeredit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-773">
+          <caret line="375" column="90" lean-forward="false" selection-start-line="375" selection-start-column="90" selection-end-line="375" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Exportdata/activeamount.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-640">
+          <caret line="389" column="42" lean-forward="false" selection-start-line="389" selection-start-column="42" selection-end-line="389" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/View/CmCard/addcard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
+        <state relative-caret-position="-545">
           <caret line="479" column="46" lean-forward="true" selection-start-line="466" selection-start-column="40" selection-end-line="479" selection-end-column="46" />
           <folding />
         </state>
@@ -864,101 +779,243 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/View/CmCard/allotcard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="299">
           <caret line="509" column="0" lean-forward="true" selection-start-line="509" selection-start-column="0" selection-end-line="527" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Card/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="649" column="70" lean-forward="true" selection-start-line="645" selection-start-column="64" selection-end-line="649" selection-end-column="70" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#td#10;n#tr#0;n#volist#0;n#if#0;n#tbody#0;n#if#0;n#table#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#button#0;n#div#0;n#td#5;n#tr#0;n#volist#0;n#if#0;n#tbody#1;n#if#0;n#table#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#button#0;n#div#0;n#td#6;n#tr#0;n#volist#0;n#if#0;n#tbody#2;n#if#0;n#table#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#button#0;n#div#0;n#td#6;n#tr#0;n#volist#0;n#if#0;n#tbody#3;n#if#0;n#table#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1560853146530" expanded="false" signature="40175:40225" ph="..." />
-            <marker date="1560853146530" expanded="false" signature="45217:45232" ph="..." />
-            <marker date="1560853146530" expanded="true" signature="81726:81766" ph="..." />
-            <marker date="1560853146530" expanded="true" signature="82644:82684" ph="..." />
-            <marker date="1560853146530" expanded="true" signature="83652:83692" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/CmCard/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="586" column="19" lean-forward="false" selection-start-line="586" selection-start-column="19" selection-end-line="586" selection-end-column="19" />
-          <folding>
-            <marker date="1560853146203" expanded="true" signature="41901:41941" ph="..." />
-            <marker date="1560853146203" expanded="true" signature="42983:43023" ph="..." />
-            <marker date="1560853146203" expanded="true" signature="44026:44066" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/CmCard/chgpackage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="457" column="46" lean-forward="true" selection-start-line="444" selection-start-column="40" selection-end-line="457" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/View/CmCard/memberswitch.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
+        <state relative-caret-position="318">
           <caret line="508" column="0" lean-forward="false" selection-start-line="508" selection-start-column="0" selection-end-line="524" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Card/activecard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9126">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Card/addcard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10495">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Card/allotcard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="546" column="8" lean-forward="true" selection-start-line="523" selection-start-column="0" selection-end-line="546" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/View/CmCard/statusmodify.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="507" column="0" lean-forward="false" selection-start-line="507" selection-start-column="0" selection-end-line="507" selection-end-column="72" />
+        <state relative-caret-position="-397">
+          <caret line="468" column="46" lean-forward="true" selection-start-line="455" selection-start-column="40" selection-end-line="468" selection-end-column="46" />
           <folding>
-            <element signature="e#9877#9883#0" expanded="true" />
-            <element signature="e#9883#9889#0" expanded="true" />
-            <element signature="e#10254#10260#0" expanded="true" />
-            <element signature="e#10260#10266#0" expanded="true" />
-            <element signature="e#24014#24020#0" expanded="true" />
-            <element signature="e#27396#27402#0" expanded="true" />
+            <element signature="e#9877#9883#0" expanded="false" />
+            <element signature="e#9883#9889#0" expanded="false" />
+            <element signature="e#10254#10260#0" expanded="false" />
+            <element signature="e#10260#10266#0" expanded="false" />
+            <element signature="e#24013#24019#0" expanded="false" />
+            <element signature="e#27395#27401#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
-          <caret line="147" column="38" lean-forward="false" selection-start-line="147" selection-start-column="38" selection-end-line="147" selection-end-column="38" />
+        <state relative-caret-position="280">
+          <caret line="179" column="36" lean-forward="false" selection-start-line="179" selection-start-column="36" selection-end-line="179" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/CmDealer/dealeredit.html">
+    <entry file="file://$PROJECT_DIR$/View/Exportdata/activedata.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="410" column="79" lean-forward="false" selection-start-line="410" selection-start-column="79" selection-end-line="410" selection-end-column="79" />
+        <state relative-caret-position="733">
+          <caret line="468" column="25" lean-forward="true" selection-start-line="468" selection-start-column="25" selection-end-line="468" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/CmDealer/index.html">
+    <entry file="file://$PROJECT_DIR$/View/Exportdata/countdata.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="419" column="48" lean-forward="true" selection-start-line="419" selection-start-column="48" selection-end-line="419" selection-end-column="48" />
+        <state relative-caret-position="511">
+          <caret line="400" column="91" lean-forward="false" selection-start-line="400" selection-start-column="91" selection-end-line="400" selection-end-column="91" />
+          <folding>
+            <element signature="e#27118#27124#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Exportdata/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1058">
+          <caret line="391" column="88" lean-forward="false" selection-start-line="391" selection-start-column="88" selection-end-line="391" selection-end-column="88" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/CmInterfacepack/interfaceedit.html">
+    <entry file="file://$PROJECT_DIR$/View/Exportdata/getcountdata.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-323">
+          <caret line="483" column="46" lean-forward="false" selection-start-line="483" selection-start-column="46" selection-end-line="483" selection-end-column="46" />
+          <folding>
+            <element signature="e#28191#28197#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Flowrecord/index15G.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="614">
+          <caret line="621" column="8" lean-forward="false" selection-start-line="621" selection-start-column="8" selection-end-line="621" selection-end-column="8" />
+          <folding>
+            <element signature="n#script#0;n#block#0;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Flowrecord/index10G.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="455" column="0" lean-forward="false" selection-start-line="455" selection-start-column="0" selection-end-line="455" selection-end-column="20" />
+          <folding>
+            <element signature="n#script#0;n#block#0;n#body#0;n#html#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Flowrecord/index2G.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="406" column="18" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="436" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Flowrecord/index3G.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="393" column="97" lean-forward="false" selection-start-line="393" selection-start-column="97" selection-end-line="393" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/plugins/jquery-flot/jquery.flot.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-99">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Index/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="315" column="73" lean-forward="false" selection-start-line="315" selection-start-column="73" selection-end-line="315" selection-end-column="73" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#0;n#block#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Card/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="292" column="51" lean-forward="false" selection-start-line="292" selection-start-column="48" selection-end-line="292" selection-end-column="51" />
+          <folding>
+            <marker date="1560930518626" expanded="true" signature="81725:81765" ph="..." />
+            <marker date="1560930518626" expanded="true" signature="82643:82683" ph="..." />
+            <marker date="1560930518626" expanded="true" signature="83651:83691" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webarch/css/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="633">
+          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="296" column="43" lean-forward="true" selection-start-line="296" selection-start-column="43" selection-end-line="296" selection-end-column="43" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#if#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#h2#0;n#div#0;n#div#0;n#if#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#if#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#if#0;n#div#0;n#div#2;n#if#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#if#0;n#div#0;n#div#2;n#if#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#if#0;n#div#0;n#div#2;n#if#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#1;n#if#0;n#div#0;n#div#2;n#if#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#if#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#if#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#if#0;n#div#1;n#div#2;n#if#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#if#0;n#div#1;n#div#2;n#if#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#if#0;n#div#1;n#div#2;n#if#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#1;n#if#0;n#div#1;n#div#2;n#if#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Exportdata/addctccdata.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="386" column="63" lean-forward="false" selection-start-line="386" selection-start-column="44" selection-end-line="386" selection-end-column="63" />
+          <folding>
+            <element signature="e#27310#27316#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Adminuser/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="36" column="7" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="188" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Index/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="79" column="29" lean-forward="false" selection-start-line="79" selection-start-column="29" selection-end-line="79" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Interfacepack/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
           <folding />
         </state>
       </provider>

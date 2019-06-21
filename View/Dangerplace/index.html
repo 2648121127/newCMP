@@ -222,8 +222,8 @@
                         <li> <a href="../Realname/Realname.html"> 实名制信息 </a> </li>
                     </ul>
                 </li>
-                <li>
-                    <a href="javascript:;"> <i class="material-icons">invert_colors</i> <span class="title">电信物联网卡管理</span> <span class=" arrow"></span> </a>
+                <li class="open active">
+                    <a href="javascript:;"> <i class="material-icons">invert_colors</i> <span class="title">电信物联网卡管理</span> <span class="open arrow"></span> </a>
                     <ul class="sub-menu">
                         <li> <a href="../Card/index.html">物联网卡 </a> </li>
                         <li> <a href="../Workorder/index.html">业务工单</a> </li>
@@ -231,6 +231,8 @@
                         <li> <a href="../Dealer/Dealer.html">发卡商管理</a> </li>
                         <li> <a href="../Pool/Pool.html">流量池管理</a> </li>
                         <li> <a href="../Opencardrecord/Opencardrecord.html">开卡记录管理</a> </li>
+                        <li> <a href="Dangerplace.html">高危区域卡管理设置</a> </li>
+                        <li> <a href="highriskhistory.html">高危区域卡管理记录</a> </li>
                     </ul>
                 </li>
                 <li>
@@ -241,12 +243,12 @@
                         <li> <a href="../Workorderspec/index.html">封装卡工单</a> </li>
                     </ul>
                 </li>
-                <li class="open active">
-                    <a href="javascript:;"> <i class="material-icons">flip</i><span class="title"> 移动（广东）物联网卡管理</span> <span class="open arrow"></span> </a>
+                <li>
+                    <a href="javascript:;"> <i class="material-icons">flip</i><span class="title"> 移动（广东）物联网卡管理</span> <span class=" arrow"></span> </a>
                     <ul class="sub-menu">
                         <li> <a href="../CmCard/index.html"> 物联网卡 </a> </li>
                         <li> <a href="../CmWorkorder/CmWorkorder.html"> 业务工单 </a> </li>
-                        <li> <a href="CmPackage.html"> 套餐管理 </a> </li>
+                        <li> <a href="../CmPackage/CmPackage.html"> 套餐管理 </a> </li>
                         <li> <a href="../CmDealer/index.html">发卡商管理</a> </li>
                     </ul>
                 </li>
@@ -308,7 +310,7 @@
                         <li> <a href="../CmZifei/flow.html"> 流量查询 </a> </li>
                         <li> <a href="../CmZifei/share.html"> 流量共享管理</a> </li>
                         <li> <a href="../CmZifei/pool.html"> 流量池管理</a> </li>
-                        <li> <a href="../CmZichan/bills.html"> 账单管理</a> </li>
+                        <li> <a href="../CmCaiwu/bills.html"> 账单管理</a> </li>
                     </ul>
                 </li>
                 <li>
@@ -374,83 +376,54 @@
                             <div class="grid simple ">
                                 <div class="grid-body no-border">
                                     <div style="overflow: hidden;border-bottom: 1px solid #dddddd">
-                                        <h3 style="font-size:18px;font-family:inherit;font-weight:500;color:#6f7b8a">套餐管理
-                                            <span style="float:right;font-size:12px;color:#fff;font-weight:bold;background: #0b9c8f;padding:0px 7px;border-radius: 5px;">共1页</span>
+                                        <h3 style="font-size:18px;font-family:inherit;font-weight:500;color:#6f7b8a">高危区管理
+                                            <!--<span style="float:right;font-size:12px;color:#fff;font-weight:bold;background: #0b9c8f;padding:0px 7px;border-radius: 5px;">共1页</span>-->
                                         </h3>
                                     </div>
 
                                     <form class="form-inline">
                                         <div class="p-t-15">
                                             <div class="form-group">
-                                                <a href="addPackagecm.html" type="button" class="btn btn-primary btn-sm m-r-65">
+                                                <a href="{:U('Dangerplace/adddangerplace')}" type="button" class="btn btn-primary btn-small m-r-65">
                                                     <i class="fa fa-plus"></i>
-                                                    增加套餐
+                                                    增加地区名称
                                                 </a>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="form-group m-r-5">
-                                                    <select style="min-width:169px;width:100%;height:36px !important;">
-                                                        <option value="">请选择套餐</option>
-                                                        <option value="1">22222.</option>
-                                                        <option value="1">3333</option>
-                                                    </select>
-                                                </div>
-                                                <label class="form-group">
-                                                    <a href="#" type="button" class="btn btn-success btn-small m-r-5" id="keywords">搜索</a>
-                                                    <!--<a href="Package.View" type="reset" class="btn btn-white btn-small">重置</a>-->
-                                                </label>
                                             </div>
                                         </div>
                                     </form>
                                     <br>
-                                    <table class="table table-striped table-flip-scroll cf" style="border-top:1px solid #ddd">
-                                        <thead class="cf">
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>套餐名称</th>
-                                            <th>套餐对应ID</th>
-                                            <th>分类</th>
-                                            <th>操作</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td colspan="5" style="text-align:center;padding:30px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">没有数据</td>
-                                        </tr>
-                                        </tbody>
-                                        <tbody style="display: none">
-                                        <tr>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td> <span class="label label-important">ALERT!</span></td>
-                                            <td>Otto</td>
-                                            <td>
-                                                <a href="javascript:;" class="btn btn-primary btn-xs btn-mini" type="button">修改</a>
-                                                <a href="javascript:;" class="btn btn-danger btn-xs btn-mini" type="button" onclick="if(!confirm('您是否确定要删除此记录？')){return  false;}">删除</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>aaaa</td>
-                                            <td>Thornton</td>
-                                            <td>aaaa</td>
-                                            <td>Thornton</td>
-                                            <td>
-                                                <a href="javascript:;" class="btn btn-primary btn-xs btn-mini" type="button">修改</a>
-                                                <a href="javascript:;" class="btn btn-danger btn-xs btn-mini" type="button" onclick="if(!confirm('您是否确定要删除此记录？')){return  false;}">删除</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>
-                                                <a href="javascript:;" class="btn btn-primary btn-xs btn-mini" type="button">修改</a>
-                                                <a href="javascript:;" class="btn btn-danger btn-xs btn-mini" type="button" onclick="if(!confirm('您是否确定要删除此记录？')){return  false;}">删除</a>
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-flip-scroll cf" style="border-top:1px solid #ddd">
+                                            <thead class="cf">
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>省份</th>
+                                                <th>城市</th>
+                                                <th>添加时间</th>
+                                                <th>添加用户</th>
+                                                <th>操作</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                                <if condition="$data eq null">
+                                                    <td colspan="6" style="text-align:center;padding:30px;border-bottom: 1px solid rgb(227, 227, 227); border-right: none;">没有数据</td>
+                                                    <else/>
+                                                    <volist name="data" id="vo">
+                                                        <tr>
+                                                            <td>{$vo.id}</td>
+                                                            <td>{$vo.proname}</td>
+                                                            <td>{$vo.cityname}</td>
+                                                            <td>{$vo.addtime}</td>
+                                                            <td>{$vo.nickname}</td>
+                                                            <td class="center">
+                                                                <a href="{:U('Dangerplace/deldangerplace',array('id'=>$vo['id']))}" onclick="if(!confirm('您是否确定要删除此记录？')){return  false;}" class="btn btn-mini btn-danger btn-xs">删除</a>
+                                                            </td>
+                                                        </tr>
+                                                    </volist>
+                                                </if>
+                                            </tbody>
+                                        </table>
+                                    </div>
 
                                 </div>
                             </div>
@@ -463,29 +436,36 @@
         <!-- END PAGE -->
     </div>
 </div>
-<script src="../../assets/plugins/pace/pace.min.js" type="text/javascript"></script>
 <!-- BEGIN JS DEPENDECENCIES-->
 <script src="../../assets/plugins/jquery/jquery-1.11.3.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrapv3/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-block-ui/jqueryblockui.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
+<!--<script src="../../assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>-->
 <script src="../../assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js" type="text/javascript"></script>
 <script src="../../assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
 <script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
-<!-- END CORE JS DEPENDECENCIES-->
-<!-- BEGIN CORE TEMPLATE JS -->
+
+<!--<script src="../../assets/plugins/jquery-datatable/js/jquery.dataTables.min.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/jquery-datatable/extra/js/dataTables.tableTools.min.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/datatables-responsive/js/datatables.responsive.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/plugins/datatables-responsive/js/lodash.min.js" type="text/javascript"></script>-->
+<!--<script src="../../assets/js/datatables.js" type="text/javascript"></script>-->
+
+<script src="../../assets/js/common.js" type="text/javascript"></script>
 <script src="../../webarch/js/webarch.js" type="text/javascript"></script>
-<!--<script src="assets/js/chat.js" type="text/javascript"></script>-->
-<!-- END CORE TEMPLATE JS -->
-<!-- BEGIN PAGE LEVEL PLUGINS -->
-<script src="../../assets/plugins/bootstrap-select2/select2.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-datatable/js/jquery.dataTables.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/jquery-datatable/extra/js/dataTables.tableTools.min.js" type="text/javascript"></script>
-<script src="../../assets/plugins/datatables-responsive/js/datatables.responsive.js" type="text/javascript"></script>
-<script src="../../assets/plugins/datatables-responsive/js/lodash.min.js" type="text/javascript"></script>
-<!-- END PAGE LEVEL JS INIT -->
-<script src="../../assets/js/datatables.js" type="text/javascript"></script>
+
+<block name="extjs">
+    <script language="javascript" type="text/javascript">
+        $(document).ready(function(){
+            $("#keyword").click(function(){
+                var keywords = $("#keywords").val();
+                var url =  "{:U('Opencardrecord/keywords')}"+"?act=keywords&keywords="+keywords;
+                window.location = url;
+            });
+        });
+    </script>
+</block>
 
 </body>
 </html>
