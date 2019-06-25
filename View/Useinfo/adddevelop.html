@@ -36,21 +36,6 @@
     <link rel="stylesheet" href="../../webarch/css/common.css" type="text/css">
     <!-- END CORE CSS FRAMEWORK -->
 
-    <style>
-        #packagetype1-error{
-            position: absolute;
-            top:36px;
-        }
-        #packageid2-error{
-            text-align: right;
-        }
-        .input-group-btn{
-            vertical-align:top;
-        }
-        #form1-error{
-            float:left;
-        }
-    </style>
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
@@ -425,7 +410,7 @@
                                             <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>日期</label>
                                             <div class="col-lg-9 col-md-9 col-sm-9">
                                                 <div class="input-append success date" style="width:100%;">
-                                                    <input type="text" name="duedate" value="" class="form-control" required>
+                                                    <input type="text" id="duedate" name="duedate" value="" class="form-control" required>
                                                     <span class="add-on" style="margin-left:-36px;"><span class="arrow"></span><i class="fa fa-th"></i></span>
                                                 </div>
                                             </div>
@@ -471,6 +456,7 @@
 <script src="../../assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
 
 <script src="../../webarch/js/webarch.js" type="text/javascript"></script>
+<script src="../../assets/js/common.js" type="text/javascript"></script>
 
 <block name="extjs">
     <script language="javascript" type="text/javascript">

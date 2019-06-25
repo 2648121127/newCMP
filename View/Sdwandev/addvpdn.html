@@ -390,21 +390,69 @@
                                     <form class="form-horizontal col-lg-6 col-md-6 col-sm-6" novalidate="novalidate" action="__ACTION__" method="post" id="form_traditional_validation" name="form_traditional_validation">
                                         <div class="p-t-15"></div>
                                         <div class="form-group">
-                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>名字</label>
+                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>VPDN名称</label>
                                             <div class="col-lg-9 col-md-9 col-sm-9">
-                                                <input type="text" name="name"  placeholder="名字" class="form-control" value="{$data.name}" required>
+                                                <input type="text" name="vpdnname"  placeholder="VPDN名称" class="form-control" data-required="true" value="{$data.vpdnname}" required>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>地址</label>
+                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>产品信息</label>
                                             <div class="col-lg-9 col-md-9 col-sm-9">
-                                                <input type="text" name="address"  placeholder="地址" class="form-control" value="{$data.address}" required>
+                                                <input type="text" name="info"  placeholder="产品信息" class="form-control" data-required="true" value="{$data.info}" required>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>信息</label>
+                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>IDCIP地址</label>
                                             <div class="col-lg-9 col-md-9 col-sm-9">
-                                                <input type="text" name="info"  placeholder="信息" class="form-control" data-required="true" required>
+                                                <input type="text" name="idcip"  placeholder="IDCIP地址" class="form-control" data-required="true" value="{$data.idcip}" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>IP池</label>
+                                            <div class="col-lg-9 col-md-9 col-sm-9">
+                                                <input type="text" name="userippool"  placeholder="IP池" class="form-control" data-required="true" value="{$data.userippool}" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>设备</label>
+                                            <div class="col-lg-9 col-md-9 col-sm-9">
+                                                <select id="sdevid" name="sdevid" data-required="true" class="c-select-36 c-width-100" required>
+                                                    <option value="">请选择设备</option>
+                                                    <volist name="sdevs" id="tp">
+                                                        <if condition="$tp.id eq $data['sdevid']" >
+                                                            <option value="{$tp.id}" selected="selected">{$tp.name}</option>
+                                                            <else/>
+                                                            <option value="{$tp.id}">{$tp.name}</option>
+                                                        </if>
+                                                    </volist>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>机房</label>
+                                            <div class="col-lg-9 col-md-9 col-sm-9">
+                                                <select id="dcid" name="dcid" data-required="true" class="c-select-36 c-width-100" required>
+                                                    <option value="">请选择机房</option>
+                                                    <volist name="dcids" id="tp">
+                                                        <if condition="$tp.id eq $data['dcid']" >
+                                                            <option value="{$tp.id}" selected="selected">{$tp.name}</option>
+                                                            <else/>
+                                                            <option value="{$tp.id}">{$tp.name}</option>
+                                                        </if>
+                                                    </volist>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>运营商</label>
+                                            <div class="col-lg-9 col-md-9 col-sm-9">
+                                                <input type="text" name="carrier"  placeholder="运营商" class="form-control" data-required="true" value="{$data.carrier}" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>虚拟墙</label>
+                                            <div class="col-lg-9 col-md-9 col-sm-9">
+                                                <input type="text" name="virtualwall"  placeholder="虚拟墙" class="form-control" data-required="true" value="{$data.virtualwall}" required>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -413,7 +461,7 @@
                                                 <input type="hidden" name="act" value="{$act}"/>
                                                 <input type="hidden" name="id" value="{$data.id}"/>
                                                 <button type="submit" id="submit" class="btn btn-success btn-small m-r-10">保存</button>
-                                                <a href="{:U('Sdwandev/datacenter')}" type="reset" class="btn btn-danger btn-small">取消</a>
+                                                <a href="{:U('Sdwandev/vpdn')}}" type="reset" class="btn btn-danger btn-small">取消</a>
                                             </div>
                                         </div>
                                     </form>

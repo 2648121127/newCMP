@@ -387,33 +387,60 @@
                                         <h3 style="font-weight:500;color:#6f7b8a">{$title}</h3>
                                     </div>
 
-                                    <form class="form-horizontal col-lg-6 col-md-6 col-sm-6" novalidate="novalidate" action="__ACTION__" method="post" id="form_traditional_validation" name="form_traditional_validation">
+                                    <form class="form-horizontal col-lg-10 col-md-10 col-sm-10" novalidate action="__ACTION__" method="post" id="form_traditional_validation" name="form_traditional_validation">
                                         <div class="p-t-15"></div>
                                         <div class="form-group">
-                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>名字</label>
-                                            <div class="col-lg-9 col-md-9 col-sm-9">
-                                                <input type="text" name="name"  placeholder="名字" class="form-control" value="{$data.name}" required>
+                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>VPDN</label>
+                                            <div class="col-lg-8 col-md-8 col-sm-8">
+                                                <select id="vpdnid" name="vpdnid" data-required="true" class="c-select-36 c-width-100" required>
+                                                    <option value="">请选择VPDN</option>
+                                                    <volist name="vpdns" id="tp">
+                                                        <if condition="$tp.id eq $data['vpdnid']" >
+                                                            <option value="{$tp.id}" selected="selected">{$tp.vpdnname}</option>
+                                                            <else/>
+                                                            <option value="{$tp.id}">{$tp.vpdnname}</option>
+                                                        </if>
+                                                    </volist>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>地址</label>
-                                            <div class="col-lg-9 col-md-9 col-sm-9">
-                                                <input type="text" name="address"  placeholder="地址" class="form-control" value="{$data.address}" required>
+                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>GRE名字</label>
+                                            <div class="col-lg-8 col-md-8 col-sm-8">
+                                                <input type="text" name="grename"  placeholder="GRE名字" class="form-control" data-required="true" value="{$data.grename}" required>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>信息</label>
-                                            <div class="col-lg-9 col-md-9 col-sm-9">
-                                                <input type="text" name="info"  placeholder="信息" class="form-control" data-required="true" required>
+                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>GRE通道</label>
+                                            <div class="col-lg-8 col-md-8 col-sm-8">
+                                                <input type="text" name="greway"  placeholder="GRE通道" class="form-control" data-required="true" value="{$data.greway}" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>GRE通道用户内网IP地址池</label>
+                                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                                <input type="text" name="greinsideip1"  placeholder="GRE通道用户内网IP地址池" class="form-control" data-required="true" maxlength="30" value="{$data.greinsideip1}" required>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                                <input type="text" name="greinsideip2"  placeholder="GRE通道用户内网IP地址池" class="form-control" data-required="true" maxlength="30" value="{$data.greinsideip2}" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>GRE通道用户外网IP地址池</label>
+                                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                                <input type="text" name="greoutip1"  placeholder="GRE通道用户外网IP地址池" class="form-control" data-required="true" maxlength="30" value="{$data.greoutip1}" required>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                                <input type="text" name="greoutip2"  placeholder="GRE通道用户外网IP地址池" class="form-control" data-required="true" maxlength="30" value="{$data.greoutip2}" required>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-lg-3 col-md-3 col-sm-3 control-label"></label>
-                                            <div class="col-lg-9 col-md-9 col-sm-9">
+                                            <div class="col-lg-8 col-md-8 col-sm-8">
                                                 <input type="hidden" name="act" value="{$act}"/>
                                                 <input type="hidden" name="id" value="{$data.id}"/>
                                                 <button type="submit" id="submit" class="btn btn-success btn-small m-r-10">保存</button>
-                                                <a href="{:U('Sdwandev/datacenter')}" type="reset" class="btn btn-danger btn-small">取消</a>
+                                                <a href="{:U('Sdwandev/gre')}" type="reset" class="btn btn-danger btn-small">取消</a>
                                             </div>
                                         </div>
                                     </form>

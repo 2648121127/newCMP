@@ -390,21 +390,31 @@
                                     <form class="form-horizontal col-lg-6 col-md-6 col-sm-6" novalidate="novalidate" action="__ACTION__" method="post" id="form_traditional_validation" name="form_traditional_validation">
                                         <div class="p-t-15"></div>
                                         <div class="form-group">
-                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>名字</label>
+                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>名称</label>
                                             <div class="col-lg-9 col-md-9 col-sm-9">
-                                                <input type="text" name="name"  placeholder="名字" class="form-control" value="{$data.name}" required>
+                                                <input type="text" class="form-control" type="text" placeholder="请输入名称" name="name"
+                                                       value="{$data.name}" required>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>地址</label>
+                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>产品信息</label>
                                             <div class="col-lg-9 col-md-9 col-sm-9">
-                                                <input type="text" name="address"  placeholder="地址" class="form-control" value="{$data.address}" required>
+                                                <input type="text" placeholder="请输入产品信息" name="product"
+                                                       value="{$data.product}" required>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>信息</label>
+                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>制造商</label>
                                             <div class="col-lg-9 col-md-9 col-sm-9">
-                                                <input type="text" name="info"  placeholder="信息" class="form-control" data-required="true" required>
+                                                <input type="text" placeholder="请输入制造商" name="manufac"
+                                                       value="{$data.manufac}" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-3 col-md-3 col-sm-3 control-label"><em class="text-danger">*&nbsp;</em>端口数</label>
+                                            <div class="col-lg-9 col-md-9 col-sm-9">
+                                                <input type="text" placeholder="请输入端口数" name="portnumber"
+                                                       value="{$data.portnumber}" required>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -413,7 +423,7 @@
                                                 <input type="hidden" name="act" value="{$act}"/>
                                                 <input type="hidden" name="id" value="{$data.id}"/>
                                                 <button type="submit" id="submit" class="btn btn-success btn-small m-r-10">保存</button>
-                                                <a href="{:U('Sdwandev/datacenter')}" type="reset" class="btn btn-danger btn-small">取消</a>
+                                                <a href="{:U('Sdwandev/index')}" type="reset" class="btn btn-danger btn-small">取消</a>
                                             </div>
                                         </div>
                                     </form>
